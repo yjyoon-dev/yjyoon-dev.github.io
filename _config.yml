@@ -85,7 +85,7 @@ rss: false
 since: 2020
 
 # icon between year and author @Footer
-authoricon: star
+authoricon: code
 
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
