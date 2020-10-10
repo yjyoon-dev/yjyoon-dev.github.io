@@ -6,7 +6,7 @@ type: about
 About
 ===
 - 윤여준
-- yjyoon-dev@gmail.com
+- yjyoon.dev@gmail.com
 - 광운대학교 소프트웨어학부
 - 개발자 지망생
 
