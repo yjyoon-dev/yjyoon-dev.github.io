@@ -210,7 +210,6 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   GitHub: https://github.com/yjyoon-dev
-  Gmail: yjyoon.dev@gmail.com
 
 
 # Social Links Icons
@@ -223,7 +222,6 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  Gmail: google-square
 
 
 # Sidebar Avatar
