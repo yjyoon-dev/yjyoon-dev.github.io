@@ -5,11 +5,10 @@ type: about
 
 About
 ===
-### Name: 윤여준
-
-### E-mail: yjyoon-dev@gmail.com
-
-### Belong: 광운대학교 소프트웨어학부
+- 윤여준
+- yjyoon-dev@gmail.com
+- 광운대학교 소프트웨어학부
+- 개발자 지망생
 
 <br>
 
