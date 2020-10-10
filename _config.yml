@@ -1,7 +1,7 @@
 # Site
 title: YJYOON's Dev Story
 subtitle:
-description:
+description: yjyoon.dev@gmail.com
 author: Yeojun Yoon
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: ko
@@ -226,7 +226,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-avatar: /assests/images/avatar.png
+avatar: /assets/images/avatar.png
 
 
 # Table Of Contents in the Sidebar
