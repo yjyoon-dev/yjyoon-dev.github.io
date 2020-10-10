@@ -3,7 +3,8 @@ layout: page
 type: about
 ---
 
-
+About
+===
 ### Name: 윤여준
 
 ### E-mail: yjyoon-dev@gmail.com
@@ -67,8 +68,9 @@ Log
       + BOJ (350+)
       + Programmers (50+)
       + SWEA (20+)
-    + Enter Codeforces Contest
-    + Start Enphago Project
+    + Discharge the Army
+    + Start Github Blog
+    + Start project Enphago
 
 
 
