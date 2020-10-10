@@ -5,12 +5,12 @@ type: about
 
 Contact
 ===
->Name: 윤여준
+### Name: 윤여준
 
->E-mail: yjyoon-dev@gmail.com
+### E-mail: yjyoon-dev@gmail.com
 
->Belong: 광운대학교 소프트웨어학부
----
+### Belong: 광운대학교 소프트웨어학부
+-----
 <br>
 
 Tech
@@ -24,7 +24,7 @@ Tech
 - HTML/CSS
 - Flutter
 - Algorithm & Data structure
----
+-----
 <br>
 
 Fav
@@ -34,14 +34,14 @@ Fav
 - Cross Platform App
 - Game client
 - AI Algorithm
----
+-----
 <br>
 
 Project
 ===
 - _2020.10_
   + Enphago - Korean word chaining game with Open API
----
+-----
 <br>
 
 Log
@@ -70,6 +70,6 @@ Log
       + SWEA (20+)
     + Enter Codeforces Contest
     + Start Enphago Project
----
+-----
 
 
