@@ -7,8 +7,7 @@ About
 ===
 - 윤여준
 - yjyoon.dev@gmail.com
-- 광운대학교 소프트웨어학부
-- 개발자 지망생
+- https://github.com/yjyoon-dev
 
 <br>
 
@@ -21,8 +20,9 @@ Tech
 - Java
 - Javascript
 - HTML/CSS
+- Android
 - Flutter
-- Algorithm & Data structure
+- PS
 
 <br>
 
@@ -49,7 +49,7 @@ Log
     + Learn my first programming language - VB
   
 - _2011_
-    + Learn C Programming language
+    + Study C Programming language
   
 - _2018_
     + Enter Kwangwoon university
