@@ -46,30 +46,30 @@ Project
 Log
 ===
  - _2010_
-    + Learn my first programming language - VB
+    + Learn my first programming language - `VB`
   
 - _2011_
-    + Study C Programming language
+    + Learn `C` Programming language
   
 - _2018_
     + Enter Kwangwoon university
-    + Study C and Python
-    + Develop simple game and app
+    + Study `C` and `Python`
+    + Develop simple games and apps
 
 - _2019_
-    + Join the Army
-    + Study variable programming languages
-      + C++ / Java / C# / HTML / CSS / JS / Dart
+    + Join the `Army`
+    + Learn variable programming languages
+      + `C++` / `Java` / `C#` / `HTML` / `CSS` / `JS` / `Dart`
 - _2020_
-    + Study Algorithm & Data structure
-    + Study PS
+    + Study `Algorithm` & `Data structure`
+    + Study `PS`
     + Solve problems on Online Judge Site
-      + BOJ (350+)
-      + Programmers (50+)
-      + SWEA (20+)
-    + Discharge the Army
-    + Start Github Blog
-    + Start project Enphago
+      + `BOJ` (350+)
+      + `Programmers` (50+)
+      + `SWEA` (20+)
+    + Discharge the `Army`
+    + [Start Github Blog](https://yjyoon-dev.github.io)
+    + [Start project Enphago](https://github.com/yjyoon-dev/enphago)
 
 
 
