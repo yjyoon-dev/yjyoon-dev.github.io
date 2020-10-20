@@ -16,10 +16,11 @@ Tech
 - C/C++
 - Python
 - C#
-- VB
 - Java
 - Javascript
+- Typescript
 - HTML/CSS
+- React
 - Android
 - Flutter
 - PS
@@ -39,7 +40,7 @@ Fav
 Project
 ===
 - _2020.10_
-  + Enphago - Korean word chaining game with Open API
+  + [Enphago - Korean word chaining game with Open API](https://github.com/yjyoon-dev/enphago)
 
 <br>
 
@@ -59,7 +60,7 @@ Log
 - _2019_
     + Join the `Army`
     + Learn variable programming languages
-      + `C++` / `Java` / `C#` / `HTML` / `CSS` / `JS` / `Dart`
+      + `C++` / `Java` / `C#` / `HTML` / `CSS` / `JS` / `TS` / `Dart`
 - _2020_
     + Study `Algorithm` & `Data structure`
     + Study `PS`
