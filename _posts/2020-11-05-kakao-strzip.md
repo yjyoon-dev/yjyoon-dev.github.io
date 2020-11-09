@@ -49,28 +49,25 @@ description: "2020 카카오 블라인드 채용 코딩테스트 - 문자열 압
 using namespace std;
 
 int solution(string s) {
-    int answer = s.size();
-    string temp="";
-    for(int i=1;i<=s.size()/2;i++){
-        string p="";
-        int d=0;
-        for(int j=0;i*j<s.size();j++){  
-            if(s.substr(i*j,i)==p)
-                d++;
-            else{
-                if(d>1)
-                    temp+=to_string(d);
-                temp+=p;
-                p=s.substr(i*j,i);
-                d=1;
-            }
-        }
-    if(d>1)                 
-        temp+=to_string(d);
-    temp+=p;
-    answer = min(answer,(int)temp.size());
-    temp="";
-    }
+	int answer=s.size();
+	for(int i=1;i<=s.size()/2;i++){
+		string convert,temp;
+		int cnt=1;
+		temp=s.substr(0,i);
+		for(int j=i;j<s.size();j+=i){
+			if(temp==s.substr(j,i)) cnt++;
+			else{
+				if(cnt>1) convert+=to_string(cnt);
+				convert+=temp;
+				temp=s.substr(j,i);
+				cnt=1;
+			}
+		}
+		if(cnt>1) convert+=to_string(cnt);
+		convert+=temp;
+		if(answer>convert.size())
+			answer=convert.size();
+	}
     return answer;
 }
 ```
