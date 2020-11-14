@@ -62,4 +62,4 @@ description: "바닐라 자바스크립트 게임 제작 프로젝트 - 뱀 게�
 
 전체 코드 및 플레이는 `github` 저장소를 참고해주기 바란다.
 
-[yjyoon-dev/vanillaJSGame-2048](https://github.com/yjyoon-dev/vanilla-javascript-game/tree/master/snake)
+[yjyoon-dev/vanillaJSGame-snake](https://github.com/yjyoon-dev/vanilla-javascript-game/tree/master/snake)
