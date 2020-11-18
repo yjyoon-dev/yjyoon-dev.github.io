@@ -5,7 +5,7 @@ date: 2020-11-19
 categories: project
 photos: /assets/post_images/js_game/tetris.png
 tags: [project,javascript,html,css,game]
-description: "바닐라 자바스크립트 게임 제작 프로젝트 02. 테트리스"
+description: "바닐라 자바스크립트 게임 제작 프로젝트 03. 테트리스"
 ---
 
 <br>
