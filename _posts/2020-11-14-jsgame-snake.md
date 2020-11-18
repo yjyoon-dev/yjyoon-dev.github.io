@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "[Project] 바닐라 자바스크립트 게임 제작 02. 뱀 게임"
+title: "[Project] 자바스크립트로 뱀 게임 만들기"
 date: 2020-11-13
 categories: project
 photos: /assets/post_images/js_game/snake.png
 tags: [project,javascript,html,css,game]
-description: "바닐라 자바스크립트 게임 제작 프로젝트 - 뱀 게임을 만들어보자"
+description: "바닐라 자바스크립트 게임 제작 프로젝트 02. 뱀"
 ---
 
 <br>
