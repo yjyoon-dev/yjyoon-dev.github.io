@@ -86,14 +86,11 @@ string solution(string p) {
 	}
 
 	if(isOK(u)) return u + solution(v);
-	else{
-		string ret = "("+solution(v)+")";
 
-		for(int i=1;i<u.size()-1;i++)
-			ret += (u[i]=='('?")":"(");
+	string ret = "("+solution(v)+")";
+	for(int i=1;i<u.size()-1;i++)
+		ret += (u[i]=='('?")":"(");
 
-		return ret;
-	}
-
+	return ret;
 }
 ```
