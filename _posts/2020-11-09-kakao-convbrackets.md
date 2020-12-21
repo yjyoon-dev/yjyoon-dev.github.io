@@ -4,7 +4,7 @@ title: "[2020 카카오 코딩테스트] 괄호 변환 문제 풀이 (프로그�
 date: 2020-11-09
 categories: kakao
 photos: /assets/post_images/kakao/convbrackets.png
-tags: [ps,algorithm,kakao,programmers,string,implementation,recursion]
+tags: [ps,algorithm,c++,kakao,programmers,string,implementation,recursion]
 description: "2020 카카오 블라인드 채용 코딩테스트 - 괄호 변환 C++ 풀이 (프로그래머스)"
 ---
 

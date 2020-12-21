@@ -4,7 +4,7 @@ title: "[2020 카카오 코딩테스트] 자물쇠와 열쇠 문제 풀이 (프�
 date: 2020-12-18
 categories: kakao
 photos: /assets/post_images/kakao/lockerkey.png
-tags: [ps,algorithm,kakao,programmers,bruteforce,implementation]
+tags: [ps,algorithm,c++,kakao,programmers,bruteforce,implementationm]
 description: "2020 카카오 블라인드 채용 코딩테스트 - 자물쇠와 열쇠 C++ 풀이 (프로그래머스)"
 ---
 
