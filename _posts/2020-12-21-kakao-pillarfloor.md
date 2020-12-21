@@ -100,12 +100,12 @@ bool isValid(const set<vector<int>>& building){
 		int x=build[0], y=build[1], a=build[2];
 
 		if(a==0){
-			vector<int> pred[3]={{x,y-1,0},{x,y,1},{x-1,y,1}};
+			vector<int> pred[3]={ {x,y-1,0},{x,y,1},{x-1,y,1} };
 			if(y==0 || has(0) || has(1) || has(2)) continue;
 			return false;
 		}
 		else{
-			vector<int> pred[4]={{x,y-1,0},{x+1,y-1,0},{x+1,y,1},{x-1,y,1}};
+			vector<int> pred[4]={ {x,y-1,0},{x+1,y-1,0},{x+1,y,1},{x-1,y,1} };
 			if(has(0) || has(1) || (has(2)&&has(3))) continue;
 			return false;
 		}
