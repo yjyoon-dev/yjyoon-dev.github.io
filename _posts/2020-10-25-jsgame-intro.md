@@ -31,17 +31,23 @@ description: "바닐라 자바스크립트 게임 제작 프로젝트"
 
 ![2048](/assets/post_images/js_game/ex_2048.png)
 
+[[Project] 자바스크립트로 2048 게임 만들기 포스트 바로가기](https://yjyoon-dev.github.io/project/2020/11/13/jsgame-2048/)
+
 <br>
 
 `javascript` 에서도 비동기 프로그래밍을 지원한다는 것을 알고는 **Snake** 게임을 만들어보기도 했다.
 
 ![snake](/assets/post_images/js_game/ex_snake.png)
 
+[[Project] 자바스크립트로 뱀 게임 만들기 포스트 바로가기](https://yjyoon-dev.github.io/project/2020/11/13/jsgame-snake/)
+
 <br>
 
 더 나아가 게임이라면 빠질 수 없는 **테트리스**도 만들었었다.
 
 ![tetris](/assets/post_images/js_game/ex_tetris.png)
+
+[[Project] 자바스크립트로 테트리스 게임 만들기 포스트 바로가기](https://yjyoon-dev.github.io/project/2020/11/13/jsgame-tetris/)
 
 <br>
 
