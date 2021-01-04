@@ -104,7 +104,7 @@ int solution(int n, vector<int> weak, vector<int> dist) {
 	do{
 		for(int i=0;i<W;i++){
 			int start = weak[i]; // 검사 시작 지점
-			int finish = weak[i + W - 1]; // 검사 종료 예상 지점
+			int finish = weak[i+W-1]; // 검사 종료 예상 지점
 			for(int j=0;j<dist.size();j++){
 				start += dist[j];
 				if(start >= finish){ // 모든 지점 방문 완료 시 탈출
