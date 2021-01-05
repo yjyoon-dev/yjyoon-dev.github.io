@@ -14,16 +14,14 @@ About
 Tech
 ===
 - C/C++
+- Kotlin
 - Python
 - C#
 - Java
 - Javascript
-- Typescript
 - HTML/CSS
-- React
 - Android
 - Flutter
-- PS
 
 <br>
 
@@ -32,7 +30,7 @@ Fav
 - Problem Solving
 - Android App
 - Cross Platform App
-- Game client
+- Game Client
 - AI Algorithm
 
 <br>
@@ -41,6 +39,9 @@ Project
 ===
 - _2020.10_
   + [Enphago - Korean word chaining game with Open API](https://github.com/yjyoon-dev/enphago)
+
+- _2020.11_
+  + [자바스크립트로 게임을 만들어보자](https://github.com/yjyoon-dev/vanilla-javascript-game)
 
 <br>
 
@@ -70,7 +71,8 @@ Log
       + `SWEA` (20+)
     + Discharge the `Army`
     + [Start Github Blog](https://yjyoon-dev.github.io)
-    + [Start project Enphago](https://github.com/yjyoon-dev/enphago)
+    + [Enphago](https://github.com/yjyoon-dev/enphago)
+    + [자바스크립트로 게임을 만들어보자](https://github.com/yjyoon-dev/vanilla-javascript-game)
 
 
 
