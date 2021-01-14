@@ -80,7 +80,6 @@ description: "2020 카카오 블라인드 채용 코딩테스트 - 블록 이동
 # 전체 코드
 
 ```c++
-#include <iostream>
 #include <vector>
 #include <tuple>
 #include <map>
@@ -89,12 +88,12 @@ using namespace std;
 
 int N;
 vector<vector<int>> board;
-const int dy[] = {-1,1,0,0};
-const int dx[] = {0,0,-1,1};
+const int dy[] = {-1, 1, 0, 0};
+const int dx[] = {0, 0, -1, 1};
 
 struct Robot{
     // 로봇의 좌표
-    int y1,x1,y2,x2;
+    int y1, x1, y2, x2;
     Robot(int y1, int x1, int y2, int x2): y1(y1), x1(x1), y2(y2), x2(x2){}
 
     // 방향 D에 대한 평행이동
