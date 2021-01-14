@@ -156,7 +156,7 @@ vector<Robot> getRotated(Robot& r){
     return ret;
 }
 
-int solve(Robot init){
+int bfs(Robot init){
     dist[init] = 0;
 
     queue<Robot> q;
@@ -188,7 +188,7 @@ int solution(vector<vector<int>> b){
     board = b;
     N = board.size(); // 편리를 위한 전역 선언
 
-    int answer = solve(Robot(0,0,0,1));
+    int answer = bfs(Robot(0,0,0,1));
 
     return answer;
 }
