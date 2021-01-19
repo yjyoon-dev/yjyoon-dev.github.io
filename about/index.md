@@ -74,12 +74,12 @@ Log
       + `Algospot`
       + `SWEA`
     + Discharge the `Army`
-    + [Start Github Blog](https://yjyoon-dev.github.io)
-    + [Start project - Enphago Prototype](https://github.com/yjyoon-dev/enphago-prototype)
-    + [Start project - 자바스크립트로 게임을 만들어보자](https://github.com/yjyoon-dev/vanilla-javascript-game)
+    + Start [Github Blog](https://yjyoon-dev.github.io)
+    + Start project - [Enphago Prototype](https://github.com/yjyoon-dev/enphago-prototype)
+    + Start project - [자바스크립트로 게임을 만들어보자](https://github.com/yjyoon-dev/vanilla-javascript-game)
     + Study `Android` with `Kotlin`
 - _2021_
-    + [Start project - Enphago Android Kotlin App](https://github.com/yjyoon-dev/enphago-android)
+    + Start project - [Enphago Android Kotlin App](https://github.com/yjyoon-dev/enphago-android)
 
 
 
