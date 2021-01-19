@@ -47,7 +47,7 @@ description: "바닐라 자바스크립트 게임 제작 프로젝트"
 
 ![tetris](/assets/post_images/js_game/ex_tetris.png)
 
-[[Project] 자바스크립트로 테트리스 게임 만들기 포스트 바로가기](https://yjyoon-dev.github.io/project/2020/11/13/jsgame-tetris/)
+[[Project] 자바스크립트로 테트리스 게임 만들기 포스트 바로가기](https://yjyoon-dev.github.io/project/2020/11/19/jsgame-tetris/)
 
 <br>
 

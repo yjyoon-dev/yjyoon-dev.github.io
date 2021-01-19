@@ -90,4 +90,4 @@ description: "바닐라 자바스크립트 게임 제작 프로젝트 03. 테트
 
 전체 코드는 `github` 저장소를 참고해주기 바란다.
 
-[yjyoon-dev/vanillaJSGame-tetris](https://github.com/yjyoon-dev/vanilla-javascript-game/tree/master/tetris)
+[https://github.com/yjyoon-dev/vanilla-javascript-game/tree/master/tetris](https://github.com/yjyoon-dev/vanilla-javascript-game/tree/master/tetris)
