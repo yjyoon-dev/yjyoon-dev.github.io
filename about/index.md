@@ -38,10 +38,13 @@ Fav
 Project
 ===
 - _2020.10_
-  + [Enphago - Korean word chaining game with Open API](https://github.com/yjyoon-dev/enphago)
+  + [Enphago - 한글 끝말잇기 AI 프로토타입 제작](https://github.com/yjyoon-dev/enphago-prototype)
 
 - _2020.11_
   + [자바스크립트로 게임을 만들어보자](https://github.com/yjyoon-dev/vanilla-javascript-game)
+
+- _2021.01_
+  + [Enphago - 한글 끝말잇기 AI 안드로이드 코틀린 앱 제작](https://github.com/yjyoon-dev/enphago-android)
 
 <br>
 
@@ -65,14 +68,18 @@ Log
 - _2020_
     + Study `Algorithm` & `Data structure`
     + Study `PS`
-    + Solve problems on Online Judge Site
-      + `BOJ` (350+)
-      + `Programmers` (50+)
-      + `SWEA` (20+)
+    + Start solving problems on Online Judge Site
+      + `BOJ`
+      + `Programmers`
+      + `Algospot`
+      + `SWEA`
     + Discharge the `Army`
     + [Start Github Blog](https://yjyoon-dev.github.io)
-    + [Enphago](https://github.com/yjyoon-dev/enphago)
-    + [자바스크립트로 게임을 만들어보자](https://github.com/yjyoon-dev/vanilla-javascript-game)
+    + [Start project - Enphago Prototype](https://github.com/yjyoon-dev/enphago-prototype)
+    + [Start project - 자바스크립트로 게임을 만들어보자](https://github.com/yjyoon-dev/vanilla-javascript-game)
+    + Study `Android` with `Kotlin`
+- _2021_
+    + [Start project - Enphago Android Kotlin App](https://github.com/yjyoon-dev/enphago-android)
 
 
 
