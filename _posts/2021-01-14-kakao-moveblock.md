@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[2020 카카오 코딩테스트] 블록 이동하기 문제 풀이 (프로그래머스)"
+title: "[프로그래머스] 블록 이동하기 문제 풀이 (2020 카카오 코딩테스트)"
 date: 2021-01-14
 categories: kakao
 photos: /assets/post_images/kakao/moveblock.png

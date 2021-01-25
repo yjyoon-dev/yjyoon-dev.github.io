@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[2020 카카오 코딩테스트] 기둥과 보 설치 문제 풀이 (프로그래머스)"
+title: "[프로그래머스] 기둥과 보 설치 문제 풀이 (2020 카카오 코딩테스트)"
 date: 2020-12-21
 categories: kakao
 photos: /assets/post_images/kakao/pillarfloor.png
