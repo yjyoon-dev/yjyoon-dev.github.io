@@ -106,7 +106,7 @@ board|r|c|result
 
 - Enter 키는 카드 한 쌍 당 항상 2번씩 눌린다.
 
-여기까지 정리가 되면 나머지는 `구현`이다. 예외 없는 꼼꼼한 구현이 필요하다. 더불어 `다익스트라` 알고리즘에 대한 경험과 익숙함이 요구된다.
+여기까지 정리가 되면 나머지는 `구현`입니다. 예외 없는 꼼꼼한 구현과 더불어 `다익스트라` 알고리즘에 대한 경험과 익숙함이 필요합니다.
 
 <br>
 
@@ -129,7 +129,7 @@ struct Point{
 
 // 우선순위 큐 비교 연산자 오버라이딩
 bool operator < (Point a, Point b){
-		return a.d > b.d;
+	return a.d > b.d;
 }
 
 bool isFinished(vector<vector<int>>& board){
@@ -167,7 +167,7 @@ int getDist(vector<vector<int>>& board, int y1, int x1, int y2, int x2){
             int cnt=0;
 			int ny=cur.y, nx=cur.x;
 
-            // 한 칸씩 i방향으로 옮겨가며 최단거리 계산
+        // 한 칸씩 i방향으로 옮겨가며 최단거리 계산
 			while(inRange(ny+dy[i],nx+dx[i])){
 				cnt++;
 				ny+=dy[i]; nx+=dx[i];
@@ -180,7 +180,7 @@ int getDist(vector<vector<int>>& board, int y1, int x1, int y2, int x2){
 				}
 			}
 
-            // 카드 또는 벽을 마주친 경우 Ctrl 키를 이용해 1번만에 이동 가능
+        // 카드 또는 벽을 마주친 경우 Ctrl 키를 이용해 1번만에 이동 가능
 			if(dist[ny][nx]>curDist+1){
 					dist[ny][nx]=curDist+1;
 					q.push(Point(curDist+1,ny,nx));
@@ -205,17 +205,17 @@ int solve(vector<vector<int>>& board, int y, int x){
 
 			if(point.empty()) continue;
 
-            // 앞에꺼를 먼저 뒤집음
+        // 앞에꺼를 먼저 뒤집음
 			int cand1 = getDist(board,y,x,point[0].first,point[0].second)
 			+ getDist(board,point[0].first,point[0].second,point[1].first,point[1].second)
 			+ 2;
 
-            // 뒤에꺼를 먼저 뒤집음
+        // 뒤에꺼를 먼저 뒤집음
 			int cand2 = getDist(board,y,x,point[1].first,point[1].second)
 			+ getDist(board,point[1].first,point[1].second,point[0].first,point[0].second)
 			+ 2;
 			
-            // dfs
+        // dfs
 			board[point[0].first][point[0].second]=0;
 			board[point[1].first][point[1].second]=0;
 
