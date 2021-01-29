@@ -144,10 +144,10 @@ bool inRange(int y, int x){
 // 다익스트라를 이용한 최소 키보드 입력 횟수 반환
 int getDist(vector<vector<int>>& board, int y1, int x1, int y2, int x2){
 
-    priority_queue<Point> q;
+	priority_queue<Point> q;
 	q.push(Point(0,y1,x1));
 	
-    int dist[4][4];
+	int dist[4][4];
 	for(int i=0;i<4;i++)
 		for(int j=0;j<4;j++)
 			dist[i][j]=1e9;
@@ -164,7 +164,7 @@ int getDist(vector<vector<int>>& board, int y1, int x1, int y2, int x2){
 		if(cur.y==y2 && cur.x==x2) return curDist; // 완료
 
 		for(int i=0;i<4;i++){
-            int cnt=0;
+			int cnt=0;
 			int ny=cur.y, nx=cur.x;
 
         		// 한 칸씩 i방향으로 옮겨가며 최단거리 계산
@@ -197,33 +197,31 @@ int solve(vector<vector<int>>& board, int y, int x){
 
     // 카드 k 뒤집기
 	for(int k=1;k<=6;k++){
-			vector<pair<int,int>> point;
-			for(int i=0;i<4;i++)
-				for(int j=0;j<4;j++)
-					if(board[i][j]==k)
-						point.push_back(make_pair(i,j));
+		vector<pair<int,int>> point;
+		for(int i=0;i<4;i++)
+			for(int j=0;j<4;j++)
+				if(board[i][j]==k)
+					point.push_back(make_pair(i,j));
 
-			if(point.empty()) continue;
+		if(point.empty()) continue;
 
         		// 앞에꺼를 먼저 뒤집음
-			int cand1 = getDist(board,y,x,point[0].first,point[0].second)
-			+ getDist(board,point[0].first,point[0].second,point[1].first,point[1].second)
-			+ 2;
+		int cand1 = getDist(board,y,x,point[0].first,point[0].second)
+		+ getDist(board,point[0].first,point[0].second,point[1].first,point[1].second) + 2;
 
         		// 뒤에꺼를 먼저 뒤집음
-			int cand2 = getDist(board,y,x,point[1].first,point[1].second)
-			+ getDist(board,point[1].first,point[1].second,point[0].first,point[0].second)
-			+ 2;
+		int cand2 = getDist(board,y,x,point[1].first,point[1].second)
+		+ getDist(board,point[1].first,point[1].second,point[0].first,point[0].second) + 2;
 			
         		// dfs
-			board[point[0].first][point[0].second]=0;
-			board[point[1].first][point[1].second]=0;
+		board[point[0].first][point[0].second]=0;
+		board[point[1].first][point[1].second]=0;
 
-			ret=min(ret,min(cand1+solve(board,point[1].first,point[1].second),cand2+solve(board,point[0].first,point[0].second)));
+		ret=min(ret,min(cand1+solve(board,point[1].first,point[1].second),cand2+solve(board,point[0].first,point[0].second)));
 
 
-			board[point[0].first][point[0].second]=k;
-			board[point[1].first][point[1].second]=k;
+		board[point[0].first][point[0].second]=k;
+		board[point[1].first][point[1].second]=k;
 	}
 	return ret;
 }
