@@ -98,6 +98,10 @@ info|query|result
 
 따라서 이 문제는 적절한 `자료구조의 선언`과 `효율적인 탐색` 방법이 핵심이었습니다.
 
+<br>
+
+# 전체 코드
+
 ```c++
 #include <string>
 #include <vector>
