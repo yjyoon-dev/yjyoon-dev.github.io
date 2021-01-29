@@ -148,20 +148,20 @@ vector<int> solution(vector<string> info, vector<string> query) {
    vector<int> answer;
 
   // info 저장
-  for(string s:info){
+  for(string s: info){
     vector<int> v = infoSplit(s);
     db[v[0]][v[1]][v[2]][v[3]].push_back(v[4]);
   }
 
-    // 추후 이분 탐색을 위한 모든 배열 정렬
-  for(int i=0;i<3;i++)
-    for(int j=0;j<2;j++)
-      for(int k=0;k<2;k++)
-        for(int l=0;l<2;l++)
+  // 추후 이분 탐색을 위한 모든 배열 정렬
+  for(int i=0; i<3; i++)
+    for(int j=0; j<2; j++)
+      for(int k=0; k<2; k++)
+        for(int l=0; l<2; l++)
           sort(db[i][j][k][l].begin(),db[i][j][k][l].end());
 
-    // 쿼리 수행
-  for(string s:query){
+  // 쿼리 수행
+  for(string s: query){
     vector<string> v = querySplit(s);
 
     // 쿼리 조건에 따른 구간 정의
@@ -188,10 +188,10 @@ vector<int> solution(vector<string> info, vector<string> query) {
 
     // 점수가 X점 이상인 사람의 수 계산
     int ans=0;
-    for(int i=ai;i<=bi;i++){
-      for(int j=aj;j<=bj;j++){
-        for(int k=ak;k<=bk;k++){
-          for(int l=al;l<=bl;l++){
+    for(int i=ai; i<=bi; i++){
+      for(int j=aj; j<=bj; j++){
+        for(int k=ak; k<=bk; k++){
+          for(int l=al; l<=bl; l++){
             int n = db[i][j][k][l].size();
             if(n==0) continue;
 
