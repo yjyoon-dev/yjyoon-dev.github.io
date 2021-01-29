@@ -90,7 +90,7 @@ using namespace std;
 int adj[201][201];
 
 int solution(int n, int s, int a, int b, vector<vector<int>> fares) {
-    int answer = 0;
+  int answer = 0;
 
     // 플로이드를 위해 충분히 큰 값으로 초기화
 	for(int i=1;i<=n;i++)
@@ -117,6 +117,6 @@ int solution(int n, int s, int a, int b, vector<vector<int>> fares) {
 	for(int i=1;i<=n;i++)
 		answer=min(answer,adj[s][i]+adj[i][a]+adj[i][b]);
 	
-    return answer;
+  return answer;
 }
 ```

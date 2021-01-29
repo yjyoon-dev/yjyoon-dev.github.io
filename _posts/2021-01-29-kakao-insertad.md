@@ -115,9 +115,9 @@ int strToSec(string s){
 
 // 초 → 문자열 변환
 string secToStr(int n){
-    string ret="";
+	string ret="";
 
-    int s = n%60; n/=60;
+ 	int s = n%60; n/=60;
 	int m = n%60; n/=60;
 	int h = n;
 
@@ -136,7 +136,7 @@ string secToStr(int n){
 }
 
 string solution(string play_time, string adv_time, vector<string> logs) {
-    string answer = "";
+	string answer = "";
 
 	for(string s:logs){
 		int start = strToSec(s.substr(0,8));
@@ -147,7 +147,7 @@ string solution(string play_time, string adv_time, vector<string> logs) {
 	int N = strToSec(play_time); // 전체 구간 길이
 	int len = strToSec(adv_time); // 광고 구간 길이
 
-    int idx=0;
+	int idx=0;
 	long long sum=0;
 	long long maxSum=0;
 	

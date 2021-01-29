@@ -73,7 +73,7 @@ no|new_id|result|
 using namespace std;
 
 string solution(string new_id) {
-    string answer = "";
+	string answer = "";
 
     // 1단계: 소문자로 변환
 	for(char& c:new_id)
@@ -96,7 +96,7 @@ string solution(string new_id) {
 		}
 		else temp.push_back(answer[i]);
 	}
-    answer=temp;
+	answer=temp;
 
     // 4단계: 양 끝 마침표 제거
 	if(answer[0]=='.') answer=answer.substr(1);
@@ -112,6 +112,6 @@ string solution(string new_id) {
     // 7단계: 2자 이하일 경우 끝 글자 늘리기
 	while(answer.size()<=2) answer+=answer[answer.size()-1];
 	
-    return answer;
+	return answer;
 }
 ```
