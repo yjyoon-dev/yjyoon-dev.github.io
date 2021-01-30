@@ -118,7 +118,7 @@ vector<string> solution(vector<string> orders, vector<int> course) {
     
     // order 의 모든 조합 전처리
     for(string& s:orders){
-        sort(s.begin(),s.end());
+        sort(s.begin(),s.end()); // 순서만 다르고 중복된 조합이 나오지 않도록 정렬
         comb(s,-1,"");
     }
     
