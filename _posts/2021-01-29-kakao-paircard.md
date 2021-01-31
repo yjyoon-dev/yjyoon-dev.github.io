@@ -123,7 +123,8 @@ int const dx[]={0,0,-1,1};
 
 struct Point{
 	int d,y,x;
-	Point(int d,int y, int x):d(d),y(y),x(x){}
+	Point(int y,int x):y(y),x(x){}
+	Point(int d,int y,int x):d(d),y(y),x(x){}
 	
 };
 
@@ -197,31 +198,31 @@ int solve(vector<vector<int>>& board, int y, int x){
 
     // 카드 k 뒤집기
 	for(int k=1;k<=6;k++){
-		vector<pair<int,int>> point;
+		vector<Point> point;
 		for(int i=0;i<4;i++)
 			for(int j=0;j<4;j++)
 				if(board[i][j]==k)
-					point.push_back(make_pair(i,j));
+					point.push_back(Point(i,j));
 
 		if(point.empty()) continue;
 
         	// 앞에꺼를 먼저 뒤집음
-		int cand1 = getDist(board,y,x,point[0].first,point[0].second)
-		+ getDist(board,point[0].first,point[0].second,point[1].first,point[1].second) + 2;
+		int cand1 = getDist(board,y,x,point[0].y,point[0].x)
+		+ getDist(board,point[0].y,point[0].x,point[1].y,point[1].x) + 2;
 
         	// 뒤에꺼를 먼저 뒤집음
-		int cand2 = getDist(board,y,x,point[1].first,point[1].second)
-		+ getDist(board,point[1].first,point[1].second,point[0].first,point[0].second) + 2;
+		int cand2 = getDist(board,y,x,point[1].y,point[1].x)
+		+ getDist(board,point[1].y,point[1].x,point[0].y,point[0].x) + 2;
 			
         	// dfs
-		board[point[0].first][point[0].second]=0;
-		board[point[1].first][point[1].second]=0;
+		board[point[0].y][point[0].x]=0;
+		board[point[1].y][point[1].x]=0;
 
-		ret=min(ret,min(cand1+solve(board,point[1].first,point[1].second),cand2+solve(board,point[0].first,point[0].second)));
+		ret=min(ret,min(cand1 + solve(board,point[1].y,point[1].x),
+				cand2 + solve(board,point[0].y,point[0].x)));
 
-
-		board[point[0].first][point[0].second]=k;
-		board[point[1].first][point[1].second]=k;
+		board[point[0].y][point[0].x]=k;
+		board[point[1].y][point[1].x]=k;
 	}
 	return ret;
 }
