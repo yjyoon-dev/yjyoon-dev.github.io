@@ -180,8 +180,8 @@ int getDist(vector<vector<int>>& board, int y1, int x1, int y2, int x2){
 
         		// 카드 또는 벽을 마주친 경우 Ctrl 키를 이용해 1번만에 이동 가능
 			if(dist[ny][nx]>curDist+1){
-					dist[ny][nx]=curDist+1;
-					q.push(Point(curDist+1,ny,nx));
+				dist[ny][nx]=curDist+1;
+				q.push(Point(curDist+1,ny,nx));
 			}
 		}
 	}
