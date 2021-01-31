@@ -101,12 +101,10 @@ board|r|c|result
 - 아무리 다음 카드가 멀리 있더라도 경로에 다른 카드가 없다면 한 번에 이동할 수 있다.
     - Ctrl + 방향키
     - 따라서 최단거리가 카드 간의 떨어진 칸 수에 비례하지 않는다 → `다익스트라` 필요
-  
 - Ctrl 키를 사용하지 않고 일일히 한 칸씩 이동하는 경우가 최단거리 일때도 있다.
-
 - Enter 키는 카드 한 쌍 당 항상 2번씩 눌린다.
 
-여기까지 정리가 되면 나머지는 `구현`입니다. 예외 없는 꼼꼼한 구현과 더불어 `다익스트라` 알고리즘에 대한 경험과 익숙함이 필요합니다.
+여기까지 정리가 되면 나머지는 `구현`입니다. 오류 없는 꼼꼼한 구현과 더불어 `다익스트라` 알고리즘에 대한 경험과 익숙함이 필요합니다.
 
 <br>
 
@@ -205,15 +203,15 @@ int solve(vector<vector<int>>& board, int y, int x){
 
 		if(point.empty()) continue;
 
-        		// 앞에꺼를 먼저 뒤집음
+        	// 앞에꺼를 먼저 뒤집음
 		int cand1 = getDist(board,y,x,point[0].first,point[0].second)
 		+ getDist(board,point[0].first,point[0].second,point[1].first,point[1].second) + 2;
 
-        		// 뒤에꺼를 먼저 뒤집음
+        	// 뒤에꺼를 먼저 뒤집음
 		int cand2 = getDist(board,y,x,point[1].first,point[1].second)
 		+ getDist(board,point[1].first,point[1].second,point[0].first,point[0].second) + 2;
 			
-        		// dfs
+        	// dfs
 		board[point[0].first][point[0].second]=0;
 		board[point[1].first][point[1].second]=0;
 
