@@ -174,7 +174,7 @@ vector<int> solution(vector<string> info, vector<string> query) {
 
     if(v[2]=="backend") aj=bj=0;
     else if(v[2]=="frontend") aj=bj=1;
-    else {aj=0; bj=1;};
+    else {aj=0; bj=1;}; // '-'
 
     if(v[4]=="junior") ak=bk=0;
     else if(v[4]=="senior") ak=bk=1;
