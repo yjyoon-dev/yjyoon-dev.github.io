@@ -2,7 +2,7 @@
 layout: post
 title: "[후기] 2021 카카오 코딩테스트 후기"
 date: 2021-02-25
-categories: kakao
+categories: review
 photos: /assets/post_images/kakao/2021review.png
 tags: [kakao,review]
 description: "2021 카카오 블라인드 채용 코딩테스트 응시 후기"
