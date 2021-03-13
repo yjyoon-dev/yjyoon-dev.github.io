@@ -5,7 +5,7 @@ date: 2021-02-27
 categories: review
 photos: /assets/post_images/swm/1test.png
 tags: [swm,review]
-description: "2021 SW 마에스트로 12기 1차 코딩테스트 응시 후기"
+description: "2021 SW 마에스트로 12기 1차 코딩테스트 합격 후기"
 ---
 
 <br>
