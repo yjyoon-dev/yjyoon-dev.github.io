@@ -4,7 +4,8 @@ title: "[프로그래머스] 광고 삽입 문제 풀이 (2021 카카오 코딩�
 date: 2021-01-29
 categories: kakao
 photos: /assets/post_images/kakao/insertad.png
-tags: [ps,algorithm,c++,kakao,programmers,two_pointer,string,implementation]
+tags:
+  [ps, algorithm, c++, kakao, programmers, two_pointer, string, implementation]
 description: "2021 카카오 블라인드 채용 코딩테스트 - 광고 삽입 C++ 풀이 (프로그래머스)"
 ---
 
@@ -32,30 +33,30 @@ description: "2021 카카오 블라인드 채용 코딩테스트 - 광고 삽입
 # 제한 사항
 
 - play_time, adv_time은 길이 8로 고정된 문자열입니다.
-    - play_time, adv_time은 HH:MM:SS 형식이며, 00:00:01 이상 99:59:59 이하입니다.
-    - 즉, 동영상 재생시간과 공익광고 재생시간은 00시간 00분 01초 이상 99시간 59분 59초 이하입니다.
-    - 공익광고 재생시간은 동영상 재생시간보다 짧거나 같게 주어집니다.
+  - play_time, adv_time은 HH:MM:SS 형식이며, 00:00:01 이상 99:59:59 이하입니다.
+  - 즉, 동영상 재생시간과 공익광고 재생시간은 00시간 00분 01초 이상 99시간 59분 59초 이하입니다.
+  - 공익광고 재생시간은 동영상 재생시간보다 짧거나 같게 주어집니다.
 - logs는 크기가 1 이상 300,000 이하인 문자열 배열입니다.
-    - logs 배열의 각 원소는 시청자의 재생 구간을 나타냅니다.
-    - logs 배열의 각 원소는 길이가 17로 고정된 문자열입니다.
-    - logs 배열의 각 원소는 H1:M1:S1-H2:M2:S2 형식입니다.
-        - H1:M1:S1은 동영상이 시작된 시각, H2:M2:S2는 동영상이 종료된 시각을 나타냅니다.
-        - H1:M1:S1는 H2:M2:S2보다 1초 이상 이전 시각으로 주어집니다.
-        - H1:M1:S1와 H2:M2:S2는 play_time 이내의 시각입니다.
+  - logs 배열의 각 원소는 시청자의 재생 구간을 나타냅니다.
+  - logs 배열의 각 원소는 길이가 17로 고정된 문자열입니다.
+  - logs 배열의 각 원소는 H1:M1:S1-H2:M2:S2 형식입니다.
+    - H1:M1:S1은 동영상이 시작된 시각, H2:M2:S2는 동영상이 종료된 시각을 나타냅니다.
+    - H1:M1:S1는 H2:M2:S2보다 1초 이상 이전 시각으로 주어집니다.
+    - H1:M1:S1와 H2:M2:S2는 play_time 이내의 시각입니다.
 - 시간을 나타내는 HH, H1, H2의 범위는 00~99, 분을 나타내는 MM, M1, M2의 범위는 00~59, 초를 나타내는 SS, S1, S2의 범위는 00~59까지 사용됩니다. 잘못된 시각은 입력으로 주어지지 않습니다. (예: 04:60:24, 11:12:78, 123:12:45 등)
 
 - return 값의 형식
-    - 공익광고를 삽입할 시각을 HH:MM:SS 형식의 8자리 문자열로 반환합니다.
+  - 공익광고를 삽입할 시각을 HH:MM:SS 형식의 8자리 문자열로 반환합니다.
 
 <br>
 
 # 입출력 예
 
-play_time|adv_time|logs|result
----|---|---|---
-"02:03:55"|"00:14:15"|["01:20:15-01:45:14", "00:40:31-01:00:00", "00:25:50-00:48:29", "01:30:59-01:53:29", "01:37:44-02:02:30"]|"01:30:59"
-"99:59:59"|"25:00:00"|["69:59:59-89:59:59", "01:00:00-21:00:00", "79:59:59-99:59:59", "11:00:00-31:00:00"]|"01:00:00"
-"50:00:00"|"50:00:00"|["15:36:51-38:21:49", "10:14:18-15:36:51", "38:21:49-42:51:45"]|"00:00:00"
+| play_time  | adv_time   | logs                                                                                                      | result     |
+| ---------- | ---------- | --------------------------------------------------------------------------------------------------------- | ---------- |
+| "02:03:55" | "00:14:15" | ["01:20:15-01:45:14", "00:40:31-01:00:00", "00:25:50-00:48:29", "01:30:59-01:53:29", "01:37:44-02:02:30"] | "01:30:59" |
+| "99:59:59" | "25:00:00" | ["69:59:59-89:59:59", "01:00:00-21:00:00", "79:59:59-99:59:59", "11:00:00-31:00:00"]                      | "01:00:00" |
+| "50:00:00" | "50:00:00" | ["15:36:51-38:21:49", "10:14:18-15:36:51", "38:21:49-42:51:45"]                                           | "00:00:00" |
 
 <br>
 
@@ -73,7 +74,7 @@ play_time|adv_time|logs|result
 
 > ad[i] = n 이면 i시간 때 광고를 재생하는 시청자 수가 n명
 
-여기까지 하면 이제 남은 것은 구간합 구하기 밖에 없습니다. 이 때 구간의 길이가 `adv_time` 으로 정해져있습니다. 단순히 `완전탐색` 을 이용할 경우 전체 구간의 길이를 `N`, 광고의 길이를 `M` 이라고 할 때 **O(N*M)** 의 시간복잡도가 걸립니다. 따라서 이 방법으로는 `효율성 테스트` 를 통과할 수 없습니다.
+여기까지 하면 이제 남은 것은 구간합 구하기 밖에 없습니다. 이 때 구간의 길이가 `adv_time` 으로 정해져있습니다. 단순히 `완전탐색` 을 이용할 경우 전체 구간의 길이를 `N`, 광고의 길이를 `M` 이라고 할 때 **O(N\*M)** 의 시간복잡도가 걸립니다. 따라서 이 방법으로는 `효율성 테스트` 를 통과할 수 없습니다.
 
 하지만 **구간의 길이가 항상 일정**하다는 점에 착안하면 **O(N)** 의 시간복잡도로 문제를 해결할 수 있습니다. 전체 구간에서 `0`번째 인덱스부터 `M-1` 인덱스까지 첫 `M` 개 원소 만큼의 구간합을 구했다고 합시다. 그 다음 구간의 구간합을 구할 때 굳이 `1`번째 인덱스부터 `M` 번째 인덱스까지 다시 구해야 할까요?
 
@@ -101,81 +102,77 @@ int ad[360000];
 
 // 문자열 → 초 변환
 int strToSec(string s){
-	int ret=0;
+    int ret=0;
 
-	string h = s.substr(0,2);
-	string m = s.substr(3,2);
-	string c = s.substr(6,2);
+    string h = s.substr(0,2);
+    string m = s.substr(3,2);
+    string c = s.substr(6,2);
 
-	ret+=stoi(h)*60*60;
-	ret+=stoi(m)*60;
-	ret+=stoi(c);
-	return ret;
+    ret+=stoi(h)*60*60;
+    ret+=stoi(m)*60;
+    ret+=stoi(c);
+    return ret;
 }
 
 // 초 → 문자열 변환
 string secToStr(int n){
-	string ret="";
+    string ret="";
 
- 	int s = n%60; n/=60;
-	int m = n%60; n/=60;
-	int h = n;
+     int s = n%60; n/=60;
+    int m = n%60; n/=60;
+    int h = n;
 
-	if(h<10) ret+="0";
-	ret+=to_string(h);
-	ret+=":";
+    if(h<10) ret+="0";
+    ret+=to_string(h);
+    ret+=":";
 
-	if(m<10) ret+="0";
-	ret+=to_string(m);
-	ret+=":";
+    if(m<10) ret+="0";
+    ret+=to_string(m);
+    ret+=":";
 
-	if(s<10) ret+="0";
-	ret+=to_string(s);
+    if(s<10) ret+="0";
+    ret+=to_string(s);
 
     return ret;
 }
 
 string solution(string play_time, string adv_time, vector<string> logs) {
-	string answer = "";
+    string answer = "";
 
-	for(string s:logs){
-		int start = strToSec(s.substr(0,8));
-		int finish = strToSec(s.substr(9,8));
-		for(int i=start;i<finish;i++) ad[i]++; // 시청자 수 누적
-	}
+    for(string s:logs){
+        int start = strToSec(s.substr(0,8));
+        int finish = strToSec(s.substr(9,8));
+        for(int i=start;i<finish;i++) ad[i]++; // 시청자 수 누적
+    }
 
-	int N = strToSec(play_time); // 전체 구간 길이
-	int len = strToSec(adv_time); // 광고 구간 길이
+    int N = strToSec(play_time); // 전체 구간 길이
+    int len = strToSec(adv_time); // 광고 구간 길이
 
-	int idx=0;
-	long long sum=0;
-	long long maxSum=0;
-	
-	queue<int> q;
+    int idx=0;
+    long long sum=0;
+    long long maxSum=0;
 
-	for(int i=0;i<len;i++){
-		sum+=ad[i];
-		q.push(ad[i]);
-	}
-	maxSum=sum;
+    queue<int> q;
+
+    for(int i=0;i<len;i++){
+        sum+=ad[i];
+        q.push(ad[i]);
+    }
+    maxSum=sum;
 
     // 큐를 이용한 투 포인터
-	for(int i=len;i<N;i++){
-		sum += ad[i];
-		q.push(ad[i]);
-		sum -= q.front();
-		q.pop();
-		if(sum > maxSum){
-			idx = i-len+1;
-			maxSum = sum;
-		}
-	}
-	
+    for(int i=len;i<N;i++){
+        sum += ad[i];
+        q.push(ad[i]);
+        sum -= q.front();
+        q.pop();
+        if(sum > maxSum){
+            idx = i-len+1;
+            maxSum = sum;
+        }
+    }
+
     answer = secToStr(idx);
     return answer;
 }
 ```
-
-
-
-

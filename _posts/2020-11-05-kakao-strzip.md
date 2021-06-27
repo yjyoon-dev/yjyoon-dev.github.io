@@ -4,7 +4,8 @@ title: "[프로그래머스] 문자열 압축 문제 풀이 (2020 카카오 코�
 date: 2020-11-05
 categories: kakao
 photos: /assets/post_images/kakao/strzip.png
-tags: [ps,algorithm,c++,kakao,programmers,string,bruteforce,implementation]
+tags:
+  [ps, algorithm, c++, kakao, programmers, string, bruteforce, implementation]
 description: "2020 카카오 블라인드 채용 코딩테스트 - 문자열 압축 C++ 풀이 (프로그래머스)"
 ---
 

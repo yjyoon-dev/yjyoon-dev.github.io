@@ -4,7 +4,19 @@ title: "[프로그래머스] 카드 짝 맞추기 문제 풀이 (2021 카카오 
 date: 2021-01-29
 categories: kakao
 photos: /assets/post_images/kakao/paircard.png
-tags: [ps,algorithm,c++,kakao,programmers,bfs,dijkstra,backtracking,bruteforce,implementation]
+tags:
+  [
+    ps,
+    algorithm,
+    c++,
+    kakao,
+    programmers,
+    bfs,
+    dijkstra,
+    backtracking,
+    bruteforce,
+    implementation,
+  ]
 description: "2021 카카오 블라인드 채용 코딩테스트 - 카드 짝 맞추기 C++ 풀이 (프로그래머스)"
 ---
 
@@ -72,10 +84,10 @@ description: "2021 카카오 블라인드 채용 코딩테스트 - 카드 짝 �
 
 # 입출력 예
 
-board|r|c|result
----|---|---|---
-[[1,0,0,3],[2,0,0,0],[0,0,0,2],[3,0,1,0]]|1|0|14
-[[3,0,0,2],[0,0,1,0],[0,1,0,0],[2,0,0,3]]|0|1|16
+| board                                     | r   | c   | result |
+| ----------------------------------------- | --- | --- | ------ |
+| [[1,0,0,3],[2,0,0,0],[0,0,0,2],[3,0,1,0]] | 1   | 0   | 14     |
+| [[3,0,0,2],[0,0,1,0],[0,1,0,0],[2,0,0,3]] | 0   | 1   | 16     |
 
 <br>
 
@@ -96,13 +108,13 @@ board|r|c|result
 
 > solve(board, y, x) : board[y][x] 의 위치에서 시작해 모든 종류의 카드 뒤집어보기
 
-따라서 `solve` 함수가 한 번 수행될 때마다 임의의 카드 한 쌍을 뒤집고 두번째로 뒤집은 카드의 좌표에서 다시 `solve` 함수를 호출합니다. 카드 쌍을 뒤집을 때 둘 중 어떤 카드를 나중에 뒤집냐에 따라 다음 `solve` 함수의 매개변수가 달라지기 때문에 두 가지 경우를 모두 탐색해주어야 합니다. 
+따라서 `solve` 함수가 한 번 수행될 때마다 임의의 카드 한 쌍을 뒤집고 두번째로 뒤집은 카드의 좌표에서 다시 `solve` 함수를 호출합니다. 카드 쌍을 뒤집을 때 둘 중 어떤 카드를 나중에 뒤집냐에 따라 다음 `solve` 함수의 매개변수가 달라지기 때문에 두 가지 경우를 모두 탐색해주어야 합니다.
 
 다음은 `최소 키보드 입력 횟수` 계산입니다. 고려해야 할 사항은 다음과 같습니다.
 
 - 아무리 다음 카드가 멀리 있더라도 경로에 다른 카드가 없다면 한 번에 이동할 수 있다.
-    + Ctrl + 방향키
-    + 따라서 최단거리가 카드 간의 떨어진 칸 수에 비례하지 않는다 → `다익스트라` 필요
+  - Ctrl + 방향키
+  - 따라서 최단거리가 카드 간의 떨어진 칸 수에 비례하지 않는다 → `다익스트라` 필요
 - Ctrl 키를 사용하지 않고 일일히 한 칸씩 이동하는 경우가 최단거리 일때도 있다.
 - Enter 키는 카드 한 쌍 당 항상 2번씩 눌린다.
 
@@ -122,108 +134,108 @@ int const dy[]={-1,1,0,0};
 int const dx[]={0,0,-1,1};
 
 struct Point{
-	int d,y,x;
-	Point(int y,int x):y(y),x(x){}
-	Point(int d,int y,int x):d(d),y(y),x(x){}
+    int d,y,x;
+    Point(int y,int x):y(y),x(x){}
+    Point(int d,int y,int x):d(d),y(y),x(x){}
 };
 
 // 우선순위 큐 비교 연산자 오버라이딩
 bool operator < (Point a, Point b){
-	return a.d > b.d;
+    return a.d > b.d;
 }
 
 bool isFinished(vector<vector<int>>& board){
-	for(auto v:board) for(int i:v) if(i!=0) return false;
-	return true;
+    for(auto v:board) for(int i:v) if(i!=0) return false;
+    return true;
 }
 
 bool inRange(int y, int x){
-	return y>=0 && x>=0 && y<4 && x<4;
+    return y>=0 && x>=0 && y<4 && x<4;
 }
 
 // 다익스트라를 이용한 최소 키보드 입력 횟수 반환
 int getDist(vector<vector<int>>& board, int y1, int x1, int y2, int x2){
 
-	priority_queue<Point> q;
-	q.push(Point(0,y1,x1));
-	
-	int dist[4][4];
-	for(int i=0;i<4;i++)
-		for(int j=0;j<4;j++)
-			dist[i][j]=1e9;
-	dist[y1][x1]=0;
+    priority_queue<Point> q;
+    q.push(Point(0,y1,x1));
 
-	while(!q.empty()){
-		Point cur = q.top();
-		q.pop();
+    int dist[4][4];
+    for(int i=0;i<4;i++)
+        for(int j=0;j<4;j++)
+            dist[i][j]=1e9;
+    dist[y1][x1]=0;
 
-		int curDist = cur.d;
+    while(!q.empty()){
+        Point cur = q.top();
+        q.pop();
 
-		if(dist[cur.y][cur.x]<cur.d) continue;
+        int curDist = cur.d;
 
-		if(cur.y==y2 && cur.x==x2) return curDist; // 완료
+        if(dist[cur.y][cur.x]<cur.d) continue;
 
-		for(int i=0;i<4;i++){
-			int cnt=0;
-			int ny=cur.y, nx=cur.x;
+        if(cur.y==y2 && cur.x==x2) return curDist; // 완료
 
-        		// 한 칸씩 i방향으로 옮겨가며 최단거리 계산
-			while(inRange(ny+dy[i],nx+dx[i])){
-				cnt++;
-				ny+=dy[i]; nx+=dx[i];
+        for(int i=0;i<4;i++){
+            int cnt=0;
+            int ny=cur.y, nx=cur.x;
 
-				if(board[ny][nx]!=0) break; // 카드 마주침
+                // 한 칸씩 i방향으로 옮겨가며 최단거리 계산
+            while(inRange(ny+dy[i],nx+dx[i])){
+                cnt++;
+                ny+=dy[i]; nx+=dx[i];
 
-				if(dist[ny][nx]>curDist+cnt){
-					dist[ny][nx]=curDist+cnt;
-					q.push(Point(curDist+cnt,ny,nx));
-				}
-			}
+                if(board[ny][nx]!=0) break; // 카드 마주침
 
-        		// 카드 또는 벽을 마주친 경우 Ctrl 키를 이용해 1번만에 이동 가능
-			if(dist[ny][nx]>curDist+1){
-				dist[ny][nx]=curDist+1;
-				q.push(Point(curDist+1,ny,nx));
-			}
-		}
-	}
+                if(dist[ny][nx]>curDist+cnt){
+                    dist[ny][nx]=curDist+cnt;
+                    q.push(Point(curDist+cnt,ny,nx));
+                }
+            }
+
+                // 카드 또는 벽을 마주친 경우 Ctrl 키를 이용해 1번만에 이동 가능
+            if(dist[ny][nx]>curDist+1){
+                dist[ny][nx]=curDist+1;
+                q.push(Point(curDist+1,ny,nx));
+            }
+        }
+    }
 }
 
 // 백트래킹
 int solve(vector<vector<int>>& board, int y, int x){
-	if(isFinished(board)) return 0; // 전부 뒤집음
+    if(isFinished(board)) return 0; // 전부 뒤집음
 
-	int ret=1e9;
+    int ret=1e9;
 
     // 카드 k 뒤집기
-	for(int k=1;k<=6;k++){
-		vector<Point> point;
-		for(int i=0;i<4;i++)
-			for(int j=0;j<4;j++)
-				if(board[i][j]==k)
-					point.push_back(Point(i,j));
+    for(int k=1;k<=6;k++){
+        vector<Point> point;
+        for(int i=0;i<4;i++)
+            for(int j=0;j<4;j++)
+                if(board[i][j]==k)
+                    point.push_back(Point(i,j));
 
-		if(point.empty()) continue;
+        if(point.empty()) continue;
 
-        	// 앞에꺼를 먼저 뒤집음
-		int cand1 = getDist(board,y,x,point[0].y,point[0].x)
-		+ getDist(board,point[0].y,point[0].x,point[1].y,point[1].x) + 2;
+            // 앞에꺼를 먼저 뒤집음
+        int cand1 = getDist(board,y,x,point[0].y,point[0].x)
+        + getDist(board,point[0].y,point[0].x,point[1].y,point[1].x) + 2;
 
-        	// 뒤에꺼를 먼저 뒤집음
-		int cand2 = getDist(board,y,x,point[1].y,point[1].x)
-		+ getDist(board,point[1].y,point[1].x,point[0].y,point[0].x) + 2;
-			
-        	// dfs
-		board[point[0].y][point[0].x]=0;
-		board[point[1].y][point[1].x]=0;
+            // 뒤에꺼를 먼저 뒤집음
+        int cand2 = getDist(board,y,x,point[1].y,point[1].x)
+        + getDist(board,point[1].y,point[1].x,point[0].y,point[0].x) + 2;
 
-		ret=min(ret,min(cand1 + solve(board,point[1].y,point[1].x),
-				cand2 + solve(board,point[0].y,point[0].x)));
+            // dfs
+        board[point[0].y][point[0].x]=0;
+        board[point[1].y][point[1].x]=0;
 
-		board[point[0].y][point[0].x]=k;
-		board[point[1].y][point[1].x]=k;
-	}
-	return ret;
+        ret=min(ret,min(cand1 + solve(board,point[1].y,point[1].x),
+                cand2 + solve(board,point[0].y,point[0].x)));
+
+        board[point[0].y][point[0].x]=k;
+        board[point[1].y][point[1].x]=k;
+    }
+    return ret;
 }
 
 int solution(vector<vector<int>> board, int r, int c) {
@@ -231,4 +243,3 @@ int solution(vector<vector<int>> board, int r, int c) {
     return answer;
 }
 ```
-

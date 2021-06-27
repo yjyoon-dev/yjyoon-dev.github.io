@@ -4,7 +4,18 @@ title: "[프로그래머스] 기둥과 보 설치 문제 풀이 (2020 카카오 
 date: 2020-12-21
 categories: kakao
 photos: /assets/post_images/kakao/pillarfloor.png
-tags: [ps,algorithm,kakao,programmers,implementation,data_structure,set,c++,python]
+tags:
+  [
+    ps,
+    algorithm,
+    kakao,
+    programmers,
+    implementation,
+    data_structure,
+    set,
+    c++,
+    python,
+  ]
 description: "2020 카카오 블라인드 채용 코딩테스트 - 기둥과 보 설치 C++ / Python 간단 풀이 (프로그래머스)"
 ---
 
@@ -17,7 +28,7 @@ description: "2020 카카오 블라인드 채용 코딩테스트 - 기둥과 보
 
 - 기둥은 바닥 위에 있거나 보의 한쪽 끝 부분 위에 있거나, 또는 다른 기둥 위에 있어야 합니다.
 - 보는 한쪽 끝 부분이 기둥 위에 있거나, 또는 양쪽 끝 부분이 다른 보와 동시에 연결되어 있어야 합니다.
-  
+
 단, 바닥은 벽면의 맨 아래 지면을 말합니다.
 
 2차원 벽면은 `n x n` 크기 정사각 격자 형태이며, 각 격자는 `1 x 1` 크기입니다. 맨 처음 벽면은 비어있는 상태입니다. 기둥과 보는 격자선의 교차점에 걸치지 않고, 격자 칸의 각 변에 정확히 일치하도록 설치할 수 있습니다. 다음은 기둥과 보를 설치해 구조물을 만든 예시입니다.
@@ -43,21 +54,21 @@ description: "2020 카카오 블라인드 채용 코딩테스트 - 기둥과 보
 - build_frame의 세로(행) 길이는 1 이상 1,000 이하입니다.
 - build_frame의 가로(열) 길이는 4입니다.
 - build_frame의 원소는 [x, y, a, b]형태입니다.
-    - x, y는 기둥, 보를 설치 또는 삭제할 교차점의 좌표이며, [가로 좌표, 세로 좌표] 형태입니다.
-    - a는 설치 또는 삭제할 구조물의 종류를 나타내며, 0은 기둥, 1은 보를 나타냅니다.
-    - b는 구조물을 설치할 지, 혹은 삭제할 지를 나타내며 0은 삭제, 1은 설치를 나타냅니다.
-    - 벽면을 벗어나게 기둥, 보를 설치하는 경우는 없습니다.
-    - 바닥에 보를 설치 하는 경우는 없습니다.
+  - x, y는 기둥, 보를 설치 또는 삭제할 교차점의 좌표이며, [가로 좌표, 세로 좌표] 형태입니다.
+  - a는 설치 또는 삭제할 구조물의 종류를 나타내며, 0은 기둥, 1은 보를 나타냅니다.
+  - b는 구조물을 설치할 지, 혹은 삭제할 지를 나타내며 0은 삭제, 1은 설치를 나타냅니다.
+  - 벽면을 벗어나게 기둥, 보를 설치하는 경우는 없습니다.
+  - 바닥에 보를 설치 하는 경우는 없습니다.
 - 구조물은 교차점 좌표를 기준으로 보는 오른쪽, 기둥은 위쪽 방향으로 설치 또는 삭제합니다.
 - 구조물이 겹치도록 설치하는 경우와, 없는 구조물을 삭제하는 경우는 입력으로 주어지지 않습니다.
 - 최종 구조물의 상태는 아래 규칙에 맞춰 return 해주세요.
-    - return 하는 배열은 가로(열) 길이가 3인 2차원 배열로, 각 구조물의 좌표를 담고있어야 합니다.
-    - return 하는 배열의 원소는 [x, y, a] 형식입니다.
-    - x, y는 기둥, 보의 교차점 좌표이며, [가로 좌표, 세로 좌표] 형태입니다.
-    - 기둥, 보는 교차점 좌표를 기준으로 오른쪽, 또는 위쪽 방향으로 설치되어 있음을 나타냅니다.
-    - a는 구조물의 종류를 나타내며, 0은 기둥, 1은 보를 나타냅니다.
-    - return 하는 배열은 x좌표 기준으로 오름차순 정렬하며, x좌표가 같을 경우 y좌표 기준으로 오름차순 정렬해주세요.
-    - x, y좌표가 모두 같은 경우 기둥이 보보다 앞에 오면 됩니다.
+  - return 하는 배열은 가로(열) 길이가 3인 2차원 배열로, 각 구조물의 좌표를 담고있어야 합니다.
+  - return 하는 배열의 원소는 [x, y, a] 형식입니다.
+  - x, y는 기둥, 보의 교차점 좌표이며, [가로 좌표, 세로 좌표] 형태입니다.
+  - 기둥, 보는 교차점 좌표를 기준으로 오른쪽, 또는 위쪽 방향으로 설치되어 있음을 나타냅니다.
+  - a는 구조물의 종류를 나타내며, 0은 기둥, 1은 보를 나타냅니다.
+  - return 하는 배열은 x좌표 기준으로 오름차순 정렬하며, x좌표가 같을 경우 y좌표 기준으로 오름차순 정렬해주세요.
+  - x, y좌표가 모두 같은 경우 기둥이 보보다 앞에 오면 됩니다.
 
 <br>
 
@@ -66,11 +77,11 @@ description: "2020 카카오 블라인드 채용 코딩테스트 - 기둥과 보
 처음 문제를 접하고 풀기 시작했을 때는 멘탈이 나갈 뻔 했다. 단순히 엄청난 양의 예외 처리가 필요한 빡구현 문제인 줄 알았다. 물론 그렇게도 풀 수 있겠지만 `2차원 배열` 의 선언 조차 없이 간단히 푸는 방법이 있었다. 아이디어는 다음과 같다.
 
 - 구조물을 추가하는 경우
-    - 구조물을 추가한 후 모든 구조물에 대하여 문제에서의 조건을 만족하는지 확인한다.
-    - 만족하지 않는다면 추가한 구조물을 다시 제거한다.
+  - 구조물을 추가한 후 모든 구조물에 대하여 문제에서의 조건을 만족하는지 확인한다.
+  - 만족하지 않는다면 추가한 구조물을 다시 제거한다.
 - 구조물을 제거하는 경우
-    - 구조물을 제거한 후 모든 구조물에 대하여 문제에서의 조건을 만족하는지 확인한다.
-    - 만족하지 않는다면 제거한 구조물을 다시 추가한다.
+  - 구조물을 제거한 후 모든 구조물에 대하여 문제에서의 조건을 만족하는지 확인한다.
+  - 만족하지 않는다면 제거한 구조물을 다시 추가한다.
 
 위 아이디어에서 **문제의 조건**이란 다음과 같다.
 
@@ -96,42 +107,42 @@ description: "2020 카카오 블라인드 채용 코딩테스트 - 기둥과 보
 using namespace std;
 
 bool isValid(const set<vector<int>>& building){
-	for(auto build:building){
-		int x=build[0], y=build[1], a=build[2];
+    for(auto build:building){
+        int x=build[0], y=build[1], a=build[2];
 
-		if(a==0){
-			vector<int> pred[3]={ {x,y-1,0},{x,y,1},{x-1,y,1} };
-			if(y==0 || has(0) || has(1) || has(2)) continue;
-			return false;
-		}
-		else{
-			vector<int> pred[4]={ {x,y-1,0},{x+1,y-1,0},{x+1,y,1},{x-1,y,1} };
-			if(has(0) || has(1) || (has(2)&&has(3))) continue;
-			return false;
-		}
-	}
+        if(a==0){
+            vector<int> pred[3]={ {x,y-1,0},{x,y,1},{x-1,y,1} };
+            if(y==0 || has(0) || has(1) || has(2)) continue;
+            return false;
+        }
+        else{
+            vector<int> pred[4]={ {x,y-1,0},{x+1,y-1,0},{x+1,y,1},{x-1,y,1} };
+            if(has(0) || has(1) || (has(2)&&has(3))) continue;
+            return false;
+        }
+    }
 
-	return true;
+    return true;
 }
 
 vector<vector<int>> solution(int n, vector<vector<int>> build_frame) {
-	vector<vector<int>> answer;
+    vector<vector<int>> answer;
     set<vector<int>> building;
 
-	for(auto task:build_frame){
-		vector<int> v = {task[0],task[1],task[2]};
-		if(task[3]==0){
-			building.erase(v);
-			if(!isValid(building)) building.insert(v);
-		}
-		else{
-			building.insert(v);
-			if(!isValid(building)) building.erase(v);
-		}
-	}
+    for(auto task:build_frame){
+        vector<int> v = {task[0],task[1],task[2]};
+        if(task[3]==0){
+            building.erase(v);
+            if(!isValid(building)) building.insert(v);
+        }
+        else{
+            building.insert(v);
+            if(!isValid(building)) building.erase(v);
+        }
+    }
 
-	for(auto build:building)
-		answer.push_back(build);
+    for(auto build:building)
+        answer.push_back(build);
 
     return answer;
 }
@@ -170,6 +181,3 @@ def solution(n, build_frame):
     answer.sort(key=lambda x:(x[0],x[1],x[2]))
     return answer
 ```
-
-
-

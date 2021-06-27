@@ -4,7 +4,7 @@ title: "[프로그래머스] 외벽 점검 문제 풀이 (2020 카카오 코딩�
 date: 2021-01-04
 categories: kakao
 photos: /assets/post_images/kakao/wallcheck.png
-tags: [ps,algorithm,c++,kakao,programmers,bruteforce,implementation]
+tags: [ps, algorithm, c++, kakao, programmers, bruteforce, implementation]
 description: "2020 카카오 블라인드 채용 코딩테스트 - 외벽 점검 C++ 풀이 (프로그래머스)"
 ---
 
@@ -24,21 +24,21 @@ description: "2020 카카오 블라인드 채용 코딩테스트 - 외벽 점검
 
 - n은 1 이상 200 이하인 자연수입니다.
 - weak의 길이는 1 이상 15 이하입니다.
-    - 서로 다른 두 취약점의 위치가 같은 경우는 주어지지 않습니다.
-    - 취약 지점의 위치는 오름차순으로 정렬되어 주어집니다.
-    - weak의 원소는 0 이상 n - 1 이하인 정수입니다.
+  - 서로 다른 두 취약점의 위치가 같은 경우는 주어지지 않습니다.
+  - 취약 지점의 위치는 오름차순으로 정렬되어 주어집니다.
+  - weak의 원소는 0 이상 n - 1 이하인 정수입니다.
 - dist의 길이는 1 이상 8 이하입니다.
-    - dist의 원소는 1 이상 100 이하인 자연수입니다.
+  - dist의 원소는 1 이상 100 이하인 자연수입니다.
 - 친구들을 모두 투입해도 취약 지점을 전부 점검할 수 없는 경우에는 -1을 return 해주세요.
 
 <br>
 
 # 입출력 예
 
-|n|weak|dist|result|
-|---|-----|-----|---|
-|12|[1, 5, 6, 10]|[1, 2, 3, 4]|2|
-|12|[1, 3, 4, 9, 10]|[3, 5, 7]|1|
+| n   | weak             | dist         | result |
+| --- | ---------------- | ------------ | ------ |
+| 12  | [1, 5, 6, 10]    | [1, 2, 3, 4] | 2      |
+| 12  | [1, 3, 4, 9, 10] | [3, 5, 7]    | 1      |
 
 <br>
 
@@ -88,34 +88,34 @@ using namespace std;
 
 int solution(int n, vector<int> weak, vector<int> dist) {
     int answer = 1e9;
-	int W = weak.size();
+    int W = weak.size();
 
     // 원형에 대한 weak 배열 가공
-	weak.resize(2*W);
-	for(int i=W;i<weak.size();i++)
-		weak[i] = weak[i-W]+n;
+    weak.resize(2*W);
+    for(int i=W;i<weak.size();i++)
+        weak[i] = weak[i-W]+n;
 
-	sort(dist.begin(),dist.end()); // 순열 계산을 위한 정렬
+    sort(dist.begin(),dist.end()); // 순열 계산을 위한 정렬
 
-	do{
-		for(int i=0;i<W;i++){
-			int start = weak[i]; // 검사 시작 지점
-			int finish = weak[i+W-1]; // 검사 종료 예상 지점
-			for(int j=0;j<dist.size();j++){
-				start += dist[j];
-				if(start >= finish){ // 모든 지점 방문 완료 시 탈출
-					answer = min(answer,j+1);
-					break;
-				}
+    do{
+        for(int i=0;i<W;i++){
+            int start = weak[i]; // 검사 시작 지점
+            int finish = weak[i+W-1]; // 검사 종료 예상 지점
+            for(int j=0;j<dist.size();j++){
+                start += dist[j];
+                if(start >= finish){ // 모든 지점 방문 완료 시 탈출
+                    answer = min(answer,j+1);
+                    break;
+                }
                 // 다음 검사 시작 지점 구하기
                 // => 마지막에 방문한 지점보다 큰 weak 지점 중 가장 작은 지점
-				int next = upper_bound(weak.begin(),weak.end(),start)-weak.begin();
-				start = weak[next];
-			}
-		}
-	}while(next_permutation(dist.begin(),dist.end())); // 모든 순열에 대한 탐색
+                int next = upper_bound(weak.begin(),weak.end(),start)-weak.begin();
+                start = weak[next];
+            }
+        }
+    }while(next_permutation(dist.begin(),dist.end())); // 모든 순열에 대한 탐색
 
-	if(answer == 1e9) return -1;
+    if(answer == 1e9) return -1;
 
     return answer;
 }

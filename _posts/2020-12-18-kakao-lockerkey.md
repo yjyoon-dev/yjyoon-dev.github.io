@@ -4,7 +4,7 @@ title: "[프로그래머스] 자물쇠와 열쇠 문제 풀이 (2020 카카오 �
 date: 2020-12-18
 categories: kakao
 photos: /assets/post_images/kakao/lockerkey.png
-tags: [ps,algorithm,c++,kakao,programmers,bruteforce,implementationm]
+tags: [ps, algorithm, c++, kakao, programmers, bruteforce, implementationm]
 description: "2020 카카오 블라인드 채용 코딩테스트 - 자물쇠와 열쇠 C++ 풀이 (프로그래머스)"
 ---
 
@@ -28,15 +28,15 @@ description: "2020 카카오 블라인드 채용 코딩테스트 - 자물쇠와 
 - lock은 N x N(3 ≤ N ≤ 20, N은 자연수)크기 2차원 배열입니다.
 - M은 항상 N 이하입니다.
 - key와 lock의 원소는 0 또는 1로 이루어져 있습니다.
-    - 0은 홈 부분, 1은 돌기 부분을 나타냅니다.
+  - 0은 홈 부분, 1은 돌기 부분을 나타냅니다.
 
 <br>
 
 # 입출력 예
 
-|key|lock|result|
-|-------|-------|-----|
-|[[0, 0, 0], [1, 0, 0], [0, 1, 1]]|[[1, 1, 1], [1, 1, 0], [1, 0, 1]]|true|
+| key                               | lock                              | result |
+| --------------------------------- | --------------------------------- | ------ |
+| [[0, 0, 0], [1, 0, 0], [0, 1, 1]] | [[1, 1, 1], [1, 1, 0], [1, 0, 1]] | true   |
 
 <br>
 
@@ -69,76 +69,73 @@ vector<vector<int>> board;
 
 // 잠금 해제 여부 체크
 bool check(vector<vector<int>>& key, int y, int x){
-	bool ret = true;
+    bool ret = true;
 
-	// 보드판에 열쇠 값 적용
-	for(int i=y;i<y+M;i++)
-		for(int j=x;j<x+M;j++)
-			board[i][j]+=key[i-y][j-x];
+    // 보드판에 열쇠 값 적용
+    for(int i=y;i<y+M;i++)
+        for(int j=x;j<x+M;j++)
+            board[i][j]+=key[i-y][j-x];
 
-	// 자물쇠의 모든 좌표 확인
-	for(int i=M;i<M+N;i++){
-		for(int j=M;j<M+N;j++){
-			if(board[i][j]!=1){
-				ret=false;
-				break;
-			}
-		}
-		if(!ret) break;
-	}
+    // 자물쇠의 모든 좌표 확인
+    for(int i=M;i<M+N;i++){
+        for(int j=M;j<M+N;j++){
+            if(board[i][j]!=1){
+                ret=false;
+                break;
+            }
+        }
+        if(!ret) break;
+    }
 
-	// 보드판에 열쇠 값 해제
-	for(int i=y;i<y+M;i++)
-		for(int j=x;j<x+M;j++)
-			board[i][j]-=key[i-y][j-x];
+    // 보드판에 열쇠 값 해제
+    for(int i=y;i<y+M;i++)
+        for(int j=x;j<x+M;j++)
+            board[i][j]-=key[i-y][j-x];
 
-	return ret;
+    return ret;
 }
 
 // 열쇠 시계방향 회전
 void rotate(vector<vector<int>>& key){
-	vector<vector<int>> temp(M,vector<int>(M));
+    vector<vector<int>> temp(M,vector<int>(M));
 
-	for(int i=0;i<M;i++)
-		for(int j=0;j<M;j++)
-			temp[i][j] = key[j][M-i-1];
+    for(int i=0;i<M;i++)
+        for(int j=0;j<M;j++)
+            temp[i][j] = key[j][M-i-1];
 
-	for(int i=0;i<M;i++)
-		for(int j=0;j<M;j++)
-			key[i][j] = temp[i][j];
+    for(int i=0;i<M;i++)
+        for(int j=0;j<M;j++)
+            key[i][j] = temp[i][j];
 }
 
 bool solution(vector<vector<int>> key, vector<vector<int>> lock) {
     bool answer = false;
 
-	M = key.size();
-	N = lock.size();
+    M = key.size();
+    N = lock.size();
 
-	board = vector<vector<int>>(2*M+N,vector<int>(2*M+N));
+    board = vector<vector<int>>(2*M+N,vector<int>(2*M+N));
 
-	// 보드판에 좌물쇠 입력
-	for(int i=M;i<M+N;i++)
-		for(int j=M;j<M+N;j++)
-			board[i][j]=lock[i-M][j-M];
-	
-	// 보드판의 모든 좌표에서 4방향에 대한 완전탐색
-	for(int i=0;i<N+M;i++){
-		for(int j=0;j<N+M;j++){
-			for(int k=0;k<4;k++){
-				rotate(key);
-				if(check(key,i,j)){
-					answer = true;
-					break;
-				}
-			}
-			if(answer) break;
-		}
-		if(answer) break;
-	}
+    // 보드판에 좌물쇠 입력
+    for(int i=M;i<M+N;i++)
+        for(int j=M;j<M+N;j++)
+            board[i][j]=lock[i-M][j-M];
+
+    // 보드판의 모든 좌표에서 4방향에 대한 완전탐색
+    for(int i=0;i<N+M;i++){
+        for(int j=0;j<N+M;j++){
+            for(int k=0;k<4;k++){
+                rotate(key);
+                if(check(key,i,j)){
+                    answer = true;
+                    break;
+                }
+            }
+            if(answer) break;
+        }
+        if(answer) break;
+    }
 
     return answer;
 }
 ```
-
-
-

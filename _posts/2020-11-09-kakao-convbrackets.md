@@ -4,7 +4,8 @@ title: "[프로그래머스] 괄호 변환 문제 풀이 (2020 카카오 코딩�
 date: 2020-11-09
 categories: kakao
 photos: /assets/post_images/kakao/convbrackets.png
-tags: [ps,algorithm,c++,kakao,programmers,string,implementation,recursion]
+tags:
+  [ps, algorithm, c++, kakao, programmers, string, implementation, recursion]
 description: "2020 카카오 블라인드 채용 코딩테스트 - 괄호 변환 C++ 풀이 (프로그래머스)"
 ---
 
@@ -26,16 +27,16 @@ description: "2020 카카오 블라인드 채용 코딩테스트 - 괄호 변환
 
 '(' 와 ')' 로만 이루어진 문자열 w가 균형잡힌 괄호 문자열 이라면 다음과 같은 과정을 통해 올바른 괄호 문자열로 변환할 수 있습니다.
 
-1. 입력이 빈 문자열인 경우, 빈 문자열을 반환합니다. 
-2. 문자열 w를 두 "균형잡힌 괄호 문자열" u, v로 분리합니다. 단, u는 "균형잡힌 괄호 문자열"로 더 이상 분리할 수 없어야 하며, v는 빈 문자열이 될 수 있습니다. 
-3. 문자열 u가 "올바른 괄호 문자열" 이라면 문자열 v에 대해 1단계부터 다시 수행합니다. 
-   1. 수행한 결과 문자열을 u에 이어 붙인 후 반환합니다. 
-4. 문자열 u가 "올바른 괄호 문자열"이 아니라면 아래 과정을 수행합니다. 
-    1. 빈 문자열에 첫 번째 문자로 '('를 붙입니다. 
-    2. 문자열 v에 대해 1단계부터 재귀적으로 수행한 결과 문자열을 이어 붙입니다. 
-    3. ')'를 다시 붙입니다. 
-    4. u의 첫 번째와 마지막 문자를 제거하고, 나머지 문자열의 괄호 방향을 뒤집어서 뒤에 붙입니다. 
-    5. 생성된 문자열을 반환합니다.
+1. 입력이 빈 문자열인 경우, 빈 문자열을 반환합니다.
+2. 문자열 w를 두 "균형잡힌 괄호 문자열" u, v로 분리합니다. 단, u는 "균형잡힌 괄호 문자열"로 더 이상 분리할 수 없어야 하며, v는 빈 문자열이 될 수 있습니다.
+3. 문자열 u가 "올바른 괄호 문자열" 이라면 문자열 v에 대해 1단계부터 다시 수행합니다.
+   1. 수행한 결과 문자열을 u에 이어 붙인 후 반환합니다.
+4. 문자열 u가 "올바른 괄호 문자열"이 아니라면 아래 과정을 수행합니다.
+   1. 빈 문자열에 첫 번째 문자로 '('를 붙입니다.
+   2. 문자열 v에 대해 1단계부터 재귀적으로 수행한 결과 문자열을 이어 붙입니다.
+   3. ')'를 다시 붙입니다.
+   4. u의 첫 번째와 마지막 문자를 제거하고, 나머지 문자열의 괄호 방향을 뒤집어서 뒤에 붙입니다.
+   5. 생성된 문자열을 반환합니다.
 
 **균형잡힌 괄호 문자열** p가 매개변수로 주어질 때, 주어진 알고리즘을 수행해 **올바른 괄호 문자열**로 변환한 결과를 return 하도록 solution 함수를 완성해 주세요.
 
@@ -57,40 +58,40 @@ description: "2020 카카오 블라인드 채용 코딩테스트 - 괄호 변환
 using namespace std;
 
 bool isOK(string s){
-	int cnt=0;
+    int cnt=0;
 
-	for(char c:s){
-		if(c=='(') cnt++;
-		else cnt--;
+    for(char c:s){
+        if(c=='(') cnt++;
+        else cnt--;
 
-		if(cnt<0) return false;
-	}
+        if(cnt<0) return false;
+    }
 
-	return cnt==0;
+    return cnt==0;
 }
 
 string solution(string p) {
     if(p=="") return p;
 
     int cnt=0;
-	string u,v;
+    string u,v;
 
-	for(int i=0;i<p.size();i++){
-		if(p[i]=='(') cnt++;
-		else cnt--;
-		if(cnt==0){
-			u=p.substr(0,i+1);
-			v=p.substr(i+1);
-			break;
-		}
-	}
+    for(int i=0;i<p.size();i++){
+        if(p[i]=='(') cnt++;
+        else cnt--;
+        if(cnt==0){
+            u=p.substr(0,i+1);
+            v=p.substr(i+1);
+            break;
+        }
+    }
 
-	if(isOK(u)) return u + solution(v);
+    if(isOK(u)) return u + solution(v);
 
-	string ret = "("+solution(v)+")";
-	for(int i=1;i<u.size()-1;i++)
-		ret += (u[i]=='('?")":"(");
+    string ret = "("+solution(v)+")";
+    for(int i=1;i<u.size()-1;i++)
+        ret += (u[i]=='('?")":"(");
 
-	return ret;
+    return ret;
 }
 ```

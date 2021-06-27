@@ -4,7 +4,18 @@ title: "[프로그래머스] 메뉴 리뉴얼 문제 풀이 (2021 카카오 코�
 date: 2021-01-30
 categories: kakao
 photos: /assets/post_images/kakao/menurenewal.png
-tags: [ps,algorithm,c++,kakao,programmers,bruteforce,string,data_structcure,implementation]
+tags:
+  [
+    ps,
+    algorithm,
+    c++,
+    kakao,
+    programmers,
+    bruteforce,
+    string,
+    data_structcure,
+    implementation,
+  ]
 description: "2021 카카오 블라인드 채용 코딩테스트 - 메뉴 리뉴얼 C++ 풀이 (프로그래머스)"
 ---
 
@@ -19,23 +30,23 @@ description: "2021 카카오 블라인드 채용 코딩테스트 - 메뉴 리뉴
 예를 들어, 손님 6명이 주문한 단품메뉴들의 조합이 다음과 같다면,
 (각 손님은 단품메뉴를 2개 이상 주문해야 하며, 각 단품메뉴는 A ~ Z의 알파벳 대문자로 표기합니다.)
 
-손님 번호|주문한 단품메뉴 조합
----|---
-1번 손님|A, B, C, F, G
-2번 손님|A, C
-3번 손님|C, D, E
-4번 손님|A, C, D, E
-5번 손님|B, C, F, G
-6번 손님|A, C, D, E, H
+| 손님 번호 | 주문한 단품메뉴 조합 |
+| --------- | -------------------- |
+| 1번 손님  | A, B, C, F, G        |
+| 2번 손님  | A, C                 |
+| 3번 손님  | C, D, E              |
+| 4번 손님  | A, C, D, E           |
+| 5번 손님  | B, C, F, G           |
+| 6번 손님  | A, C, D, E, H        |
 
 가장 많이 함께 주문된 단품메뉴 조합에 따라 스카피가 만들게 될 코스요리 메뉴 구성 후보는 다음과 같습니다.
 
-코스 종류|메뉴 구성|설명
----|---|---
-요리 2개 코스|A, C|1번, 2번, 4번, 6번 손님으로부터 총 4번 주문됐습니다.
-요리 3개 코스|C, D, E|3번, 4번, 6번 손님으로부터 총 3번 주문됐습니다.
-요리 4개 코스|B, C, F, G|1번, 5번 손님으로부터 총 2번 주문됐습니다.
-요리 4개 코스|A, C, D, E|4번, 6번 손님으로부터 총 2번 주문됐습니다.
+| 코스 종류     | 메뉴 구성  | 설명                                                 |
+| ------------- | ---------- | ---------------------------------------------------- |
+| 요리 2개 코스 | A, C       | 1번, 2번, 4번, 6번 손님으로부터 총 4번 주문됐습니다. |
+| 요리 3개 코스 | C, D, E    | 3번, 4번, 6번 손님으로부터 총 3번 주문됐습니다.      |
+| 요리 4개 코스 | B, C, F, G | 1번, 5번 손님으로부터 총 2번 주문됐습니다.           |
+| 요리 4개 코스 | A, C, D, E | 4번, 6번 손님으로부터 총 2번 주문됐습니다.           |
 
 <br>
 
@@ -59,7 +70,7 @@ description: "2021 카카오 블라인드 채용 코딩테스트 - 메뉴 리뉴
   - 배열의 각 원소에 저장된 문자열 또한 알파벳 오름차순으로 정렬되어야 합니다.
   - 만약 가장 많이 함께 주문된 메뉴 구성이 여러 개라면, 모두 배열에 담아 return 하면 됩니다.
   - orders와 course 매개변수는 return 하는 배열의 길이가 1 이상이 되도록 주어집니다.
-  
+
  <br>
  
  # 입출력 예
@@ -115,21 +126,21 @@ void comb(string s, int idx, string made){
 }
 vector<string> solution(vector<string> orders, vector<int> course) {
     vector<string> answer;
-    
+
     // order의 모든 조합 전처리
     for(string& s:orders){
         sort(s.begin(),s.end()); // 순서만 다르고 중복된 조합이 나오지 않도록 정렬
         comb(s,-1,"");
     }
-    
+
     // 쿼리 수행
     for(int i:course)
         if(cnt[i]>1) // 길이가 i인 조합의 최대 주문 횟수가 1 이상인 경우만
             for(string s:menu[i][cnt[i]])
                 answer.push_back(s);
-    
+
     sort(answer.begin(),answer.end());
-    
+
     return answer;
 }
 ```
