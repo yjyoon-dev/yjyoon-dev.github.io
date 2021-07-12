@@ -2,7 +2,7 @@
 layout: post
 title: "[2021 카카오 인턴십] 숫자 문자열과 영단어 풀이 (프로그래머스)"
 date: 2021-07-12
-categories: BOJ
+categories: kakao
 photos: /assets/post_images/kakao/numstrengword.png
 tags: [ps, boj, algorithm, c++, dynamic_programming]
 description: "프로그래머스 - 숫자 문자열과 영단어 C++ 풀이 (2021 카카오 인턴십 코딩테스트)"
@@ -68,7 +68,7 @@ description: "프로그래머스 - 숫자 문자열과 영단어 C++ 풀이 (202
 using namespace std;
 
 bool isNum(char c) {
-    return '0'<= c && c<='9';
+    return '0'<=c && c<='9';
 }
 
 int solution(string s) {
