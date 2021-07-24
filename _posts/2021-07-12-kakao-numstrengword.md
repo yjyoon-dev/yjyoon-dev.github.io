@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[2021 카카오 인턴십] 숫자 문자열과 영단어 풀이 (프로그래머스)"
+title: "[프로그래머스] 숫자 문자열과 영단어 풀이 (2021 카카오 인턴십)"
 date: 2021-07-12
 categories: kakao
 photos: /assets/post_images/kakao/numstrengword.png

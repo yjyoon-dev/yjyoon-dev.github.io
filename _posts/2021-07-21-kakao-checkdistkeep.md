@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[2021 카카오 인턴십] 거리두기 확인하기 풀이 (프로그래머스)"
+title: "[프로그래머스] 거리두기 확인하기 풀이 (2021 카카오 인턴십)"
 date: 2021-07-21
 categories: kakao
 photos: /assets/post_images/kakao/checkdistkeep.png
