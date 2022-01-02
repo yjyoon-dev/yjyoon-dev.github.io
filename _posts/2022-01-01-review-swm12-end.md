@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[후기] 2021 SW 마에스트로 12기 활동 후기"
+title: "[후기] 2021 SW 마에스트로 12기 활동 및 수료 후기"
 date: 2022-01-01
 categories: review
 photos: /assets/post_images/swm/end.png
