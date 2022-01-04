@@ -5,7 +5,7 @@ date: 2022-01-01
 categories: review
 photos: /assets/post_images/swm/end.png
 tags: [swm,review]
-description: "2021 SW 마에스트로 12기 활동 및 수료 후기"
+description: "2021 SW 마에스트로 12기 활동 및 수료 후기이자 2021년 회고록"
 ---
 
 <br>
