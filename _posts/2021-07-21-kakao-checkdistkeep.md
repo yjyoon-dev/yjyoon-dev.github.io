@@ -4,7 +4,7 @@ title: "[프로그래머스] 거리두기 확인하기 풀이 (2021 카카오 �
 date: 2021-07-21
 categories: kakao
 photos: /assets/post_images/kakao/checkdistkeep.png
-tags: [ps, boj, algorithm, c++, dfs, bfs, implementation]
+tags: [ps, kakao, programmers, algorithm, c++, dfs, bfs, implementation]
 description: "프로그래머스 - 거리두기 확인하기 C++ 풀이 (2021 카카오 인턴십 코딩테스트)"
 ---
 

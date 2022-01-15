@@ -4,7 +4,7 @@ title: "[프로그래머스] 숫자 문자열과 영단어 풀이 (2021 카카�
 date: 2021-07-12
 categories: kakao
 photos: /assets/post_images/kakao/numstrengword.png
-tags: [ps, boj, algorithm, c++, dynamic_programming]
+tags: [ps, kakao, programmers, algorithm, c++, dynamic_programming]
 description: "프로그래머스 - 숫자 문자열과 영단어 C++ 풀이 (2021 카카오 인턴십 코딩테스트)"
 ---
 

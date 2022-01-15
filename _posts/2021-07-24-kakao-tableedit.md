@@ -4,7 +4,7 @@ title: "[프로그래머스] 표 편집 풀이 (2021 카카오 인턴십)"
 date: 2021-07-24
 categories: kakao
 photos: /assets/post_images/kakao/tableedit.png
-tags: [ps, boj, algorithm, c++, string, linked_list, set, implementation]
+tags: [ps, kakao, programmers, algorithm, c++, string, linked_list, set, implementation]
 description: "프로그래머스 - 표 편집 C++ 풀이 (2021 카카오 인턴십 코딩테스트)"
 ---
 
