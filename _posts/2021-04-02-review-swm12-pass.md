@@ -84,5 +84,3 @@ description: "2021 SW 마에스트로 12기 최종 합격 후기"
 ---
 
 추후 SW 마에스트로 연수생 모집에 지원하는 분들께 도움이 되었기를 바랍니다!
-
-- [[후기] 2021 SW 마에스트로 12기 활동 및 수료 후기](https://yjyoon-dev.github.io/review/2022/01/01/review-swm12-end/)
