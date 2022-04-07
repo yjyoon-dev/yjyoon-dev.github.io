@@ -21,8 +21,8 @@ $subtitle-color                   : $gray-lighter;
 // --------------------------------------------------
 $sidebar-offset-float             : if(type-of(jekyll-config('sidebar.offset_float')) == 'number',  jekyll-config('sidebar.offset_float') + px, null);
 
-$sidebar-nav-hover-color          : $orange;
-$sidebar-highlight                : $orange;
+$sidebar-nav-hover-color          : $blue;
+$sidebar-highlight                : $blue;
 
 $site-author-image-width          : 120px;
 $site-author-image-border-width   : 1px;

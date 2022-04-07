@@ -56,14 +56,14 @@
 
 .feed-link a {
   display: block;
-  color: $orange;
+  color: $blue;
   border: none;
 
   &:hover {
     background: none;
-    color: scale-color($orange, $lightness: -20%);
+    color: scale-color($blue, $lightness: -20%);
 
-    i { color: scale-color($orange, $lightness: -20%); }
+    i { color: scale-color($blue, $lightness: -20%); }
   }
 }
 
