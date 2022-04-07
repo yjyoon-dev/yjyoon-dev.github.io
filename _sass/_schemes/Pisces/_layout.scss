@@ -1,7 +1,7 @@
 .header {
   position: relative;
   margin: 0 auto;
-  width: $main-desktop-large;
+  width: $main-desktop;
 
   @include tablet() {
     width: auto;
@@ -16,13 +16,13 @@
   top: 0;
   overflow: hidden;
   padding: 0;
-  width: 360px;
+  width: 240px;
   background: white;
   box-shadow: $box-shadow-inner;
   border-radius: $border-radius-inner;
 
   @include desktop-large() {
-    .container & { width: 360px; }
+    .container & { width: 240px; }
   }
   @include tablet() {
     position: relative;
@@ -47,7 +47,7 @@
 }
 
 .container .main-inner {
-  width: $main-desktop-large;
+  width: $main-desktop;
 
   @include tablet() {
     width: auto;
@@ -100,7 +100,7 @@
 
 
 .footer-inner {
-  width: $main-desktop-large;
+  width: $main-desktop;
   padding-left: 260px;
 
   @include tablet() {
