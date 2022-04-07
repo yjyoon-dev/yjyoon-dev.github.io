@@ -16,13 +16,13 @@
   top: 0;
   overflow: hidden;
   padding: 0;
-  width: 240px;
+  width: 260px;
   background: white;
   box-shadow: $box-shadow-inner;
   border-radius: $border-radius-inner;
 
   @include desktop-large() {
-    .container & { width: 240px; }
+    .container & { width: 260px; }
   }
   @include tablet() {
     position: relative;
@@ -74,7 +74,7 @@
   }
   @include mobile() {
     width: 100%;
-    padding: 12px;
+    padding: 20px;
     min-height: auto;
     border-radius: initial;
   }
@@ -101,7 +101,7 @@
 
 .footer-inner {
   width: $main-desktop;
-  padding-left: 390px;
+  padding-left: 340px;
 
   @include tablet() {
     width: auto;
