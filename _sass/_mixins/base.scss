@@ -17,13 +17,13 @@
 }
 
 @mixin desktop() {
-  @media (min-width: 992px) {
+  @media (min-width: 1600px) {
     @content;
   }
 }
 
 @mixin desktop-large() {
-  @media (min-width: 1600px) {
+  @media (min-width: 1930px) {
     @content;
   }
 }

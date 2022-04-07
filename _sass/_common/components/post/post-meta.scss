@@ -25,9 +25,10 @@
 .post-views {
   display: inline-block;
   pointer-events: none;
-  
+
   img {
     display: inline;
+    bottom: -10px;
   }
 }
 
