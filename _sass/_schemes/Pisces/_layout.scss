@@ -22,7 +22,7 @@
   border-radius: $border-radius-inner;
 
   @include desktop-large() {
-    .container & { width: 240px; }
+    .container & { width: 480px; }
   }
   @include tablet() {
     position: relative;

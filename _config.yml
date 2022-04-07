@@ -2,6 +2,7 @@
 title: YJYOON's Code Story
 subtitle: Android Developer
 description: yjyoon.dev@gmail.com
+signature: yjyoon.dev@gmail.com
 author: Yeojun Yoon
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: ko
@@ -211,8 +212,6 @@ font:
 social:
   Github: https://github.com/yjyoon-dev
   LinkedIn: https://www.linkedin.com/in/yjyoon-dev
-  Email: yjyoon.dev@gmail.com
-
 # Social Links Icons
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
@@ -224,8 +223,6 @@ social_icons:
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   Github: github
   LinkedIn: linkedin
-  E-Mail: gmail
-
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
