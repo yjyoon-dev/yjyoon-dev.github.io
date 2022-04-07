@@ -100,7 +100,7 @@ copyright: true
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in jekyll config.
 # subtitle: Subtitle
@@ -209,8 +209,8 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  GitHub: https://github.com/yjyoon-dev
-
+  Github: https://github.com/yjyoon-dev
+  LinkedIn: https://www.linkedin.com/in/yjyoon-dev
 
 # Social Links Icons
 # Icon Mapping:
@@ -221,7 +221,8 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
+  Github: github
+  LinkedIn: linkedin
 
 
 # Sidebar Avatar
