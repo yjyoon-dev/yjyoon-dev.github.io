@@ -376,10 +376,10 @@ han: false
 disqus:
   enable: true
   shortname: yjyoon
-  count: true
+  count: false
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true
-  hide: false
+  hide: true
 
 # <wildfire>
 wildfire:
@@ -429,12 +429,12 @@ changyan:
 
 # Support for gitalk comments system.
 gitalk:
-  enable: false
-  clientID: # 54730ddf7b9420460c03
-  clientSecret: # c05684701b25ff1c19ea0c01ce4d80c125e0707d
-  repo: # colingpt.github.io
-  owner: # colingpt
-  admin: # colingpt
+  enable: true
+  clientID: d94ba200ebecd2b0e2f4
+  clientSecret: c9bf379069384453083edbaa697ccd54bfd56bed
+  repo: yjyoon-dev.github.io
+  owner: yjyoon-dev
+  admin: [yjyoon-dev]
 
 # Baidu Share
 # Available value:
