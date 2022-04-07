@@ -1,6 +1,6 @@
 # Site
 title: YJYOON's Code Story
-subtitle: Be developer
+subtitle: Android Developer
 description: yjyoon.dev@gmail.com
 author: Yeojun Yoon
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
@@ -146,9 +146,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -211,6 +211,7 @@ font:
 social:
   Github: https://github.com/yjyoon-dev
   LinkedIn: https://www.linkedin.com/in/yjyoon-dev
+  Email: yjyoon.dev@gmail.com
 
 # Social Links Icons
 # Icon Mapping:
@@ -223,6 +224,7 @@ social_icons:
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   Github: github
   LinkedIn: linkedin
+  E-Mail: gmail
 
 
 # Sidebar Avatar
@@ -510,7 +512,7 @@ vkontakte_api:
 # To get your ID visit https://widgetpack.com
 rating:
   enable: false
-  id:     #<app_id>
+  id:     34472
   color:  fc6423
 
 

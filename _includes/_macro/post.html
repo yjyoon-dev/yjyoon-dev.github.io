@@ -86,7 +86,14 @@
               </time>
             {% endif %}
           </span>
-
+          
+          {% unless is_index %}
+            <span class="post-views">
+              <span class="post-meta-divider">|</span>
+              <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}&count_bg=%233D3D3D&title_bg=%23000000&icon=&icon_color=%23E7E7E7&title=views&edge_flat=true"/>
+            </span>
+          {% endunless %}
+          
           {% if post.categories and post.categories.size > 0 and site.post_meta.categories %}
             <span class="post-category" >
             {% if site.post_meta.created_at or site.post_meta.updated_at %}
@@ -196,13 +203,6 @@
               </span>
             {% endif %}
           {% endif %}
-
-          {% unless is_index %}
-            <span class="post-views">
-              <span class="post-meta-divider">|</span>
-              <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}&count_bg=%233D3D3D&title_bg=%23000000&icon=&icon_color=%23E7E7E7&title=views&edge_flat=true"/>
-            </span>
-          {% endunless %}
 
           {% comment %} LeanCould PageView {% endcomment %}
           {% if site.leancloud_visitors.enable %}
