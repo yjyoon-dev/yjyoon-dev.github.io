@@ -3,6 +3,7 @@
 .links-of-author a {
   display: inline-block;
   vertical-align: middle;
+  text-align: center;
   margin-right: 10px;
   margin-bottom: 10px;
   border-bottom-color: $black-light;
@@ -11,6 +12,7 @@
   &:before {
     display: inline-block;
     vertical-align: middle;
+    text-align: center;
     margin-right: 3px;
     content: " ";
     width: 4px;
