@@ -99,7 +99,7 @@ $font-size-larger         : $font-size-base + 4px;
 
 
 // Headings font size
-$font-size-headings-step    : 4px;
+$font-size-headings-step    : 8px;
 $font-size-headings-base    : 32px;
 $font-size-headings-small   : $font-size-headings-base - $font-size-headings-step;
 $font-size-headings-smaller : $font-size-headings-small - $font-size-headings-step;
@@ -142,7 +142,7 @@ $table-row-hover-bg-color       : $whitesmoke;
 // Code & Code Blocks
 // --------------------------------------------------
 $code-font-family               : $font-family-monospace;
-$code-font-size                 : 13px;
+$code-font-size                 : 15px;
 $code-font-size                 : if(type-of(jekyll-config('font.codes.size')) == 'number', jekyll-config('font.codes.size') + px, $code-font-size);
 $code-border-radius             : 3px;
 $code-foreground                : $black-light;
