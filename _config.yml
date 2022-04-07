@@ -234,7 +234,7 @@ toc:
   enable: true
 
   # Automatically add list number to toc.
-  number: true
+  number: false
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
@@ -509,8 +509,8 @@ vkontakte_api:
 # To get your ID visit https://widgetpack.com
 rating:
   enable: true
-  id:     34472
-  color:  fc6423
+  id: 34472
+  color: 222222
 
 
 # Show number of visitors to each article.
