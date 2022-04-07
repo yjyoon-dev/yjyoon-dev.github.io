@@ -11,7 +11,7 @@
 }
 
 @mixin tablet() {
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 768px) and (max-width: 1599px) {
     @content;
   }
 }
@@ -23,7 +23,7 @@
 }
 
 @mixin desktop-large() {
-  @media (min-width: 1930px) {
+  @media (min-width: 1600px) {
     @content;
   }
 }
