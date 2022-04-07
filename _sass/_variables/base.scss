@@ -99,11 +99,11 @@ $font-size-larger         : $font-size-base + 4px;
 
 
 // Headings font size
-$font-size-headings-step    : 8px;
+$font-size-headings-step    : 4px;
 $font-size-headings-base    : 24px;
-$font-size-headings-small   : $font-size-headings-base - $font-size-headings-step;
-$font-size-headings-smaller : $font-size-headings-small - $font-size-headings-step;
-$font-size-headings-large   : $font-size-headings-base + $font-size-headings-step;
+$font-size-headings-smaller : $font-size-headings-base + $font-size-headings-step;
+$font-size-headings-small   : $font-size-headings-smaller + $font-size-headings-step;
+$font-size-headings-large   : $font-size-headings-small + $font-size-headings-step;
 $font-size-headings-larger  : $font-size-headings-large + $font-size-headings-step;
 
 // Global line height
