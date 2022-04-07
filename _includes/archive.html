@@ -3,15 +3,6 @@
 
   <span class="archive-page-counter">
     {% assign posts_length = site.posts.size %}
-    {% if posts_length > 210 %} {% assign cheers = 'excellent' %}
-      {% elsif posts_length > 130 %} {% assign cheers = 'great' %}
-      {% elsif posts_length > 80 %} {% assign cheers = 'good' %}
-      {% elsif posts_length > 50 %} {% assign cheers = 'nice' %}
-      {% elsif posts_length > 30 %} {% assign cheers = 'ok' %}
-    {% else %}
-      {% assign cheers = 'um' %}
-    {% endif %}
-    {{ __.cheers[cheers] }}!
     {% if site.posts.size == 0 %}
       {{ __.counter.archive_posts.zero }}
     {% elsif site.posts.size == 1 %}
