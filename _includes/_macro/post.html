@@ -180,10 +180,10 @@
               </span>
             {% elsif site.changyan.enable and site.changyan.appid and site.changyan.appkey %}
               <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
               {% if post.layout == 'post' %}
                 <a href="{{ post.url | relative_url }}#SOHUCS" itemprop="discussionUrl">
                   <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="{{ post.url }}" itemprop="commentsCount"></span>
@@ -193,14 +193,14 @@
                   <span id="url::{{ post.url | absolute_url }}" class="cy_cmt_count" data-xid="{{ post.url }}" itemprop="commentsCount" ></span>
                 </a>
               {% endif %}
+              </span>
             {% endif %}
           {% endif %}
 
           {% unless is_index %}
             <span class="post-views">
               <span class="post-meta-divider">|</span>
-                <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}&count_bg=%233D3D3D&title_bg=%23000000&icon=&icon_color=%23E7E7E7&title=views&edge_flat=true"/>
-              </a>
+              <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}&count_bg=%233D3D3D&title_bg=%23000000&icon=&icon_color=%23E7E7E7&title=views&edge_flat=true"/>
             </span>
           {% endunless %}
 
