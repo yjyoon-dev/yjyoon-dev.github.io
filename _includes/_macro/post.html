@@ -299,8 +299,8 @@
 
       {% if is_index %}
         {% if post.description and site.excerpt_description %}
-          <div class="post-description">
-            {{ post.description }}
+          <div class="post-meta">
+            <div class="post-description">{{ post.description }}</div>
           </div>
           <!--noindex-->
           <div class="post-button text-center">
