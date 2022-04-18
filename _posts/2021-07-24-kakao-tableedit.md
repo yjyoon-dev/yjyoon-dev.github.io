@@ -86,7 +86,77 @@ description: "프로그래머스 - 표 편집 C++ 풀이 (2021 카카오 인턴�
 
 <br>
 
+> 문제를 푼지 반년만에 다시 풀이해 본 결과, set 자료구조를 이용한 풀이는 더 이상 프로그래머스에서 **효율성 테스트**를 통과하지 못하는 것으로 확인했습니다. 아무래도 본 풀이를 카카오의 의도와는 다른 풀이로 취급하여 테스트 케이스에 데이터 **삽입 및 삭제**를 대량으로 수행하는 케이스를 추가한 것으로 보입니다. set 자료구조를 이용한 풀이는 참고만 해주시고, 프로그래머스 상에서 풀이할 때에는 **연결 리스트 풀이**를 적용해주셔야 합니다.
+
+<br>
+
 # 전체 코드
+
+- 연결 리스트 풀이
+
+```c++
+#include <bits/stdc++.h>
+using namespace std;
+
+struct Node {
+    int n;
+    Node* prev;
+    Node* next;
+    Node(int n, Node* prev, Node* next) : n(n), prev(prev), next(next) {}
+};
+
+string solution(int n, int k, vector<string> cmd) {
+    string answer(n, 'X');
+    
+    // 테이블 생성
+    Node* cursor = new Node(0, NULL, NULL);
+    for(int i=1;i<n;i++) {
+        cursor->next = new Node(i, cursor, NULL);
+        cursor = cursor->next;
+    }
+    
+    // k로 커서 이동
+    for(int i=0;i<n-k-1;i++) cursor = cursor->prev;
+    
+    // cmd 수행
+    stack<Node*> del;
+    for(string str : cmd) {
+        if(str[0] == 'U' || str[0] == 'D') {
+            int x = stoi(str.substr(2));
+            if(str[0] == 'U') while(x--) cursor = cursor->prev;
+            else while(x--) cursor = cursor->next;
+        }
+        else if(str[0] == 'C') {
+            del.push(cursor);
+            if(cursor->prev != NULL) cursor->prev->next = cursor->next;
+            if(cursor->next != NULL) cursor->next->prev = cursor->prev;
+            if(cursor->next == NULL) cursor = cursor->prev;
+            else cursor = cursor->next;
+        }
+        else {
+            Node* r = del.top(); del.pop();
+            if(r->prev != NULL) r->prev->next = r;
+            if(r->next != NULL) r->next->prev = r;
+        }
+    }
+    
+    // 삭제 여부 검사 (현재 커서 기준 윗쪽 부분은 중복 검사하므로 비효율적)
+    answer[cursor->n] = 'O';
+    while(cursor->prev != NULL) {
+        answer[cursor->prev->n] = 'O';
+        cursor = cursor->prev;
+    }
+    while(cursor->next != NULL) {
+        answer[cursor->next->n] = 'O';
+        cursor = cursor->next;
+    }
+    
+    return answer;
+}
+}
+```
+
+<br>
 
 - set 자료구조 풀이
 
@@ -126,100 +196,6 @@ string solution(int n, int k, vector<string> cmd) {
     }
 
     for(int i:table) answer[i]='O';
-
-    return answer;
-}
-```
-
-<br>
-
-- 연결 리스트 풀이
-
-```c++
-#include <string>
-#include <vector>
-#include <stack>
-using namespace std;
-
-int cur;
-stack<int> st;
-
-// 연결 리스트 node
-struct Node {
-    int num;
-    Node* prev;
-    Node* next;
-    Node(int num):num(num),prev(NULL),next(NULL){};
-};
-
-vector<Node*> v;
-
-void solve(vector<string>& cmd){
-    for(string s:cmd){
-        if(s[0]=='D' || s[0]=='U'){
-            int x = stoi(s.substr(2));
-            if(s[0]=='D') while(x--) cur = v[cur]->next->num;
-            else while(x--) cur = v[cur]->prev->num;
-        }
-        else if(s[0]=='C'){
-            st.push(cur);
-            if(v[cur]->prev != NULL)
-                v[cur]->prev->next = v[cur]->next;
-            if(v[cur]->next != NULL){
-                v[cur]->next->prev = v[cur]->prev;
-                cur = v[cur]->next->num;
-            }
-            else cur = v[cur]->prev->num;
-        }
-        else if(s[0]=='Z'){
-            int r = st.top(); st.pop();
-            if(v[r]->prev != NULL)
-                v[r]->prev->next = v[r];
-            if(v[r]->next != NULL)
-            v[r]->next->prev = v[r];
-        }
-        else return; //oops
-    }
-}
-
-string solution(int n, int k, vector<string> cmd) {
-    string answer(n,'X');
-    
-    // 연결리스트 생성 및 연결
-    v = vector<Node*>(n);
-    
-    for(int i=0;i<n;i++)
-        v[i] = new Node(i);
-    
-    v[0]->next = v[1];
-    v[n-1]->prev = v[n-2];
-    
-    for(int i=1;i<n-1;i++){
-        v[i]->next = v[i+1];
-        v[i]->prev = v[i-1];
-    }
-    
-    // cmd 수행
-    cur = k;
-    solve(cmd);
-    
-    // 삭제 여부 체크
-    int leftCheck, rightCheck;
-    leftCheck = rightCheck = cur;
-    
-    answer[cur] = 'O';
-    
-    // 현재 커서 기준 왼쪽 체크
-    while(v[leftCheck]->prev != NULL){
-        leftCheck = v[leftCheck]->prev->num;
-        answer[leftCheck] = 'O';
-    }
-    
-    // 현재 커서 기준 오른쪽 체크
-    while(v[rightCheck]->next != NULL){
-        rightCheck = v[rightCheck]->next->num;
-        answer[rightCheck] = 'O';
-    }
 
     return answer;
 }
