@@ -140,7 +140,8 @@ string solution(int n, int k, vector<string> cmd) {
         }
     }
     
-    // 삭제 여부 검사 (현재 커서 기준 윗쪽 부분은 중복 검사하므로 비효율적)
+    // 삭제 여부 검사
+    // (다소 비효율적인 방법이지만 코드의 간결성을 위해)
     answer[cursor->n] = 'O';
     while(cursor->prev != NULL) {
         answer[cursor->prev->n] = 'O';
