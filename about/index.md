@@ -19,31 +19,12 @@ type: about
 
 ## Skill
 
-**Mobile**
-- Android, Kotlin
-- Flutter, Dart
-
-<br>
-
-**Front-End**
-- React, Javascript, Sass
-- Flutter, Dart
-
-<br>
-
-**Back-End**
-- Springboot, JPA, Kotlin, Java
-- Ktor, Kotlin
-- Flask, Python
-- MySQL
-
-<br>
-
-**Dev-Ops**
-- AWS
-- Docker
-- Nginx
-- Firebase
+Part | Tech Stack | Environment
+---|---|---
+Mobile | Android, Flutter | Kotlin, Dart
+Front-End | React, Flutter | Javascript, Dart
+Back-End | SpringBoot, Ktor, Flask, JPA, MySQL | Kotlin, Java, Python
+Dev-Ops | AWS, GCP, Docker | Linux, Nginx
 
 ---
 
@@ -128,7 +109,5 @@ type: about
 - 오프라인 SNS 해시태그 이벤트 관리 시스템 특허 *(2021.10.20)*
 
 ---
-
-<br>
 
 > *Effort and luck will meet someday*
