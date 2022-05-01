@@ -3,9 +3,8 @@ layout: page
 type: about
 ---
 
-# Profile
+## Profile
 
-## 윤여준
 ### Yeojun Yoon
 - yjyoon.dev@gmail.com
 - Kwangwoon Univ. Software
@@ -20,41 +19,42 @@ type: about
 
 <br>
 
-# Skill
+## Skill
 
-## Mobile
+### Mobile
 - Android, Kotlin
 - Flutter, Dart
 
-## Front-End
+### Front-End
 - React, Javascript, Sass
 - Flutter, Dart
 
-## Back-End
+### Back-End
 - Springboot, JPA, Kotlin, Java
 - Ktor, Kotlin
 - Flask, Python
 - MySQL
   
-## Dev-Ops
+### Dev-Ops
 - AWS
 - Docker
 - Nginx
+- Firebase
 
 ---
 
 <br>
 
-# Experience
+## Experience
 
-- SW Maestro 12th
-- YAPP 20th
+- SW Maestro 12th *(2021.04 ~ 2021.12)*
+- YAPP 20th *(2022.04 ~ 2021.08)*
   
 ---
 
 <br>
 
-# Project
+## Project
 
 - [**광운대학교 수강신청 모의 연습 프로그램**](https://github.com/yjyoon-dev/kw-enrolment-practice) *(2019. 02)*
     - 개인 프로젝트 / 기획 개발(Windows Desktop)
@@ -111,10 +111,27 @@ type: about
 
 <br>
 
-# SW Certificate
+## Achievement
+
+- SW 마에스트로 12기 해커톤 최우수상 (2021)
+- 광운대학교 제 1회 인공지능 아이디어 공모전 우수상(2018)
+
+---
+
+<br>
+
+## SW Certificate
 
 - AWS Certified Solutions Architect - Associate
 - TOPCIT Level 3 (Score 543)
+
+---
+
+<br>
+
+## SW Patent
+
+- 오프라인 SNS 해시태그 이벤트 관리 시스템 특허 *(2021.10.20)*
 
 ---
 
