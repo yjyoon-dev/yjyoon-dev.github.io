@@ -17,24 +17,28 @@ type: about
 
 ---
 
-<br>
-
 ## Skill
 
 **Mobile**
 - Android, Kotlin
 - Flutter, Dart
 
+<br>
+
 **Front-End**
 - React, Javascript, Sass
 - Flutter, Dart
+
+<br>
 
 **Back-End**
 - Springboot, JPA, Kotlin, Java
 - Ktor, Kotlin
 - Flask, Python
 - MySQL
-  
+
+<br>
+
 **Dev-Ops**
 - AWS
 - Docker
@@ -43,16 +47,12 @@ type: about
 
 ---
 
-<br>
-
 ## Experience
 
 - SW Maestro 12th *(2021.04 ~ 2021.12)*
 - YAPP 20th *(2022.04 ~ 2021.08)*
   
 ---
-
-<br>
 
 ## Project
 
@@ -109,8 +109,6 @@ type: about
 
 ---
 
-<br>
-
 ## Achievement
 
 - SW 마에스트로 12기 해커톤 최우수상 (2021)
@@ -118,16 +116,12 @@ type: about
 
 ---
 
-<br>
-
 ## SW Certificate
 
-- AWS Certified Solutions Architect - Associate
 - TOPCIT Level 3 (Score 543)
+- AWS Certified Solutions Architect - Associate
 
 ---
-
-<br>
 
 ## SW Patent
 
