@@ -7,8 +7,8 @@ type: about
 
 ### Yeojun Yoon
 - yjyoon.dev@gmail.com
-- Kwangwoon Univ. Software
-- Android Developer
+- Majoring in Software, Kwangwoon Univ.
+- Junior Android Developer
 
 ### Link
 - [https://github.com/yjyoon-dev](https://github.com/yjyoon-dev)
@@ -21,21 +21,21 @@ type: about
 
 ## Skill
 
-### Mobile
+**Mobile**
 - Android, Kotlin
 - Flutter, Dart
 
-### Front-End
+**Front-End**
 - React, Javascript, Sass
 - Flutter, Dart
 
-### Back-End
+**Back-End**
 - Springboot, JPA, Kotlin, Java
 - Ktor, Kotlin
 - Flask, Python
 - MySQL
   
-### Dev-Ops
+**Dev-Ops**
 - AWS
 - Docker
 - Nginx
@@ -137,4 +137,4 @@ type: about
 
 <br>
 
-> 오늘도 어김없이 커밋을 안주삼아 맥주를 마시며 밤을 샙니다
+> *Effort and luck will meet someday*
