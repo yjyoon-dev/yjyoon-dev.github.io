@@ -70,9 +70,9 @@ Dev-Ops | AWS, GCP, Docker | Linux, Nginx
     - SW 특허 출원 및 브랜드 로고 상표 출원
     - 마케팅 및 인터뷰를 통한 실사용자 유치, Play 스토어 이벤트 부문 10위 달성
 
-- [**Nara 크롤링 시스템**](https://github.com/yjyoon-dev/NARA-crawler) *(2021. 12)*
+- [**NARA 크롤링 시스템**](https://github.com/yjyoon-dev/NARA-crawler) *(2021. 12)*
     - 개인 / KBS 외주 개발
-    - 특정 백과사전 웹페이지 데이터 수집
+    - 특정 웹페이지 데이터 수집
 
 - [**KW 알리미 광운대학교 공지사항 알림 서비스**](https://github.com/yjyoon-dev/kw-notice) *(2022. 02)*
     - 개인 프로젝트 / 기획 디자인 개발(Android & Server)
