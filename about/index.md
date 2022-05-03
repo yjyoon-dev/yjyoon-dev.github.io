@@ -39,12 +39,12 @@ Dev-Ops | AWS, GCP, Docker | Linux, Nginx
 
 - [**광운대학교 수강신청 모의 연습 프로그램**](https://github.com/yjyoon-dev/kw-enrolment-practice) *(2019. 02)*
     - 개인 프로젝트 / 기획 개발(Windows Desktop)
-    - 누적 다운로드 횟수 약 10000회 / 22-1학기 다운로드 횟수 약 1500회
+    - 누적 다운로드 횟수 약 10,000회 / 22-1학기 다운로드 횟수 약 1,500회
     - 재학생 피드백 및 원본 프로그램 변경에 따른 지속적 업데이트 중
 
 - [**미니게임 모음집 2048 Snake Tetris**](https://github.com/yjyoon-dev/javascript-mini-game) *(2020. 06)*
     - 개인 프로젝트 / 기획 디자인 개발(Web)
-    - 군인 복무 시절 개발, 군인 이용자 수 약 6500명 (IT게시판 조회수 기준)
+    - 군인 복무 시절 개발, 군인 이용자 수 약 6,500명 (IT게시판 조회수 기준)
 
 - [**YJYOON’s Code Story 개인 기술 블로그**](https://yjyoon-dev.github.io/) *(2020. 10 ~ )*
     - 개인 프로젝트 / 디자인 수정 및 부가 기능 구현(Web)
