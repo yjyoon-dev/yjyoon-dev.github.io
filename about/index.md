@@ -8,7 +8,7 @@ type: about
 ### Yeojun Yoon
 - yjyoon.dev@gmail.com
 - Majoring in Software, Kwangwoon Univ.
-- Junior Android Developer
+- Be Android Developer
 
 ### Link
 - [https://github.com/yjyoon-dev](https://github.com/yjyoon-dev)
@@ -84,8 +84,8 @@ Dev-Ops | AWS, GCP, Docker | Linux, Nginx
 - [**Sniffeed 컨텐츠 이미지 자동 생성 서비스**](https://github.com/yjyoon-dev/sniffeed-cic) *(2022. 04)*
     - 개인 / 스타트업 외주 개발(Web)
 
-- [**Merang 리워드식 지식 공유 플랫폼**](https://github.com/YAPP-Github/20th-ALL-Rounder-Team-2-Android) *(2022. 05 ~ )*
-    - 10인 1팀 /  기획 개발(Android)
+- [**Knowlly 리워드식 지식 공유 플랫폼**](https://github.com/YAPP-Github/20th-ALL-Rounder-Team-2-Android) *(2022. 05 ~ )*
+    - 9인 1팀 /  기획 개발(Android)
     - YAPP 20기 올라운더 프로젝트
 
 ---
