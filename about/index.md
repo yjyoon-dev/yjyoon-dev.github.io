@@ -59,7 +59,7 @@ Dev-Ops | AWS, GCP, Docker | Linux, Nginx
 
 - [**햇살 실종 아동 웹 전단지 서비스**](https://github.com/yjyoon-dev/swm-hatsal-missing) *(2021. 05)*
     - 6인 1팀 / 기획 디자인 개발(Front-End)
-    - SW 마에스트로 12기 해커톤 진행, 최우수상
+    - SW 마에스트로 12기 해커톤 최우수상 수상
 
 - [**모두의 여가 관광지 무장애 정보 제공 플랫폼**](https://github.com/yjyoon-dev/leisure-for-all) *(2021. 06)*
     - 2인 1팀 / 기획 디자인 개발(Full-stack)
@@ -68,7 +68,7 @@ Dev-Ops | AWS, GCP, Docker | Linux, Nginx
 - [**쏘다 SNS 해시태그 이벤트 자동화 매니저**](https://github.com/yjyoon-dev/ssoda-flutter) *(2021. 11)*
     - 3인 1팀 / 기획 디자인 개발(Web & Mobile)
     - SW 특허 출원 및 브랜드 로고 상표 출원
-    - 마케팅 및 인터뷰를 통한 실사용자 유치, Play 스토어 이벤트 부문 10위 달성
+    - 실사용자 유치, Play 스토어 이벤트 부문 10위 달성
 
 - [**NARA 크롤링 시스템**](https://github.com/yjyoon-dev/NARA-crawler) *(2021. 12)*
     - 개인 / KBS 외주 개발
@@ -80,19 +80,26 @@ Dev-Ops | AWS, GCP, Docker | Linux, Nginx
 
 - [**Coverist 북커버 생성 AI 서비스**](https://github.com/coverist) *(2022. 03)*
     - 4인 1팀 / 기획 개발(Android & Server + Infra)
+    - 2022 광운대학교 SW참빛설계 우수상 수상
 
 - [**Sniffeed 컨텐츠 이미지 자동 생성 서비스**](https://github.com/yjyoon-dev/sniffeed-cic) *(2022. 04)*
     - 개인 / 스타트업 외주 개발(Web)
 
 - [**Knowlly 리워드식 지식 공유 플랫폼**](https://github.com/YAPP-Github/20th-ALL-Rounder-Team-2-Android) *(2022. 05 ~ )*
-    - 9인 1팀 /  기획 개발(Android)
+    - 9인 1팀 / 기획 개발(Android)
     - YAPP 20기 올라운더 프로젝트
+
+- [**엠비티엠아이 MBTI 익명 커뮤니티 플랫폼**](https://github.com/sw-hackathon-2022) *(2022. 06)*
+    - 3인 1팀 / 팀장 기획 개발(Mobile)
+    - 2022 SW중심대학 공동해커톤 우수상 수상
 
 ---
 
 ## Achievement
 
 - SW 마에스트로 12기 해커톤 최우수상 (2021)
+- 2022 SW중심대학 공동 해커톤 우수상 (2022)
+- 2022 광운대학교 SW참빛설계 우수상 (2022)
 - 광운대학교 제 1회 인공지능 아이디어 공모전 우수상(2018)
 
 ---
