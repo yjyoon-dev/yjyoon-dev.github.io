@@ -90,7 +90,7 @@ Dev-Ops | AWS, GCP, Docker | Linux, Nginx
     - YAPP 20기 올라운더 프로젝트
 
 - [**엠비티엠아이 MBTI 익명 커뮤니티 플랫폼**](https://github.com/sw-hackathon-2022) *(2022. 06)*
-    - 5인 1팀 / 팀장 기획 개발(Mobile)
+    - 5인 1팀 / 기획 개발(Mobile)
     - 2022 SW중심대학 공동해커톤 우수상 수상
 
 ---
