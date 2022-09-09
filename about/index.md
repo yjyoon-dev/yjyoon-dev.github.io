@@ -72,24 +72,24 @@ Dev-Ops | AWS, GCP, Docker | Linux, Nginx
 - [**NARA 크롤링 시스템**](https://github.com/yjyoon-dev/NARA-crawler) *(2021. 12)*
     - 개인 / KBS 외주 개발
 
-- [**KW 알리미 광운대학교 공지사항 알림 서비스**](https://github.com/yjyoon-dev/kw-notice) *(2022. 02)*
-    - 개인 프로젝트 / 기획 디자인 개발(Android & Server)
-    - 서비스 이용 재학생 수 약 700명
-
-- [**Coverist 북커버 생성 AI 서비스**](https://github.com/coverist) *(2022. 03)*
-    - 4인 1팀 / 기획 개발(Android & Server + Infra)
-    - 2022 광운대학교 SW참빛설계 우수상 수상
-
 - [**Sniffeed 컨텐츠 이미지 자동 생성 서비스**](https://github.com/yjyoon-dev/sniffeed-cic) *(2022. 04)*
     - 개인 / 스타트업 외주 개발(Web)
 
-- [**Knowlly 리워드식 지식 공유 플랫폼**](https://github.com/YAPP-Github/20th-ALL-Rounder-Team-2-Android) *(2022. 05 ~ )*
+- [**Coverist 북커버 생성 AI 서비스**](https://github.com/coverist) *(2022. 05)*
+    - 4인 1팀 / 기획 개발(Android & Server + Infra)
+    - 2022 광운대학교 SW참빛설계 우수상 수상
+
+- [**엠비티엠아이 MBTI 익명 커뮤니티 플랫폼**](https://github.com/yjyoon-dev/mbtmi-flutter) *(2022. 06)*
+    - 5인 1팀 / 기획 개발(Flutter)
+    - 2022 SW중심대학 공동해커톤 우수상 수상
+
+- [**Knowlly 리워드식 지식 공유 플랫폼**](https://github.com/yjyoon-dev/knowlly-android) *(2022. 07)*
     - 9인 1팀 / 기획 개발(Android)
     - YAPP 20기 올라운더 프로젝트
 
-- [**엠비티엠아이 MBTI 익명 커뮤니티 플랫폼**](https://github.com/sw-hackathon-2022) *(2022. 06)*
-    - 5인 1팀 / 기획 개발(Flutter)
-    - 2022 SW중심대학 공동해커톤 우수상 수상
+- [**KW 알리미 광운대학교 공지사항 알림 서비스**](https://github.com/kw-notice/kw-notice-android-v2) *(2022. 08)*
+    - 개인 프로젝트 / 기획 디자인 개발(Android & Server)
+    - 서비스 이용 재학생 수 약 700명
 
 ---
 
