@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[후기] YAPP 20기 안드로이드 파트 활동 후기"
+title: "[후기] YAPP 20기 안드로이드 파트 수료 후기"
 date: 2022-09-16
 categories: review
 photos: /assets/post_images/yapp/yapp.png
