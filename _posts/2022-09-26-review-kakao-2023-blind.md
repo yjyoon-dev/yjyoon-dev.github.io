@@ -3,7 +3,7 @@ layout: post
 title: "[후기] 2023 카카오 블라인드 코딩테스트 후기"
 date: 2022-09-26
 categories: kakao
-photos: /assets/post_images/kakao/2022review.png
+photos: /assets/post_images/kakao/review-2023-blind.png
 tags: [kakao,review]
 description: "2023 카카오 블라인드 채용 1차 코딩테스트 응시 후기"
 ---
