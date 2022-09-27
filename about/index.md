@@ -24,14 +24,24 @@ Part | Tech Stack | Environment
 Mobile | Android, Flutter | Kotlin, Dart
 Front-End | React, Flutter | Javascript, Dart
 Back-End | SpringBoot, Ktor, Flask, JPA, MySQL | Kotlin, Java, Python
-Dev-Ops | AWS, GCP, Docker | Linux, Nginx
+Dev-Ops | AWS, GCP, Docker, Nginx | Linux
 
+---
+
+## Internship
+
+- Neurosky, Inc. *(2022.08 ~ 2022.12)*
+  - Android Developer
+  - 미국 캘리포니아 실리콘밸리 소재 해외 기업
+  
 ---
 
 ## Experience
 
-- SW Maestro 12th *(2021.04 ~ 2021.12)*
-- YAPP 20th *(2022.04 ~ 2021.08)*
+- SW마이스터고 연합 해커톤 멘토 *(2022.10)*
+- 미국 산호세 주립대 SVSTIP *(2022.07 ~ 2022.08)*
+- YAPP 20기 안드로이드 YB *(2022.04 ~ 2021.08)*
+- SW 마에스트로 12기 *(2021.04 ~ 2021.12)*
   
 ---
 
@@ -95,10 +105,11 @@ Dev-Ops | AWS, GCP, Docker | Linux, Nginx
 
 ## Achievement
 
-- SW 마에스트로 12기 해커톤 최우수상 (2021)
-- 2022 SW중심대학 공동 해커톤 우수상 (2022)
-- 2022 광운대학교 SW참빛설계 우수상 (2022)
-- 광운대학교 제 1회 인공지능 아이디어 공모전 우수상(2018)
+
+- SW중심대학 공동 해커톤 **우수상** *(2022)*
+- 중앙대학교 캠퍼스타운 창업경진대회 **대상** *(2022)*
+- SW 마에스트로 12기 해커톤 **최우수상** *(2021)*
+- 광운대학교 AI 아이디어 공모전 **우수상** *(2018)*
 
 ---
 
