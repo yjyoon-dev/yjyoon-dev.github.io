@@ -12,7 +12,7 @@ future: true
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
-url: https://yjyoon-dev.github.io
+url: https://blog.yjyoon.dev
 baseurl:
 permalink: pretty
 
@@ -77,7 +77,7 @@ plugins:
 favicon: /assets/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "YJYOON"
+keywords: "yjyoon"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -431,8 +431,8 @@ changyan:
 # Support for gitalk comments system.
 gitalk:
   enable: true
-  clientID: d94ba200ebecd2b0e2f4
-  clientSecret: c9bf379069384453083edbaa697ccd54bfd56bed
+  clientID: 8b37cd6cd67c1a25b15b
+  clientSecret: 19f681553fe85871acae06a3b95489bce4553650
   repo: yjyoon-dev.github.io
   owner: yjyoon-dev
   admin: [yjyoon-dev]
