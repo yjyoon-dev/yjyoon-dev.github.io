@@ -32,7 +32,7 @@ Dev-Ops | AWS, GCP, Docker, Nginx | Linux
 
 - Neurosky, Inc. *(2022.08 ~ 2022.12)*
   - Android Developer
-  - 미국 캘리포니아 실리콘밸리 소재 해외 기업
+  - U.S. 캘리포니아 실리콘밸리 소재 해외 기업
   
 ---
 
@@ -47,7 +47,7 @@ Dev-Ops | AWS, GCP, Docker, Nginx | Linux
 
 ## Achievement
 
-
+- 공개SW 개발자대회 **금상** *(2022)*
 - SW중심대학 공동 해커톤 **우수상** *(2022)*
 - 중앙대학교 캠퍼스타운 창업경진대회 **대상** *(2022)*
 - SW 마에스트로 12기 해커톤 **최우수상** *(2021)*
