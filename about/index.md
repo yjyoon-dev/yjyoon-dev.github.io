@@ -36,13 +36,9 @@ Dev-Ops | AWS, GCP, Docker, Nginx | Linux
   - Android Developer
   - 부서 미정
 
-<br>
-
 - KakaoBrain *(2023.06 ~ 2023.08)*
   - Android Developer Intern
   - 언어모델사업실 Pathfinder TF
-
-<br>
 
 - Neurosky, Inc. *(2022.08 ~ 2022.12)*
   - Android Developer Intern
@@ -52,12 +48,12 @@ Dev-Ops | AWS, GCP, Docker, Nginx | Linux
 
 ## Experience
 
-- 디프만 13기 안드로이드 *(2023.04 ~ 2023.07)*
-- Nexters 22기 안드로이드 *(2023.01 ~ 2023.02)*
-- SW마이스터고 연합 해커톤 멘토 *(2022.10)*
+- 디프만 13기 Android *(2023.04 ~ 2023.07)*
+- Nexters 22기 Android *(2023.01 ~ 2023.02)*
+- SW마이스터고 연합해커톤 기술 멘토 *(2022.10)*
 - 미국 산호세 주립대 SVSTIP *(2022.07 ~ 2022.08)*
-- YAPP 20기 안드로이드 YB *(2022.04 ~ 2021.08)*
-- SW 마에스트로 12기 *(2021.04 ~ 2021.12)*
+- YAPP 20기 Android *(2022.04 ~ 2021.08)*
+- SW마에스트로 12기 *(2021.04 ~ 2021.12)*
   
 ---
 
