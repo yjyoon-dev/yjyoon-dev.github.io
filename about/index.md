@@ -32,15 +32,15 @@ Dev-Ops | AWS, GCP, Docker, Nginx | Linux
 
 ## Career
 
-- TEAM NAVER *(2023.12 ~ )*
+- **NAVER** *(2023.12 ~ )*
   - Android Developer
   - 부서 미정
 
-- KakaoBrain *(2023.06 ~ 2023.08)*
+- **KakaoBrain** *(2023.06 ~ 2023.08)*
   - Android Developer Intern
   - 언어모델사업실 Pathfinder TF
 
-- Neurosky, Inc. *(2022.08 ~ 2022.12)*
+- **Neurosky, Inc.** *(2022.08 ~ 2022.12)*
   - Android Developer Intern
   - U.S. 캘리포니아 실리콘밸리 소재 해외 기업
   
