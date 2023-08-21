@@ -7,17 +7,19 @@ type: about
 
 ### Yeojun Yoon
 - yjyoon.dev@gmail.com
-- Kwangwoon University
-- Android Developer
+- Naver Corporation
+- Kotlin & Android Developer
 
 ### Link
 - [https://github.com/yjyoon-dev](https://github.com/yjyoon-dev)
 - [https://www.linkedin.com/in/yjyoon-dev](https://www.linkedin.com/in/yjyoon-dev/)
-- [https://yjyoon-dev.github.io](https://yjyoon-dev.github.io/)
+- [https://blog.yjyoon.dev](https://blog.yjyoon.dev)
 
 ---
 
 ## Skill
+
+> Specially interested in **Kotlin**, **Android**, **Compose Multiplatform**
 
 Part | Tech Stack | Environment
 ---|---|---
@@ -28,16 +30,36 @@ Dev-Ops | AWS, GCP, Docker, Nginx | Linux
 
 ---
 
-## Internship
+## Career
+
+- TEAM NAVER *(2023.12 ~ )*
+  - Android Developer
+  - 부서 미정
+
+<br>
 
 - Neurosky, Inc. *(2022.08 ~ 2022.12)*
-  - Android Developer
+  - Android Developer Intern
+  - U.S. 캘리포니아 실리콘밸리 소재 해외 기업
+
+<br>
+
+- KakaoBrain *(2023.06 ~ 2023.08)*
+  - Android Developer Intern
+  - 언어모델사업실 Pathfinder TF
+
+<br>
+
+- Neurosky, Inc. *(2022.08 ~ 2022.12)*
+  - Android Developer Intern
   - U.S. 캘리포니아 실리콘밸리 소재 해외 기업
   
 ---
 
 ## Experience
 
+- 디프만 13기 안드로이드 *(2023.04 ~ 2023.07)*
+- Nexters 22기 안드로이드 *(2023.01 ~ 2023.02)*
 - SW마이스터고 연합 해커톤 멘토 *(2022.10)*
 - 미국 산호세 주립대 SVSTIP *(2022.07 ~ 2022.08)*
 - YAPP 20기 안드로이드 YB *(2022.04 ~ 2021.08)*
@@ -55,9 +77,17 @@ Dev-Ops | AWS, GCP, Docker, Nginx | Linux
 
 ---
 
+## OSS Contribution
+
+- [DroidKnights 2023 안드로이드 앱](https://github.com/droidknights/DroidKnights2023_App)
+  - UI 기능 개발 기여
+
+---
+
+
 ## SW Certificate
 
-- TOPCIT Level 3 (Score 543)
+- TOPCIT Level 3
 - AWS Certified Solutions Architect - Associate
 
 ---
@@ -67,5 +97,3 @@ Dev-Ops | AWS, GCP, Docker, Nginx | Linux
 - 오프라인 SNS 해시태그 이벤트 관리 시스템 특허 *(2021.10.20)*
 
 ---
-
-> *Effort and luck will meet someday*
