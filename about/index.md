@@ -38,12 +38,6 @@ Dev-Ops | AWS, GCP, Docker, Nginx | Linux
 
 <br>
 
-- Neurosky, Inc. *(2022.08 ~ 2022.12)*
-  - Android Developer Intern
-  - U.S. 캘리포니아 실리콘밸리 소재 해외 기업
-
-<br>
-
 - KakaoBrain *(2023.06 ~ 2023.08)*
   - Android Developer Intern
   - 언어모델사업실 Pathfinder TF
@@ -79,7 +73,7 @@ Dev-Ops | AWS, GCP, Docker, Nginx | Linux
 
 ## OSS Contribution
 
-- [DroidKnights 2023 안드로이드 앱](https://github.com/droidknights/DroidKnights2023_App)
+- [DroidKnights 2023 컨퍼런스 공식앱](https://github.com/droidknights/DroidKnights2023_App)
   - UI 기능 개발 기여
 
 ---
