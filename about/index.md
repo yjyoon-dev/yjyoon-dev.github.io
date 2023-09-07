@@ -5,7 +5,7 @@ type: about
 
 ## Profile
 
-### Yeojun Yoon
+### 윤여준
 - yjyoon.dev@gmail.com
 - Naver Corporation
 - Kotlin & Android Developer
@@ -19,14 +19,13 @@ type: about
 
 ## Skill
 
-> Specially interested in **Kotlin**, **Android**, **Compose Multiplatform**
+- Kotlin, Java, Dart, Python, C/C++
 
-Part | Tech Stack | Environment
----|---|---
-Mobile | Android, Flutter | Kotlin, Dart
-Front-End | React, Flutter | Javascript, Dart
-Back-End | SpringBoot, Ktor, Flask, JPA, MySQL | Kotlin, Java, Python
-Dev-Ops | AWS, GCP, Docker, Nginx | Linux
+- Android, Flutter, Compose Multiplatform
+
+- SpringBoot, Ktor, MySQL
+
+- AWS, NCP, Nginx, Docker
 
 ---
 
@@ -48,16 +47,28 @@ Dev-Ops | AWS, GCP, Docker, Nginx | Linux
 
 ## Experience
 
+### 개발 활동
+
 - 디프만 13기 Android *(2023.04 ~ 2023.07)*
 - Nexters 22기 Android *(2023.01 ~ 2023.02)*
-- SW마이스터고 연합해커톤 기술 멘토 *(2022.10)*
-- 미국 산호세 주립대 SVSTIP *(2022.07 ~ 2022.08)*
 - YAPP 20기 Android *(2022.04 ~ 2021.08)*
 - SW마에스트로 12기 *(2021.04 ~ 2021.12)*
-  
+
+### 멘토 활동
+
+- SW마이스터고 연합해커톤 기술 멘토 *(2022.10)*
+
+### 글로벌 활동
+
+- Silicon Valley Software Technology & Innovation Program *(2022.07 ~ 2022.08)*
+
+### 기술 블로그
+
+- https://blog.yjyoon.dev *(2020.10 ~)*
+
 ---
 
-## Achievement
+## Reward
 
 - 공개SW 개발자대회 **금상** *(2022)*
 - SW중심대학 공동 해커톤 **우수상** *(2022)*
