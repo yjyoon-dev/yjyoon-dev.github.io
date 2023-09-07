@@ -16,9 +16,9 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/1.png" />
-
 # 모집 과정
+
+<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/1.png" />
 
 모집은 4월 말부터 5월 초까지 약 2주간 진행되었으며, 모집 분야는 다음과 같이 3가지 분야였습니다.
 
@@ -45,19 +45,23 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 그리고 마침내 6월 초에 합격 소식을 받게 되었고, 6월 말부터 본격적인 패스파인더 활동을 시작하게 되었습니다.
 
 <br>
-
-<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/2.jpg" />
  
 # 서바이벌식 온보딩
+
+<img width="100%" src="/assets/post_images/review/kakaobrain-pathfinder/2.jpg" />
 
 합격 메일을 받은 후 출근 하기까지 남은 2주 정도의 기간 동안 입사 준비를 했습니다. `LDAP`이라고 불리는 사내에서 사용할 **영어 이름**을 정하고, 회사에서 생성한 노션 페이지에 합격자들이 각자 **자기소개**를 작성하는 것이 있었습니다. 이를 통해 32명의 패스파인더 인원들을 하나하나 알아갈 수 있었고, 댓글 기능을 통해 입사 전에 서로 소통하곤 했습니다.
 
 <br>
 
-<p>
-<img width="30%" src="/assets/post_images/review/kakaobrain-pathfinder/3.jpg" />
-<img width="30%" src="/assets/post_images/review/kakaobrain-pathfinder/4.jpg" />
-</p>
+<figure class="half">
+    <a href="">
+        <img width="40%" src="/assets/post_images/review/kakaobrain-pathfinder/3.jpg" />
+    </a>
+    <a href="">
+        <img width="40%" src="/assets/post_images/review/kakaobrain-pathfinder/4.jpg" />
+    </a>
+</figure>
 
 마침내 첫 출근 날이 되었고, 온보딩 과정에서는 대망의 **노랑 사원증**을 받게 되었습니다. 비록 기간제 사원증이라는 것은 알았지만 사원증을 받았을 때의 행복감과 뿌듯함은 아직도 잊혀지지 않습니다.
 
@@ -71,29 +75,35 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/5.jpg" />
-
 # 싱글벙글 카카오 생활
 
+<img width="100%" src="/assets/post_images/review/kakaobrain-pathfinder/5.jpg" />
 
 마침내 정식 출근일이 되어 오피스에 처음 들어갔을 때는 신규 입사자(패스파인더)들의 LDAP이 입구 스크린에 나열되어 있었습니다. 정말로 카카오브레인의 일원이 되었음을 실감하는 순간이었습니다.
 
 오피스는 크지 않지만 굉장히 **자유로운 분위기**였고, 카카오브레인이 얼마나 **일하기 좋은 회사**인지 금방 파악할 수 있었습니다.
 
-<p>
-<img width="30%" src="/assets/post_images/review/kakaobrain-pathfinder/7.jpg" />
-<img width="30%" src="/assets/post_images/review/kakaobrain-pathfinder/8.jpg" />
-</p>
+<figure class="half">
+    <a href="">
+        <img width="40%" src="/assets/post_images/review/kakaobrain-pathfinder/7.jpg" />
+    </a>
+    <a href="">
+        <img width="40%" src="/assets/post_images/review/kakaobrain-pathfinder/8.jpg" />
+    </a>
+</figure>
 
 저희 패스파인더를 위한 굿즈들이 오피스에 배치되어 있어서 감동이었고, 특이하게도 오피스에 카카오브레인 디자인 템플릿으로 **인생네컷**을 찍을 수 있는 기계도 있었습니다. 출근 첫 날에는 패스파인더들끼리 위 굿즈를 들고 기계 앞에서 인생네컷 사진을 여러 장 찍곤 했습니다.
 
 <br>
 
-<p>
-<img width="30%" src="/assets/post_images/review/kakaobrain-pathfinder/9.jpg" />
-<img width="30%" src="/assets/post_images/review/kakaobrain-pathfinder/10.jpg" />
-</p>
-
+<figure class="half">
+    <a href="">
+        <img width="40%" src="/assets/post_images/review/kakaobrain-pathfinder/9.jpg" />
+    </a>
+    <a href="">
+        <img width="40%" src="/assets/post_images/review/kakaobrain-pathfinder/10.jpg" />
+    </a>
+</figure>
 또 출근의 가장 큰 원동력이자 카카오 최고의 복지는 바로 **구내식당 춘식도락**이었습니다. 매일같이 다른 컨셉의 4개 메뉴가 준비되어 있고, 하나하나 정말 맛있어 보여 항상 메뉴를 고르는 것이 힘들 정도였습니다. 또한 샐러드와 덮밥류의 테이크아웃 메뉴도 별도로 있기 때문에 식당에서 먹기 여의치 않은 상황에서도 끼니를 해결하기 편리해보였습니다. 양이 부족하다면 메인 반찬을 포함한 모든 반찬을 추가로 받을 수 있기 때문에 수시로 저희 팀은 영양사 분께 **"양 많이요"**를 외쳤습니다. 또한 운 좋게도 패스파인더 기간에 춘식도락 주년 기념일이 겹쳐 특식을 먹을 수 있는 기회가 있었는데 **왕갈비탕**이나 **돈마호크 커틀렛** 등 일반적인 구내식당 수준을 초월하는 메뉴들을 즐길 수 있었습니다.
 
 <br>
@@ -112,8 +122,6 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/13.jpg" />
-
 # LLM과 사투를 벌이는 Pathfinder
 
 이렇게 일하기 좋은 환경을 갖추고 있습니다만, 패스파인더 프로젝트 과정은 만만치 않았습니다.
@@ -128,7 +136,7 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-<img width="80%" src="https://storage.googleapis.com/prod-kakaobrain-wordpress-recruit-blog-bucket-2/2023/03/515cb8d3-banner_main1-4.png" />
+<img width="90%" src="https://storage.googleapis.com/prod-kakaobrain-wordpress-recruit-blog-bucket-2/2023/03/515cb8d3-banner_main1-4.png" />
 
 하지만 이런 살벌한 기획을 요구함과 동시에 카카오브레인은 저희에게 **애자일 프로세스**라는 도구를 손에 쥐어줬습니다. 학교 팀플이나 외부 사이드 프로젝트에서 사용하는 가벼운 애자일이 아닌 **실제 현업 스타일의 치열하고 몰입감 있는 애자일**이었습니다. 각 팀마다 애자일 코치님들이 붙어 애자일 프로세스를 따라갈 수 있도록 도와주었고, 그 과정 속에는 코치님들의 수많은 노하우들이 담겨있었습니다. **데일리 스크럼**을 통해 어제 한 일과 오늘 할 일을 매일매일 공유하고, 위클리 플래닝을 통해 칸반 보드와 포스트잇을 활용하여 **매주 구체적인 MVP와 Spring Goal을 선정**했습니다. 한 주의 마무리로는 **팀별 회고**를 통해 스스로의 작업을 돌아보고 팀원들과 공유하며 팀워크적으로 발전해나갔습니다.
 
@@ -136,7 +144,7 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-<img width="80%" src="https://developer-blogs.nvidia.com/ko-kr/wp-content/uploads/sites/5/2023/04/image-1024x576.png" />
+<img width="90%" src="https://developer-blogs.nvidia.com/ko-kr/wp-content/uploads/sites/5/2023/04/image-1024x576.png" />
 
 기획에서 중요하게 고려해야 할 것 중 하나는 바로 AI 기술이었습니다. 이번 패스파인더의 메인 주제는 **LLM**이었고, LLM을 이용한 사업적인 서비스를 생각해내기 위해서는 **먼저 LLM에 대해 잘 알 필요가 있었습니다.** 우리가 흔히 사용하는 ChatGPT가 어떤 것을 잘하는지, 한계점은 무엇인지, 어떻게 잘 사용할 수 있는지 등에 대한 배경지식을 필수로 갖추고 있어야 했지만 그렇지 않았습니다. 모집 과정에서는 AI 역량을 테스트하지 않고 오로지 SW 개발적인 역량만 고려하여 채용했기 때문에 프로젝트 초반에는 모든 팀들이 **생성형 AI와 LLM을 공부하는 데에 시간을 투자**했습니다.
 
