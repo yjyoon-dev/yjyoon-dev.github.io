@@ -16,9 +16,9 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-# 모집 과정
-
 <img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/1.png" />
+
+# 모집 과정
 
 모집은 4월 말부터 5월 초까지 약 2주간 진행되었으며, 모집 분야는 다음과 같이 3가지 분야였습니다.
 
@@ -46,10 +46,9 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-# 서바이벌 같았던 온보딩
-
-
 <img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/2.jpg" />
+ 
+# 서바이벌식 온보딩
 
 합격 메일을 받은 후 출근 하기까지 남은 2주 정도의 기간 동안 입사 준비를 했습니다. `LDAP`이라고 불리는 사내에서 사용할 **영어 이름**을 정하고, 회사에서 생성한 노션 페이지에 합격자들이 각자 **자기소개**를 작성하는 것이 있었습니다. 이를 통해 32명의 패스파인더 인원들을 하나하나 알아갈 수 있었고, 댓글 기능을 통해 입사 전에 서로 소통하곤 했습니다.
 
@@ -72,10 +71,10 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-# 행복한 카카오 생활
-
-
 <img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/5.jpg" />
+
+# 싱글벙글 카카오 생활
+
 
 마침내 정식 출근일이 되어 오피스에 처음 들어갔을 때는 신규 입사자(패스파인더)들의 LDAP이 입구 스크린에 나열되어 있었습니다. 정말로 카카오브레인의 일원이 되었음을 실감하는 순간이었습니다.
 
@@ -113,10 +112,9 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-# LLM과 사투를 벌이는 Pathfinder
-
-
 <img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/13.jpg" />
+
+# LLM과 사투를 벌이는 Pathfinder
 
 이렇게 일하기 좋은 환경을 갖추고 있습니다만, 패스파인더 프로젝트 과정은 만만치 않았습니다.
 
@@ -130,7 +128,7 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-<img width="70%" src="https://storage.googleapis.com/prod-kakaobrain-wordpress-recruit-blog-bucket-2/2023/03/515cb8d3-banner_main1-4.png" />
+<img width="80%" src="https://storage.googleapis.com/prod-kakaobrain-wordpress-recruit-blog-bucket-2/2023/03/515cb8d3-banner_main1-4.png" />
 
 하지만 이런 살벌한 기획을 요구함과 동시에 카카오브레인은 저희에게 **애자일 프로세스**라는 도구를 손에 쥐어줬습니다. 학교 팀플이나 외부 사이드 프로젝트에서 사용하는 가벼운 애자일이 아닌 **실제 현업 스타일의 치열하고 몰입감 있는 애자일**이었습니다. 각 팀마다 애자일 코치님들이 붙어 애자일 프로세스를 따라갈 수 있도록 도와주었고, 그 과정 속에는 코치님들의 수많은 노하우들이 담겨있었습니다. **데일리 스크럼**을 통해 어제 한 일과 오늘 할 일을 매일매일 공유하고, 위클리 플래닝을 통해 칸반 보드와 포스트잇을 활용하여 **매주 구체적인 MVP와 Spring Goal을 선정**했습니다. 한 주의 마무리로는 **팀별 회고**를 통해 스스로의 작업을 돌아보고 팀원들과 공유하며 팀워크적으로 발전해나갔습니다.
 
@@ -138,7 +136,7 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-<img width="70%" src="https://developer-blogs.nvidia.com/ko-kr/wp-content/uploads/sites/5/2023/04/image-1024x576.png" />
+<img width="80%" src="https://developer-blogs.nvidia.com/ko-kr/wp-content/uploads/sites/5/2023/04/image-1024x576.png" />
 
 기획에서 중요하게 고려해야 할 것 중 하나는 바로 AI 기술이었습니다. 이번 패스파인더의 메인 주제는 **LLM**이었고, LLM을 이용한 사업적인 서비스를 생각해내기 위해서는 **먼저 LLM에 대해 잘 알 필요가 있었습니다.** 우리가 흔히 사용하는 ChatGPT가 어떤 것을 잘하는지, 한계점은 무엇인지, 어떻게 잘 사용할 수 있는지 등에 대한 배경지식을 필수로 갖추고 있어야 했지만 그렇지 않았습니다. 모집 과정에서는 AI 역량을 테스트하지 않고 오로지 SW 개발적인 역량만 고려하여 채용했기 때문에 프로젝트 초반에는 모든 팀들이 **생성형 AI와 LLM을 공부하는 데에 시간을 투자**했습니다.
 
@@ -150,10 +148,10 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
+<img width="90%" src="/assets/post_images/review/kakaobrain-pathfinder/15.png" />
+
 # 인턴십에서 Kotlin으로 데스크탑 개발한 썰
 
-
-<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/15.png" />
 
 저희 팀이 최종적으로 기획한 서비스는 웹소설 AI 프로토타이핑 서비스로, **간단한 소재 및 키워드를 입력하면 웹소설의 플롯과 등장인물들을 구체화 해주고 프롤로그까지 작성해주는** 서비스입니다. 기존에는 소설을 처음부터 끝까지 모두 작성해주는 서비스를 기획했지만, 여러 삽질 끝에 LLM의 특성상 일관된 맥락으로 긴 글을 전부 생성하는 것은 어렵다고 판단하여 웹소설 작가의 단편적인 소재들을 구체화하는 데 활용할 수 있는 서비스로 피버팅했습니다.
 
@@ -164,20 +162,20 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 <br>
 
 
-<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/14.png" />
+<img width="90%" src="/assets/post_images/review/kakaobrain-pathfinder/14.png" />
 
 저는 작년에 참가했던 대회에서 **Kotlin과 Compose Multiplatform 기술을 이용해 성공적으로 데스크탑 앱을 개발**해 본 경험이 있었기 때문에 본 프로젝트도 충분히 이 기술들로 안정적인 결과물을 만들어낼 수 있다고 생각했습니다. 다행히도 다른 안드로이드 팀원이 흔쾌히 제안을 받아들여, 인턴십 프로그램에서 어쩌면 대단히 도전적인 경험을 하게 되었습니다. 다행히 UI적인 부분은 안드로이드에서 사용하는 Jetpack Compose와 거의 동일하기 때문에 수월하게 개발할 수 있었고, 아키텍쳐나 비즈니스 로직 같은 경우에도 모바일 개발 환경과 큰 차이가 없어 재미있게 개발할 수 있었습니다. 물론, 이전에 개발하던 **300 commit이 넘는 모바일 앱 레포지토리를 버리고** 새로 프로젝트를 팔 때에는 큰 현타가 밀려오기도 했습니다.
 
 <br>
 
 
-<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/16.png" />
+<img width="90%" src="/assets/post_images/review/kakaobrain-pathfinder/16.png" />
 
 초반의 걱정과는 달리 기획적으로나 개발적으로나 결과물은 **상당히 만족스러웠습니다.** 사용자가 간단한 문장이나 단어만 던져주면 알아서 플롯을 만들어 주었고, LLM과 끊임없이 소통하며 이를 구체화하도록 사용자를 유도해주었습니다. 무엇보다 저희가 개발한 프로젝트임에도 불구하고 **서비스를 사용해보는 것 자체가 재밌었습니다**. 아무 생각없이 던진 말에 그럴싸한 소설 앞부분을 써주니 자연스레 뒷부분이 궁금해지기도 하고, 등장인물들을 더 추가하여 프롤로그를 생성해보고 싶은 마음이 들기도 하였습니다.
 
 <br>
 
-<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/17.png" />
+<img width="90%" src="/assets/post_images/review/kakaobrain-pathfinder/17.png" />
 
 제가 속한 팀은 타 팀에 비해 덜 치열하게(?) 움직이는 팀이었습니다. 다르게 말하면 무리하면서 몰입하기 보단 가벼운 마음으로 **흥미와 재미를 추구하는 팀**이었습니다.
 카카오브레인 패스파인더 끝 물에 **Final Showcase**라는 명칭으로 모든 팀들의 2달 간 결과물을 최종 발표하는 시간이 있었는데, 팀의 발표자를 맡게 되었을 때도 청중들에게 데모를 보여주며 즐겁고 가벼운 마음으로 발표했던 기억이 있습니다. 그만큼 저희 팀이 개발한 서비스는 모든 팀을 통들어 **가장 재미있는 서비스였고, 또 저희 팀이 추구하는 바와 딱 맞는 프로젝트**였다고 생각합니다.
@@ -189,7 +187,7 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 하지만 패스파인더는 아쉬운 점이 비교적 명확한 프로그램으로, 참가자들 대부분이 공통적으로 느끼는 바가 비슷했습니다. 우선, 패스파인더 프로그램이 **참가자들의 역량 향상보다는 카카오브레인의 사업 아이템 발굴에 더욱 초점이 맞춰져 있었다**는 것입니다. 물론 돈을 들여 인턴십 프로그램을 진행하는 만큼 카카오브레인에게도 득이 있어야겠지만, 이러한 카카오브레인의 목적을 참가자들에게 너무 노골적으로 드러냈다고 생각합니다. 그리고 또 하나는 모집 과정입니다. 사실 이번 패스파인더 프로그램에서 필요한 인재들은 **훌륭한 SW 개발자가 아니라 AI 엔지니어와 기획자**였습니다. 참가자들은 프로그램 기간 동안 대부분의 시간을 기획이나 프롬프트 튜닝에 투자했고, 시간을 겨우 쪼개어 코드 품질을 올릴 수 밖에 없었습니다. 이렇듯 **채용된 인원들의 역량과 패스파인더 프로그램 목표 간의 딜레마**가 있었기 때문에 참가자들도 힘들고 프로그램 진행도 더딘 모습이 많이 보였습니다. 채용연계형 인턴십임을 고려하면 **사업 아이템 발굴과 SW 인재 채용**을 한 번에 하려고 한 것이 너무 욕심이 아니었나 싶습니다.
 
 
-<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/18.png" />
+<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/18.jpg" />
 
 2달 간의 여정 끝에 패스파인더 프로그램이 종료되었고, 저는 다시 대학생으로 돌아왔습니다. 지금까지 보낸 여름 방학 중에서도 가장 빠르게 지나간 것 같지만, 힘들다거나 바쁘다는 생각은 거의 하지 않은 것 같습니다. 그 정도로 패스파인더는 저에게 흥미롭고 재밌는 활동이었습니다. 제가 패스파인더에서 얻은 것을 정리하면 다음과 같습니다.
 
@@ -202,6 +200,6 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 <br>
 
 
-<img width="50%" src="/assets/post_images/review/kakaobrain-pathfinder/19.png" />
+<img width="50%" src="/assets/post_images/review/kakaobrain-pathfinder/19.jpg" />
 
 저와 같이 의미있는 두 달을 보내게 해준 카카오브레인과 패스파인더 인원들, 애자일 코치들, 그리고 소중한 추억을 제작해 줄 영상 촬영팀에게 모두 감사드립니다!
