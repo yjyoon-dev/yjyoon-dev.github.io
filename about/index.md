@@ -47,24 +47,17 @@ type: about
 
 ## Experience
 
-### 개발 활동
+- **개발 활동**
+  - 디프만 13기 Android *(2023.04 ~ 2023.07)*
+  - Nexters 22기 Android *(2023.01 ~ 2023.02)*
+  - YAPP 20기 Android *(2022.04 ~ 2021.08)*
+  - SW마에스트로 12기 *(2021.04 ~ 2021.12)*
 
-- 디프만 13기 Android *(2023.04 ~ 2023.07)*
-- Nexters 22기 Android *(2023.01 ~ 2023.02)*
-- YAPP 20기 Android *(2022.04 ~ 2021.08)*
-- SW마에스트로 12기 *(2021.04 ~ 2021.12)*
+- **멘토 활동**
+  - SW마이스터고 연합해커톤 기술 멘토 *(2022.10)*
 
-### 멘토 활동
-
-- SW마이스터고 연합해커톤 기술 멘토 *(2022.10)*
-
-### 글로벌 활동
-
-- Silicon Valley Software Technology & Innovation Program *(2022.07 ~ 2022.08)*
-
-### 기술 블로그
-
-- https://blog.yjyoon.dev *(2020.10 ~)*
+- **글로벌 활동**
+  - Silicon Valley Software Technology & Innovation Program *(2022.07 ~ 2022.08)*
 
 ---
 
@@ -84,7 +77,6 @@ type: about
   - UI 기능 개발 기여
 
 ---
-
 
 ## SW Certificate
 
