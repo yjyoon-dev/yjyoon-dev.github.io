@@ -139,10 +139,9 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-<img width="90%" src="/assets/post_images/review/kakaobrain-pathfinder/15.png" />
-
 # 인턴십에서 Kotlin으로 데스크탑 개발한 썰
 
+<img width="90%" src="/assets/post_images/review/kakaobrain-pathfinder/15.png" />
 
 저희 팀이 최종적으로 기획한 서비스는 웹소설 AI 프로토타이핑 서비스로, **간단한 소재 및 키워드를 입력하면 웹소설의 플롯과 등장인물들을 구체화 해주고 프롤로그까지 작성해주는** 서비스입니다. 기존에는 소설을 처음부터 끝까지 모두 작성해주는 서비스를 기획했지만, 여러 삽질 끝에 LLM의 특성상 일관된 맥락으로 긴 글을 전부 생성하는 것은 어렵다고 판단하여 웹소설 작가의 단편적인 소재들을 구체화하는 데 활용할 수 있는 서비스로 피버팅했습니다.
 
