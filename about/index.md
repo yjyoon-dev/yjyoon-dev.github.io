@@ -20,11 +20,8 @@ type: about
 ## Skill
 
 - Kotlin, Java, Dart, Python, C/C++
-
 - Android, Flutter, Compose Multiplatform
-
 - SpringBoot, Ktor, MySQL
-
 - AWS, NCP, Nginx, Docker
 
 ---
@@ -47,17 +44,17 @@ type: about
 
 ## Experience
 
-- **개발 활동**
-  - 디프만 13기 Android *(2023.04 ~ 2023.07)*
-  - Nexters 22기 Android *(2023.01 ~ 2023.02)*
-  - YAPP 20기 Android *(2022.04 ~ 2021.08)*
-  - SW마에스트로 12기 *(2021.04 ~ 2021.12)*
+**개발 활동**
+ - 디프만 13기 Android *(2023.04 ~ 2023.07)*
+ - Nexters 22기 Android *(2023.01 ~ 2023.02)*
+ - YAPP 20기 Android *(2022.04 ~ 2021.08)*
+ - SW마에스트로 12기 *(2021.04 ~ 2021.12)*
 
-- **멘토 활동**
-  - SW마이스터고 연합해커톤 기술 멘토 *(2022.10)*
+**멘토 활동**
+ - SW마이스터고 연합해커톤 기술 멘토 *(2022.10)*
 
-- **글로벌 활동**
-  - Silicon Valley Software Technology & Innovation Program *(2022.07 ~ 2022.08)*
+**글로벌 활동**
+ - Silicon Valley Software Technology & Innovation Program *(2022.07 ~ 2022.08)*
 
 ---
 
