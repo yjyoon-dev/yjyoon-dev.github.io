@@ -54,14 +54,7 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 <br>
 
-<figure class="half">
-    <a href="">
-        <img width="40%" src="/assets/post_images/review/kakaobrain-pathfinder/3.jpg" />
-    </a>
-    <a href="">
-        <img width="40%" src="/assets/post_images/review/kakaobrain-pathfinder/4.jpg" />
-    </a>
-</figure>
+<img width="60%" src="/assets/post_images/review/kakaobrain-pathfinder/3.jpg" />
 
 마침내 첫 출근 날이 되었고, 온보딩 과정에서는 대망의 **노랑 사원증**을 받게 되었습니다. 비록 기간제 사원증이라는 것은 알았지만 사원증을 받았을 때의 행복감과 뿌듯함은 아직도 잊혀지지 않습니다.
 
@@ -83,40 +76,30 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 오피스는 크지 않지만 굉장히 **자유로운 분위기**였고, 카카오브레인이 얼마나 **일하기 좋은 회사**인지 금방 파악할 수 있었습니다.
 
-<figure class="half">
-    <a href="">
-        <img width="40%" src="/assets/post_images/review/kakaobrain-pathfinder/7.jpg" />
-    </a>
-    <a href="">
-        <img width="40%" src="/assets/post_images/review/kakaobrain-pathfinder/8.jpg" />
-    </a>
-</figure>
+<br>
+
+<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/7.jpg" />
+
 
 저희 패스파인더를 위한 굿즈들이 오피스에 배치되어 있어서 감동이었고, 특이하게도 오피스에 카카오브레인 디자인 템플릿으로 **인생네컷**을 찍을 수 있는 기계도 있었습니다. 출근 첫 날에는 패스파인더들끼리 위 굿즈를 들고 기계 앞에서 인생네컷 사진을 여러 장 찍곤 했습니다.
 
 <br>
+        
+<img width="80%" src="/assets/post_images/review/kakaobrain-pathfinder/9.jpg" />
 
-<figure class="half">
-    <a href="">
-        <img width="40%" src="/assets/post_images/review/kakaobrain-pathfinder/9.jpg" />
-    </a>
-    <a href="">
-        <img width="40%" src="/assets/post_images/review/kakaobrain-pathfinder/10.jpg" />
-    </a>
-</figure>
 또 출근의 가장 큰 원동력이자 카카오 최고의 복지는 바로 **구내식당 춘식도락**이었습니다. 매일같이 다른 컨셉의 4개 메뉴가 준비되어 있고, 하나하나 정말 맛있어 보여 항상 메뉴를 고르는 것이 힘들 정도였습니다. 또한 샐러드와 덮밥류의 테이크아웃 메뉴도 별도로 있기 때문에 식당에서 먹기 여의치 않은 상황에서도 끼니를 해결하기 편리해보였습니다. 양이 부족하다면 메인 반찬을 포함한 모든 반찬을 추가로 받을 수 있기 때문에 수시로 저희 팀은 영양사 분께 **"양 많이요"**를 외쳤습니다. 또한 운 좋게도 패스파인더 기간에 춘식도락 주년 기념일이 겹쳐 특식을 먹을 수 있는 기회가 있었는데 **왕갈비탕**이나 **돈마호크 커틀렛** 등 일반적인 구내식당 수준을 초월하는 메뉴들을 즐길 수 있었습니다.
 
 <br>
 
 
-<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/11.jpg" />
+<img width="60%" src="/assets/post_images/review/kakaobrain-pathfinder/11.jpg" />
 
 또 대표적인 카카오 복지로는 **카카오 프렌즈샵 20% 직원 할인**이 있었습니다. 오프라인 매장에서는 카카오 아지트점에서만 혜택을 받을 수 있는데, 오피스와 매우 가까워 가끔씩 점심 시간 이후 팀원들과 구경을 갈 수 있었습니다. 마음에 드는 물건이 있으면 가족이나 주변 지인에게 자랑스럽게 직원 할인 받은 카카오 굿즈를 선물하곤 했습니다.
 
 <br>
 
 
-<img width="70%" src="/assets/post_images/review/kakaobrain-pathfinder/12.jpg" />
+<img width="60%" src="/assets/post_images/review/kakaobrain-pathfinder/12.jpg" />
 
 그 외에도 오피스에서 가끔씩 **피자 파티**를 하기도 하고(근데 춘식도락이 더 맛있다), 업무 중간 중간 **안마의자**를 이용하고, 풍성한 **간식바와 커피 머신**을 통해 살을 찌우는 등등... 일하는 환경과 복지적인 면에서는 정말 크게 만족했습니다. 그런데...
 
