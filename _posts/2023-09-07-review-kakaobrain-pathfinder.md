@@ -48,7 +48,7 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
  
 # 서바이벌식 온보딩
 
-<img width="100%" src="/assets/post_images/review/kakaobrain-pathfinder/2.jpg" />
+<img width="90%" src="/assets/post_images/review/kakaobrain-pathfinder/2.jpg" />
 
 합격 메일을 받은 후 출근 하기까지 남은 2주 정도의 기간 동안 입사 준비를 했습니다. `LDAP`이라고 불리는 사내에서 사용할 **영어 이름**을 정하고, 회사에서 생성한 노션 페이지에 합격자들이 각자 **자기소개**를 작성하는 것이 있었습니다. 이를 통해 32명의 패스파인더 인원들을 하나하나 알아갈 수 있었고, 댓글 기능을 통해 입사 전에 서로 소통하곤 했습니다.
 
@@ -70,7 +70,7 @@ description: "KakaoBrain 채용연계형 인턴십 Pathfiner 2기 합격 및 활
 
 # 싱글벙글 카카오 생활
 
-<img width="100%" src="/assets/post_images/review/kakaobrain-pathfinder/5.jpg" />
+<img width="90%" src="/assets/post_images/review/kakaobrain-pathfinder/5.jpg" />
 
 마침내 정식 출근일이 되어 오피스에 처음 들어갔을 때는 신규 입사자(패스파인더)들의 LDAP이 입구 스크린에 나열되어 있었습니다. 정말로 카카오브레인의 일원이 되었음을 실감하는 순간이었습니다.
 
