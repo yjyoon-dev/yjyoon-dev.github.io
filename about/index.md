@@ -70,7 +70,7 @@ Dev-Ops | AWS, GCP, Docker, Nginx | Linux
 ## OSS Contribution
 
 - [DroidKnights 2023 컨퍼런스 공식앱](https://github.com/droidknights/DroidKnights2023_App)
-  - UI 기능 개발 기여
+  - UI 기능 개발 기여 (PR #215, #223)
 
 ---
 
