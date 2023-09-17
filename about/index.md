@@ -38,7 +38,7 @@ type: about
 
 - **Neurosky, Inc.** *(2022.08 ~ 2022.12)*
   - Android Developer Intern
-  - U.S. 캘리포니아 실리콘밸리 소재 해외 기업
+  - 실리콘밸리 소재 해외 IT 기업 CTO 직속 개발팀
   
 ---
 
@@ -57,7 +57,7 @@ type: about
 - **글로벌 활동**
    - Silicon Valley Software Technology & Innovation Program *(2022.07 ~ 2022.08)*
    - U.S. San Jose State University 국제 프로젝트 수행 *(2022.07 ~ 2022.08)*
-   - NeuroSky, Inc. 실리콘밸리 소재 기업 해외 인턴십 수행 *(2022.08 ~ 2022.12)*
+   - U.S. 캘리포니아 실리콘밸리 소재 기업 해외 인턴십 수행 *(2022.08 ~ 2022.12)*
 
 ---
 
