@@ -6,7 +6,7 @@ type: about
 ## Profile
 
 ### 윤여준
-- yjyoon.dev@gmail.com
+- me@yjyoon.dev
 - Naver Corporation
 - Kotlin & Android Developer
 
