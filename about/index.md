@@ -7,8 +7,8 @@ type: about
 
 ### 윤여준
 - me@yjyoon.dev
-- Naver Corporation
-- Kotlin & Android Developer
+- NAVER Corporation
+- Android Developer
 
 ### Link
 - [https://github.com/yjyoon-dev](https://github.com/yjyoon-dev)
@@ -52,7 +52,7 @@ type: about
 
 - **멘토 활동**
    - SW마이스터고 연합해커톤 기술 멘토 *(2022.10 ~ 2022.10)*
-   - 웅진씽크빅 게임 개발 챌린지 리뷰어 *(2022.09 ~ 2023.09)*
+   - 웅진씽크빅 게임 개발 챌린지 리뷰어 *(2022.09, 2023.09)*
 
 - **글로벌 활동**
    - U.S. 캘리포니아 실리콘밸리 소재 기업 해외 인턴십 *(2022.08 ~ 2022.12)*
