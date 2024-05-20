@@ -30,7 +30,7 @@ type: about
 
 - **NAVER** *(2023.12 ~ )*
   - Android Developer
-  - Biz CIC 광고 플랫폼 SDK 개발팀
+  - 광고 SDK 개발팀
 
 - **KakaoBrain** *(2023.06 ~ 2023.08)*
   - Android Developer Intern
