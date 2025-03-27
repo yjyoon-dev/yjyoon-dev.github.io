@@ -214,6 +214,7 @@ font:
 social:
   Github: https://github.com/yjyoon-dev
   LinkedIn: https://www.linkedin.com/in/yjyoon-dev
+  HomePage: https://yjyoon.dev
 # Social Links Icons
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
@@ -225,6 +226,7 @@ social_icons:
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   Github: github
   LinkedIn: linkedin
+  HomePage: house
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
