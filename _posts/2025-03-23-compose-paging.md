@@ -1,11 +1,11 @@
 ---       
 layout: post
-title: "[Android] Jetpack Compose 무한스크롤 직접 구현해보기"
+title: "[Android] Jetpack Compose 무한스크롤 직접 구현하고 성능 개선해보기"
 date: 2025-03-27
 categories: android
 photos: /assets/post_images/compose/paging.png
 tags: [android, compose]
-description: "Compose 환경에서 서버로부터 받은 응답을 자연스럽게 무한스크롤 형태로 표시하기 위해 페이지네이션을 위한 데이터 모델을 설계하고 리컴포지션과 성능을 고려한한 PagingColumn 을 직접 구현해봅시다."
+description: "Compose 환경에서 서버로부터 받은 응답을 자연스럽게 무한스크롤 형태로 표시하기 위해 페이지네이션을 위한 데이터 모델을 설계하고 PagingColumn 을 직접 구현한 뒤 적절한 리컴포지션 관리로 성능을 개선해 봅시다."
 ---
 
 # 개요
