@@ -14,11 +14,9 @@ description: "Clean Architecture 와 구글 권장 아키텍쳐, 두 아키텍�
 
 <br>
 
-# Clean Architecture
-
-<br>
-
 <img width="75%" src="/assets/post_images/android/12-1.png" />
+
+# Clean Architecture
 
 우선 클린 아키텍쳐에 대해 간단히 알아봅시다. 위 사진은 아마 지겹도록 보셨을 듯한 Clean Architecture 도식화 자료입니다. 이를 좀 더 직관적으로 이해하기 위해, 안드로이드 프로젝트에서 Clean Architecture 를 채택하고 모듈화를 진행했을 때의 일반적인 구조를 살펴봅시다.
 
@@ -30,11 +28,9 @@ description: "Clean Architecture 와 구글 권장 아키텍쳐, 두 아키텍�
 
 <br>
 
-# Google Architecture
-
-<br>
-
 <img width="50%" src="https://developer.android.com/static/topic/libraries/architecture/images/mad-arch-overview.png?hl=ko" />
+
+# Google Architecture
 
 Android Developer 에서는 권장하는 아키텍쳐를 위와 같이 도식화하여 제공하고 있습니다. 그런데 한 가지 이상한 점이 눈에 바로 띄게 됩니다.
 
@@ -52,7 +48,7 @@ UI 모듈에서 도메인 모듈을 거쳐 데이터 모듈까지 마찬가지�
 
 <img src="/assets/post_images/android/12-4.png" />
 
-Now in Android 에서는 **모든 모듈이 Model 모듈을 바라보고 있습니다.** 마치 클린 아키텍쳐의 **도메인 모듈**과 같은 모습입니다. 이렇게 비즈니스 로직 중에서도 전역에 걸쳐서 사용되는 **model**에 대해서는 별도의 모듈로 분리하고 다른 모듈이 바라보게 하면서 **불필요한 mapper 코드의 생성을 방지하는** 모습입니다.
+Now in Android 에서는 **모든 모듈이 `core:model` 모듈을 바라보고 있습니다.** 해당 모듈이 마치 클린 아키텍쳐의 **도메인 모듈**의 역할을 하는 것처럼 보입니다. 이렇게 비즈니스 로직 중에서도 전역에 걸쳐서 사용되는 **model**에 대해서는 별도의 모듈로 분리하고 다른 모듈이 바라보게 하면서 **불필요한 mapper 코드의 생성을 방지하는** 모습입니다.
 
 <br>
 
