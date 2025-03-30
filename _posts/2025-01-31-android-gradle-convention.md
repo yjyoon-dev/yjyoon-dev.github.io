@@ -70,7 +70,7 @@ private val licenseHeaderKotlin = buildString {
 
 우선 app 모듈에 spotless 를 적용해보았습니다. 하지만 아직 남아있는 모듈이 많습니다. 모든 모듈의 gradle 파일에 위 코드를 복붙하지 않기 위해, **spotless 를 위한 convention plugin** 을 만들어봅시다.
 
-우선 이 convention plugin 이라는 것은 프로젝트 어디에 위치해야 할까요? Android 개발의 바이블인 [Now in Android](https://github.com/android/nowinandroid) 프로젝트에서는 **`build-logic` 이라는 폴더 안에 `convention` 이라는 이름의 모듈을 만들어 plugin 들을 관리하고 있습니다.** 그리고 이 `build-logic` 폴더를 빌드에 포함시키기 위해 `build-logic/settings.gradle.kts` 파일을 작성하고, 루트의 `settings.gradle.kts` 에서 해당 폴더를 `includedBuild` 시켜줍니다.
+우선 이 convention plugin 이라는 것은 프로젝트 어디에 위치해야 할까요? Android 개발의 바이블인 [Now in Android](https://github.com/android/nowinandroid) 프로젝트에서는 **`build-logic` 이라는 폴더 안에 `convention` 이라는 이름의 모듈을 만들어 plugin 들을 관리하고 있습니다.** 그리고 이 `build-logic` 폴더를 빌드에 포함시키기 위해 `build-logic/settings.gradle.kts` 파일을 작성하고, 루트의 `settings.gradle.kts` 에서 해당 폴더를 빌드에 포함시켜 줍시다.
 
 ```kotlin
 // build-logic/settings.gradle.kts
@@ -113,7 +113,7 @@ pluginManagement {
 }
 ```
 
-`build-logic` 폴더를 만들었다면 해당 폴더 안에 `convention` 모듈을 포함시켜줍니다. `convention` 모듈의 `build.gradle.kts` 는 아래와 같습니다.
+`build-logic` 폴더를 만들었다면 해당 폴더 안에 `convention` 모듈을 만들어줍시다. `convention` 모듈의 `build.gradle.kts` 는 아래와 같습니다.
 
 ```kotlin
 // build-logic/convention/build.gradle.kts
@@ -293,11 +293,24 @@ gradlePlugin {
 
 Spotless convention plugin 에서는 보지 못했던 패턴이 보입니다. 바로 **모듈 유형별로 의존성을 분기 처리 하는 것입니다.** Hilt 를 사용하기 위해 필수적인 `ksp` 플러그인과  `hilt-compiler` 의존성은 공통으로 추가하고, 모듈에 걸려있는 plugin 종류에 따라 각기 다른 hilt 관련 의존성을 추가해줍니다. 위 코드의 예시로 `kotlin("jvm")` 의존성이 걸려있다면 안드로이드 의존성이 없는 순수 JVM 모듈이기 때문에 `hilt-core` 에 대한 의존성만 추가하고, `com.android.library` 의존성이 걸려있는 안드로이드 모듈에 경우 이에 필요한 `hilt-android` 의존성을 추가해줄 수 있습니다.
 
+```kotlin
+plugins {
+    kotlin("jvm")
+    id("example.convention.hilt") // with hilt-core
+}
+```
+```kotlin
+plugins {
+    id("com.android.library")
+    id("example.convention.hilt") // with hilt-android
+}
+```
+
 <br>
 
 # 상위 convention 들을 묶어 하위 convention 만들기
 
-특정 gradle 설정을 담는 **convention plugin 여러개가 모여서 또 하나의 convention plugin 을** 만들어내기도 합니다. 예를 들어, **feature 기반 멀티 모듈 구조**의 안드로이드 프로젝트에서 **어느 한 feature 모듈을 가정**해봅시다.
+더 효율적으로 사용할 수 있는 방법 중 하나는 특정 gradle 설정을 담는 **convention plugin 여러개를 모아서서 또 하나의 convention plugin**을 만들어내는 것입니다. 예를 들어 **feature 기반 멀티 모듈 구조**의 안드로이드 프로젝트에서 **어느 한 feature 모듈을 가정**해봅시다.
 
 ```kotlin
 // feature/home/build.gradle.kts
@@ -323,7 +336,7 @@ dependencies {
 /* . . . */
 ```
 
-위에서 만든 spotless 와 hilt 외에도 android, compose 관련 설정들 또한 convention plugin 으로 만들어 적용했다고 가정한 모습입니다. 이 정도만 되어도 convention plugin 을 사용하지 않았을 때보다 충분히 코드량이 많이 줄었고 재사용성도 높아졌지만, **더 공통화 시킬 수 있는** 건덕지가 보이는 것 같습니다. `feature` 모듈이라면 위 코드와 같이 android 및 compose 관련 플러그인이나 `ui` 및 `data` 와 같은 핵심 core 모듈, 그리고 ViewModel 과 Navigation 에 대한 의존성은 **필수가 아닐까요?** 이번엔 이들을 묶어서 **feature 모듈을 위한 공통 convention plugin**을 만들어봅시다.
+위에서 만든 spotless 와 hilt 외에도 android, compose 관련 설정들 또한 convention plugin 으로 만들어 적용했다고 가정한 모습입니다. 이 정도만 되어도 convention plugin 을 사용하지 않았을 때보다 충분히 코드량이 많이 줄었고 재사용성도 높아졌지만, **더 공통화 시킬 수 있는** 건덕지가 보이는 것 같습니다. 위 코드와 같이 android 및 compose 관련 플러그인이나 `ui` 및 `data` 와 같은 핵심 core 모듈, 그리고 ViewModel 과 Navigation 에 대한 의존성은 **그 어떤 feature 모듈이라도 공통적으로 적용되지 않을까요?** 이번엔 이들을 묶어서 **feature 모듈을 위한 공통 convention plugin**을 만들어봅시다.
 
 ```kotlin
 // build-logic/convention/FeatureConventionPlugin.kt
@@ -374,4 +387,4 @@ plugins {
 
 # 마치며
 
-이렇게 한 번 개발한 convention plugin 은 특정 프로젝트에서 뿐만 아니라, **다른 프로젝트에서도 충분히 재사용이 가능하다는 이점**을 갖고 있습니다. 멀티 모듈 구조의 프로젝트를 개발할 때의 가장 일반적인 문제 중 하나가 바로 **코드양이 늘어남으로써 오버헤드가 발생할 수 있다는 점**인데, **gradle convention plugin 이 이를 해결하는 데에 아주 결정적인 역할을 하는 것 같습니다.** 만약 모듈화를 진행하신다면 반드시 적용해보시는 것을 추천드립니다!
+이렇게 한 번 개발한 convention plugin 은 특정 프로젝트에서 뿐만 아니라, **다른 프로젝트에서도 충분히 재사용이 가능하다는 이점**을 갖고 있습니다. 멀티 모듈 구조의 프로젝트를 개발할 때의 가장 일반적인 문제 중 하나가 바로 **코드양이 늘어남으로써 오버헤드가 발생할 수 있다는 점**인데, **gradle convention plugin 은 이에 대한 강력한 솔루션**인 것 같습니다. 만약 프로젝트의 모듈화를 고민 중이시라면 꼭 적용해보시는 것을 추천드립니다.
