@@ -1,7 +1,7 @@
 ---       
 layout: post
 title: "[Android] Gradle Convention Plugin 으로 멀티 모듈 효율적으로 관리하기"
-date: 2025-03-30
+date: 2025-01-31
 categories: android
 photos: /assets/post_images/android/13.png
 tags: [android, gradle, gradle_plugin, convention_plugin, multi-module, modularization, build]
