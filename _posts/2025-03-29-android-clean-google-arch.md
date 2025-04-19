@@ -1,7 +1,7 @@
 ---       
 layout: post
 title: "[Android] 클린 아키텍쳐 vs 구글 아키텍쳐 - 무엇을 선택해야 할까?"
-date: 2025-03-28
+date: 2025-03-29
 categories: android
 photos: /assets/post_images/android/12.png
 tags: [android, architecture, pattern, clean_architecture, google_architecture, modularization]

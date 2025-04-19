@@ -1,7 +1,7 @@
 ---       
 layout: post
 title: "[Android] Jetpack Compose 무한스크롤 직접 구현하고 성능 개선해보기"
-date: 2025-02-23
+date: 2025-03-27
 categories: android
 photos: /assets/post_images/compose/paging.png
 tags: [android, compose]
