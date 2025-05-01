@@ -1,18 +1,18 @@
 ---       
 layout: post
-title: "[Android] 멀티 모듈 프로젝트에서 Compose Navigation 제대로 사용하기"
+title: "[Android/KMP] Compose Navigation 멀티 모듈 환경에서 제대로 사용하기"
 date: 2025-05-01
 categories: android
 photos: /assets/post_images/android/14.png
-tags: [android, compose, navigation, multi-module, architecture]
+tags: [android, kmp, compose, navigation, multi-module, architecture]
 description: "멀티 모듈 구조의 안드로이드 및 KMP 프로젝트에서 compose navigation 을 이용해 모듈 간 캡슐화와 의존성을 고려한 화면 네비게이션 기능을 제대로 구현해보자"
 ---
 
+<br>
+
 # 개요
 
-Android 및 KMP 프로젝트에서 멀티 모듈을 도입한다고 가정해봅시다.
-여러 멀티 모듈 구조 중에서도 feature 별로 모듈화를 진행하는 프로젝트라고 한다면, feature 간의 화면 이동을 구현하려면 어떻게 해야할까요?
-feature 별 Screen 과 ViewModel 을 공개하고 이를 다른 feature 에서 직접 참조해도 괜찮을까요?
+최근에 사이드로 진행했던 KMP 프로젝트를 단일 모듈 구조에서 feature 기반 멀티 모듈 구조로 마이그레이션하는 작업을 했었습니다. 당시 저는 Navigation 및 ViewModel 에 대한 솔루션으로 KMP 를 지원하는 [Voyager](https://github.com/adrielcafe/voyager) 를 사용했었는데, 이는 navigate 동작 시 타겟 Screen 을 반드시 직접 참조해야했기 때문에 feature 별 모듈 분리에 제약이 있었습니다. 따라서 프로젝트 전반에 퍼져있는 **Voyager 를 걷어내고 이를 이제 막 KMP 를 alpha 버전으로 지원하기 시작한 compose-navigation 으로 마이그레이션하는 대공사**를 진행했습니다. 이 과정에서 **feature 기반 멀티 모듈 프로젝트에서 어떻게 해야 compose-navigation 을 제대로 적용할 수 있을지** 고찰한 내용에 대해 정리해보았습니다.
 
 <br>
 
@@ -33,7 +33,7 @@ fun MyApp() {
     NavHost(navController, startDestination = Home) {
         composable<HomeRoute> {
             HomeScreen(
-                viewModel = hiltViewModel<HomeViewModel>(),
+                viewModel = koinViewModel<HomeViewModel>(),
                 onNavigateToCheckout = { bookId ->
                     navController.navigate(route = Checkout(bookId))
                 }
@@ -55,12 +55,12 @@ fun MyApp() {
 
 <img width="33%" src="/assets/post_images/android/14-1.png" />
 
-위 네비게이션 코드를 보면 `HomeScreen` 에서 `CheckoutScreen` 으로 이동할 수 있고, 반대로 `CheckoutScreen` 에서도 `HomeScreen` 으로 이동할 수 있습니다. 즉, 각 모듈에서 **양방향**으로 이동할 수 있습니다. 따라서 네비게이션 코드를 각 모듈에서 구현하려고 해도 **`:home` 모듈과 `:checkout` 모듈이 서로 참조해야 하기 때문에 **순환 종속**이 일어나 구현이 불가능합니다.** 또한, 모듈을 분리한 이상 최대한 
+위 네비게이션 코드를 보면 `HomeScreen` 에서 `CheckoutScreen` 으로 이동할 수 있고, 반대로 `CheckoutScreen` 에서도 `HomeScreen` 으로 이동할 수 있습니다. 즉, 각 모듈에서 **양방향**으로 이동할 수 있습니다. 따라서 네비게이션 코드를 각 모듈에서 구현하려고 해도 **`:home` 모듈과 `:checkout` 모듈이 서로 참조해야 하기 때문에 순환 종속이 일어나 구현이 불가능합니다.** 또한, 모듈을 분리한 이상 최대한 
 **모듈 간 결합력을 낮추는 것**이 중요하기 때문에 이렇게 두 가지 **모듈 간 직접 통신하는 것 자체가 아키텍쳐 관점에서도 바람직하지 않습니다.**
 
 그렇면 어떻게 해야할까요? 가장 직관적이면서도 깔끔한 해결책은 바로 **모든 feature 모듈을 참조하고 있는 모듈에 네비게이션 기능을 위임하는 것**입니다. 일반적으로 이 역할을 맡고 있는 모듈은 **`:app` 모듈**이며, 필요 시 별도로 **`:navigation` 모듈** 등을 따로 두어 모든 feature 모듈들을 참조하도록 하는 경우도 있습니다. 
 
-<img width="75%" src="/assets/post_images/android/14-2.png" />
+<img width="95%" src="/assets/post_images/android/14-2.png" />
 
 그러면 위 네비게이션 코드를 단순히 `:app` 모듈에 선언하기만 하면 되는걸까요? 아쉽게도 한 가지 고려해야 할 부분이 남아있습니다.
 
@@ -68,7 +68,7 @@ fun MyApp() {
 
 # 모듈 별 캡슐화
 
-위에서 모듈 간 직접 참조하고 통신하는 것은 아키텍쳐 관점에서 바람직하지 않다고 했습니다. 이를 프로그래매틱한 차원에서 방지하는 방법은 **모듈 별 캡슐화**를 잘 해주는 것입니다. Kotlin 에서는 이를 위해 모듈 내의 클래스 또는 메서드를 외부 모듈에 노출시키지 않도록 하는 **`internal`** 접근제어자를 제공하고 있습니다. 방금과 같은 순환 종속 발생과 모듈 간 직접적인 통신을 하려는 시도를 막으려면 모듈의 화면을 구성하는 Screen 과 비즈니스 로직을 포함하는 ViewModel 은 굳이 다른 모듈에 공개하지 않고 숨기는 것이 좋아보입니다. Screen 과 ViewModel 에 `internal` 키워드를 붙여봅시다.
+위에서 모듈 간 직접 참조하고 통신하는 것은 아키텍쳐 관점에서 바람직하지 않다고 했습니다. 이를 프로그래매틱한 차원에서 방지하는 방법은 **모듈 별 캡슐화**를 잘 해주는 것입니다. Kotlin 에서는 이를 위해 모듈 내의 클래스 또는 메서드를 외부 모듈에 노출시키지 않도록 하는 **`internal`** 접근제어자를 제공하고 있습니다. 방금과 같은 순환 종속 발생과 모듈 간 직접적인 통신을 하려는 시도를 막으려면 모듈의 화면을 구성하는 Screen 과 비즈니스 로직을 포함하는 ViewModel 은 굳이 **다른 모듈에 공개하지 않고 숨기는 것**이 좋아보입니다. Screen 과 ViewModel 에 `internal` 키워드를 붙여봅시다.
 
 ```kotlin
 // feature/home
@@ -82,7 +82,7 @@ internal fun HomeScreen(
 }
 
 internal class HomeViewModel(
-    savedHandleState: SavedHandleState
+    /* . . . */
 ): ViewModel() {
     /* . . . */
 }
@@ -112,7 +112,7 @@ fun NavGraphBuilder.homeScreen(
 ) {
     composable<HomeRoute> {
         HomeScreen(
-            viewModel = hiltViewModel<HomeViewModel>(),
+            viewModel = koinViewModel<HomeViewModel>(),
             onNavigateToCheckout = onNavigateToCheckout
         )
     }
@@ -137,11 +137,13 @@ fun NavGraphBuilder.checkoutScreen(
 }
 ```
 
-`internal` 로 선언된 Screen 과 ViewModel 을 같은 모듈 내의 **`NavGraphBuilder` 확장 함수**에서 호출하고, 해당 **확장 함수와 route 클래스를 외부로 공개**합니다. 이렇게 하면 **모듈 별 캡슐화를 지키면서도 `:app` 모듈의 탐색 그래프에서 feature 모듈 간 네비게이션을 구현할 수 있습니다.** 필요하다면 아래와 같이 `NavController`의 확장 함수를 통해 navigate 코드를 단순화할 수도 있습니다. 이 때, 해당 확장 함수를 구현했다고 해서 route 클래스까지 `internal` 키워드를 통해 숨기면 `:app` 모듈에서 해당 route 로 직접 `navigate()` 하거나 `startDestination` 로 지정하는 등의 작업이 불가능하기 때문에 유의해야 합니다.
+`internal` 로 선언된 Screen 과 ViewModel 을 같은 모듈 내의 **`NavGraphBuilder` 확장 함수**에서 호출하고, 해당 **확장 함수와 route 클래스를 외부로 공개**합니다. 이렇게 하면 **모듈 별 캡슐화를 지키면서도 `:app` 모듈의 탐색 그래프에서 feature 모듈 간 네비게이션을 구현할 수 있습니다.** 필요하다면 아래와 같이 `NavController`의 확장 함수를 통해 navigate 코드를 단순화할 수도 있습니다.
 
 ```kotlin
 fun NavController.navigateToCheckout(bookId: Long) = navigate(CheckoutRoute(bookId))
 ```
+
+> 이 때, 해당 확장 함수를 구현했다고 해서 route 클래스까지 `internal` 키워드를 통해 숨기면 `:app` 모듈에서 해당 route 로 직접 `navigate()` 하거나 `startDestination` 로 지정하는 등의 작업이 불가능하기 때문에 유의해야 합니다.
 
 최종적으로 `:app` 모듈은 아래와 같은 형태를 갖습니다.
 
@@ -213,7 +215,7 @@ fun NavGraphBuilder.friendGraph(
 
         composable<FriendGraph.DetailRoute> {
             FriendDetailScreen(
-                viewModel = hiltViewModel<FriendDetailViewModel>(),
+                viewModel = koinViewModel<FriendDetailViewModel>(),
                 onNavigateToBack = {
                     navController.popBackStack()
                 }
@@ -222,8 +224,7 @@ fun NavGraphBuilder.friendGraph(
     }
 }
 
-@HiltViewModel
-internal class FriendDetailViewModel @Inject constructor(
+internal class FriendDetailViewModel(
     savedHandleState: SavedHandleState,
     private val friendRepository: FriendRepository
 ): ViewModel() {
@@ -259,3 +260,9 @@ fun MyNavHost(
     }
 }
 ```
+
+<br>
+
+# 마치며
+
+중간중간 `hiltViewModel` 이 아닌 `koinViewModel` 이 나와 당황하신 분들이 계실 수 있을텐데요. KMP 프로젝트를 기반으로 작성된 포스트라 KMP 를 지원하는 koin 을 예시로 사용하게 되었습니다. 얼른 compose-navigation 도 KMP 를 정식 지원하게 되면 좋겠네요!
