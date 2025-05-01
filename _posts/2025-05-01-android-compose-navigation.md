@@ -12,7 +12,7 @@ description: "멀티 모듈 구조의 안드로이드 및 KMP 프로젝트에서
 
 # 개요
 
-최근에 사이드로 진행했던 KMP 프로젝트를 단일 모듈 구조에서 feature 기반 멀티 모듈 구조로 마이그레이션하는 작업을 했었습니다. 당시 저는 Navigation 및 ViewModel 에 대한 솔루션으로 KMP 를 지원하는 [Voyager](https://github.com/adrielcafe/voyager) 를 사용했었는데, 이는 navigate 동작 시 타겟 Screen 을 반드시 직접 참조해야했기 때문에 feature 별 모듈 분리에 제약이 있었습니다. 따라서 프로젝트 전반에 퍼져있는 **Voyager 를 걷어내고 이를 이제 막 KMP 를 alpha 버전으로 지원하기 시작한 compose-navigation 으로 마이그레이션하는 대공사**를 진행했습니다. 이 과정에서 **feature 기반 멀티 모듈 프로젝트에서 어떻게 해야 compose-navigation 을 제대로 적용할 수 있을지** 고찰한 내용에 대해 정리해보았습니다.
+최근에 사이드로 진행했던 KMP 프로젝트를 단일 모듈 구조에서 feature 기반 멀티 모듈 구조로 마이그레이션하는 작업을 했었습니다. 당시 저는 Navigation 및 ViewModel 에 대한 솔루션으로 KMP 를 지원하는 [Voyager](https://github.com/adrielcafe/voyager) 를 사용했었는데, 이는 navigate 동작 시 타겟 Screen 을 반드시 직접 참조해야했기 때문에 feature 별 모듈 분리에 제약이 있었습니다. 따라서 프로젝트 전반에 퍼져있는 **Voyager 를 걷어내고 이를 이제 막 KMP 를 alpha 버전으로 지원하기 시작한 compose-navigation 으로 마이그레이션하는 대공사**를 진행했습니다. 이 과정에서 **feature 기반 멀티 모듈 프로젝트에서 어떻게 해야 compose-navigation 을 제대로 적용할 수 있을지** 고민해본 내용에 대해 정리해보았습니다.
 
 <br>
 
@@ -180,7 +180,9 @@ fun MyApp() {
 
 <br>
 
-# 중첩 그래프 탐색
+# 부록
+
+## 중첩 그래프 탐색
 
 추가적으로 한 모듈에 여러 스크린이 포함된 경우, `navigation` 컴포넌트를 이용한 중첩 그래프 탐색을 통해 하나의 확장 함수로 간단히 구현할 수 있습니다.
 
@@ -260,6 +262,101 @@ fun MyNavHost(
     }
 }
 ```
+
+<br>
+
+## 복잡한 데이터 넘기기
+
+Route 클래스에 `Long` 과 같은 원시 타입이 아닌 `data class` 와 같은 데이터를 넘길 경우 **typeMap** 을 지정해줘야 합니다. typeMap 은 넘기려는 데이터에 대한 serialization 정보를 매핑해줍니다. 여기서는 `kotlinx-serialization-json` 을 이용한 방법을 살펴봅니다.
+
+```kotlin
+inline fun <reified T : Any?> serializableTypeOf(
+    isNullableAllowed: Boolean = false,
+    json: Json = Json,
+) = object : NavType<T>(isNullableAllowed = isNullableAllowed) {
+
+    override fun get(bundle: Bundle, key: String) = bundle.getString(key)?.let<String, T>(json::decodeFromString)
+    
+    override fun parseValue(value: String): T = json.decodeFromString(value)
+
+    override fun serializeAsValue(value: T): String = json.encodeToString(value)
+
+    override fun put(bundle: Bundle, key: String, value: T) = bundle.putString(key, json.encodeToString(value))
+}
+
+@Serializable
+data class Friend(
+    val id: Long,
+    val name: String,
+    val profileImageUrl: String
+) {
+    companion object {
+        val typeMap = mapOf(typeOf<Friend>() to serializableTypeOf<Friend>())
+    }
+}
+```
+
+
+```kotlin
+@Serializable
+data class FriendDetailRoute(val friend: Friend)
+
+fun NavGraphBuilder.friendDetailScreen(
+    onNavigateToHome: () -> Unit
+) {
+    composable<FriendDetailRoute>(
+        typeMap = Friend.typeMap
+    ) { backStackEntry ->
+        val friend = backStackEntry.toRoute().friend
+        FriendDetailScreen(
+            friend = friend,
+            onNavigateToHome = onNavigateToHome
+        )
+    }
+}
+```
+위와 같이 `kotlin-serialization-json` 의 encoding 및 decoding 을 이용하여 `NavType` 의 제네릭한 구현체를 만들어주는 `serializableType` 공통 함수를 작성해두면 편리하게 다양한 데이터에 대한 typeMap 을 만들 수 있습니다.
+
+**하지만 위 예제는 매칭되는 navigation destinaion 이 없다는 오류를 내며 제대로 동작하지 않습니다.** 놀랍게도 그 이유는 바로 **`Friend` 클래스의 `profileImageUrl` 필드**에 있습니다.
+
+<br>
+
+### 데이터에 URL 형식의 문자열이 포함되어 있을 때
+
+Compose navigation 의 route 는 내부적으로 **결국 URL 형식의 문자열**로 이루어져 있습니다. Route 클래스나 그 안에 담기는 데이터가 serializable 해야하는 이유도 바로 이 때문입니다. Route 가 최종적으로 중복되지 않고 유일한 url 형식의 문자열로 변환되야 하기 때문입니다.
+
+> android-app://androidx.navigation/\${route}/\${arguments}
+
+그렇기 때문에 url 형식의 문자열이 포함된 데이터를 넘기게 될 경우, **url 형식으로 변환된 route 문자열에 영향을 주게 되어 url 이 변질되고 이에 맞는 navigation destination 을 찾을 수 없다는 오류가 발생**하게 되는 것입니다.
+
+이와 같은 현상을 피하려면 아래와 같이 데이터 안에 포함된 url 형식의 문자열에 대하여 인코딩 및 디코딩을 해줘야 합니다.
+
+```kotlin
+object UriSerializer : KSerializer<String> {
+    override val descriptor = PrimitiveSerialDescriptor("Uri", PrimitiveKind.STRING)
+
+    override fun serialize(encoder: Encoder, value: String) {
+        encoder.encodeString(URLEncoder.encode(value, StandardCharsets.UTF_8.name()))
+    }
+
+    override fun deserialize(decoder: Decoder): String {
+        return URLDecoder.decode(decoder.decodeString(), StandardCharsets.UTF_8.name())
+    }
+}
+
+@Serializable
+data class Friend(
+    val id: Long,
+    val name: String,
+    @Serializable(with = UriSerializer::class)
+    val profileImageUrl: String
+) {
+    companion object {
+        val typeMap = mapOf(typeOf<Friend>() to serializableTypeOf<Friend>())
+    }
+}
+```
+이 때, `URLEncoder` 및 `URLDecoder` 의 경우 java 패키지에서 지원하는 클래스이기 때문에 KMP 환경에서는 사용할 수 없으므로, URL 인코딩/디코딩을 지원하는 별도의 third-party 라이브러리를 사용하셔야 합니다.
 
 <br>
 
