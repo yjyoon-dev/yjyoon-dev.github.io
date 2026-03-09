@@ -19,10 +19,8 @@ type: about
 
 ## Skill
 
-- Kotlin, Java, Dart, Python, C/C++
-- Android, Flutter, Compose Multiplatform
-- SpringBoot, Ktor, MySQL
-- AWS, NCP, Nginx, Docker
+- Develop Modern Android App
+- Build Apps for various platforms such as iOS, Desktop, Web using Kotlin Multiplatform
 
 ---
 
@@ -43,6 +41,11 @@ type: about
 ---
 
 ## Experience
+
+- **발표 활동**
+  - Kotlin User Group Seoul - KMP + Supabase: 1인 개발자의 새로운 패러다임 *(2025.12)*
+  - 2025 NAVER Engineering Day - 생산성을 높이는 Android SDK 배포 전략 *(2025.05)*
+  - Google Developer Group Android - 사이드 프로젝트를 20번 실패한 주니어의 오답노트 *(2025.03)*
 
 - **개발 활동**
   - 디프만 13기 Android *(2023.04 ~ 2023.07)*
@@ -72,22 +75,7 @@ type: about
 
 ---
 
-## OSS Contribution
-
-- [DroidKnights 2023 컨퍼런스 공식앱](https://github.com/droidknights/DroidKnights2023_App)
-  - UI 기능 개발 기여 (PR #215, #223)
-
----
-
 ## SW Certificate
 
 - TOPCIT Level 3
 - AWS Certified Solutions Architect - Associate
-
----
-
-## SW Patent
-
-- 오프라인 SNS 해시태그 이벤트 관리 시스템 특허 *(2021.10.20)*
-
----
